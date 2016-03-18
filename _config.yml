@@ -65,6 +65,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: casper
 
+## Disqus
+disqus_shortname: techbridgeweekly
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
