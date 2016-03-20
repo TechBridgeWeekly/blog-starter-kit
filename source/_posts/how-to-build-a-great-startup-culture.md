@@ -20,7 +20,11 @@ author: kdchang
 7. 簡約設計，注重 MVP (最小可行) 的產品，敏捷開發
 8. 工程師文化，不惜代價找到最合適的人才，常舉辦內部 Hack Day。技術分享風氣濃厚，熱於學習新技術
 
-事實上，以上幾點描述一流科技新創 (Startup) 的文化和工作環境未必合適於每個組織中。能找到合適的夥伴加入團隊，一起打造適合的文化和價值觀才是關鍵。
+事實上，以上幾點科技新創 (Startup) 的常見文化和工作環境未必合適於每個組織中。能找到合適的夥伴加入團隊，一起打造適合的文化和價值觀才是關鍵。
+
+參考文件：
+1. [[翻譯] 是什麼造就了好的軟體工程文化？(上)](http://blog.littlelin.info/posts/2014/05/04/what-makes-good-engineering-culture-1)
+2. [[翻譯] 是什麼造就了好的軟體工程文化？(下)](http://blog.littlelin.info/posts/2014/09/21/what-makes-good-engineering-culture-2)
 
 關於作者：
 [@kdchang](https://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App. :)
