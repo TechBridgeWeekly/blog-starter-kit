@@ -4,7 +4,7 @@
 
 # Site
 title: TechBridge 技術共筆部落格
-subtitle: var topoic = ['Web前後端', '行動網路', '機器人/物聯網', '數據分析與產品設計'];
+subtitle: var topic = ['Web前後端', '行動網路', '機器人/物聯網', '數據分析', '產品設計', 'etc.'];
 description:
 author: TechBridge Weekly 技術週刊編輯團隊
 language: zh-tw
