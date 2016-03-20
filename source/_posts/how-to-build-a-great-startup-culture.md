@@ -17,8 +17,10 @@ author: kdchang
 4. 擁抱開源軟體 (Open Source)，利用各種可用工具，注意力集中在核心產品
 5. 快速迭代 (Iterate)，A / B Testing，數據驅動思考 (Data Driven Thinking)
 6. 注重使用者體驗 (User Experience)，使用者利益大於獲利考慮
-7. 簡約設計，注重MVP (最小可行) 的產品，敏捷開發
+7. 簡約設計，注重 MVP (最小可行) 的產品，敏捷開發
 8. 工程師文化，不惜代價找到最合適的人才，常舉辦內部 Hack Day。技術分享風氣濃厚，熱於學習新技術
+
+事實上，以上幾點描述一流科技新創 (Startup) 的文化和工作環境未必合適於每個組織中。能找到合適的夥伴加入團隊，一起打造適合的文化和價值觀才是關鍵。
 
 關於作者：
 [@kdchang](https://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App. :)
