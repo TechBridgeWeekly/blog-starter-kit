@@ -6,11 +6,14 @@
     <h1 class="post-title"><%- post.title %></h1>
     <section class="post-content">
       <%- post.content %>
+      <div class="fb-like" data-href="<%- url %>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div> 
     </section>
+    <br>
     <footer class="post-footer">
       <%- partial('post/author') %>
       <%- partial('post/share') %>
     </footer>
+    <br>
   </article>
   <%- partial('post/navigation') %>
   <%- partial('post/comments') %>

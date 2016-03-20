@@ -4,9 +4,9 @@
 
 # Site
 title: TechBridge 技術共筆部落格
-subtitle: 讓我們聊聊 Web前後端、行動網路、機器人、物聯網、數據分析
+subtitle: 讓我們聊聊 Web前後端、行動網路、機器人/物聯網、數據分析與產品設計
 description:
-author: TechBridge 技術週刊編輯團隊
+author: TechBridge Weekly 技術週刊編輯團隊
 language: zh-tw
 timezone:
 
@@ -68,8 +68,26 @@ theme: casper
 plugins:
   hexo-generator-cname
 
+sitemap:
+    path: sitemap.xml  
+
 ## Disqus
 disqus_shortname: techbridgeweekly
+
+## Google Analytics
+google_analytics:
+  enable: true
+  id: UA-75308642-1
+  site: auto
+
+## social
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
