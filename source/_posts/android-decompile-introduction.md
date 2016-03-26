@@ -1,7 +1,7 @@
 ---
 title: 人人都會的 Android Apk 反編譯
 date: 2016-03-24 23:30:00
-tags: Android, Decompile, Apktool, Smali, Dex2jar
+tags: Android, Decompile, Apktool, Smali, Dex2jar, Mobile, 行動網路, 反編譯, APK
 author: huli
 ---
 
@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
 ```
 
 安裝到手機上之後，會看到這樣的畫面：
+
 ![device-2016-03-20-152510.png](http://user-image.logdown.io/user/7013/blog/6977/post/661513/uVN5gnA0QC6PEdujMIZg_device-2016-03-20-152510.png)
 
 ## 實際動手
@@ -174,7 +175,7 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 <string name="hello_world">Hello world!</string>
 ```
 
-改成
+改成：
 
 ``` xml
 <string name="hello_world">HELLO WORLD</string>
