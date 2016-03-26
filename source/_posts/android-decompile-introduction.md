@@ -12,8 +12,8 @@ author: huli
 本篇文章只介紹一些工具的使用，適合初學者觀看。若是想了解更底層的知識，可以參考文末附上的延伸閱讀。
 
 ## 事前準備
-首先，我們需要一個用來被破解的 apk，簡單用任何你平常熟悉的工具自己 build 一個就好了。
-架構很簡單，只要一個 `MainActivity` 跟兩個`TextView`就好。
+首先，我們需要一個用來被破解的 apk，簡單用任何你平常熟悉的工具自己 build 一個就好了。基本架構很簡單，只要一個 `MainActivity` 跟兩個`TextView`就好：
+
 ``` java MainActivity.java
 public class MainActivity extends Activity {
 
@@ -144,6 +144,7 @@ invoke-virtual {p0, v1}, Lapktest/huli/com/apkdecompile/MainActivity;->setConten
 
 你可能會好奇，這個`0x7f040019`是哪來的？
 事實上，你可以在`res/values/public.xml`這個檔案裡面找到答案：
+
 ``` xml
 <public type="layout" name="activity_main" id="0x7f040019" />
 ```
@@ -156,6 +157,7 @@ invoke-virtual {p0, v1}, Lapktest/huli/com/apkdecompile/MainActivity;->setConten
 
 ## 修改
 在剛剛的`smali`裡面，有這麼一段：
+
 ``` java
 .line 15
 .local v0, "text":Landroid/widget/TextView;
@@ -167,10 +169,13 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 讓我們把`Taiwan No1`換成`T@iw@n n0!`。
 還記得另一個`TextView`有用到`R.string.hello_world`嗎？
 在`res/values/strings.xml`裡面，可以找到這一串的定義：
+
 ``` xml
 <string name="hello_world">Hello world!</string>
 ```
+
 改成
+
 ``` xml
 <string name="hello_world">HELLO WORLD</string>
 ```
@@ -187,9 +192,10 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 `jarsigner -verbose -digestalg SHA1 -keystore ~/KEY.keystore APK_NAME.apk KEY_ALIAS`
 
 安裝完以後就會看到這樣的畫面：
+
 ![device-2016-03-20-160501.png](http://user-image.logdown.io/user/7013/blog/6977/post/661513/RNKaPElHQA2BJ02proFr_device-2016-03-20-160501.png)
 
-沒錯！就是這麼簡單，一個 apk 就這樣被修改了
+沒錯！就是這麼簡單，一個 apk 就這樣被修改了！
 
 可是`smali`的程式碼不好懂，能不能直接看到 java code呢？
 這時候剛剛推薦的工具`dex2jar`與`jd-gui`就派上用場了
@@ -198,7 +204,8 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 
 `dex2jar`下載下來之後會有一堆的 shell script，`dex2jar`就是我們想要的那個
 `./d2j-dex2jar.sh app.apk`
-執行完之後會有一個 jar，用 jd-gui 打開，會看到你的程式碼一覽無遺
+執行完之後會有一個 jar，用 jd-gui 打開，會看到你的程式碼一覽無遺：
+
 ![螢幕快照 2016-03-20 下午4.10.15.png](http://user-image.logdown.io/user/7013/blog/6977/post/661513/zrnTKCQgT0OeIPbkkfp8_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-20%20%E4%B8%8B%E5%8D%884.10.15.png)
 
 ## 總結
