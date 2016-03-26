@@ -67,9 +67,13 @@ theme: casper
 
 plugins:
   hexo-generator-cname
+  hexo-generator-robotstxt
 
+# hexo sitemap
 sitemap:
-    path: sitemap.xml  
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 ## Disqus
 disqus_shortname: techbridgeweekly
@@ -88,6 +92,23 @@ addthis:
   twitter: true
   google: true
   pinterest: true
+
+## robots.txt
+robotstxt:
+  useragent: "*"
+  disallow:
+    - /js/
+    - /css/
+    - /fonts/
+    - /vendors/
+    - /fancybox/
+  allow:
+    - /
+    - /archives/
+  sitemap: 
+    - /sitemap.xml
+  baidusitemap: 
+    - /baidusitemap.xml
 
 ## RSS
 feed:
