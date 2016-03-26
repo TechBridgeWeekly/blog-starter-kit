@@ -12,8 +12,8 @@ author: huli
 本篇文章只介紹一些工具的使用，適合初學者觀看。若是想了解更底層的知識，可以參考文末附上的延伸閱讀。
 
 ## 事前準備
-首先，我們需要一個用來被破解的 apk，簡單用任何你平常熟悉的工具自己 build 一個就好了
-架構很簡單，只要一個 `MainActivity` 跟兩個`TextView`就好
+首先，我們需要一個用來被破解的 apk，簡單用任何你平常熟悉的工具自己 build 一個就好了。
+架構很簡單，只要一個 `MainActivity` 跟兩個`TextView`就好。
 ``` java MainActivity.java
 public class MainActivity extends Activity {
 
@@ -50,21 +50,21 @@ public class MainActivity extends Activity {
 ![device-2016-03-20-152510.png](http://user-image.logdown.io/user/7013/blog/6977/post/661513/uVN5gnA0QC6PEdujMIZg_device-2016-03-20-152510.png)
 
 ## 實際動手
-好，這個就是我們要拿來測試的 apk 了
-接著你需要一些非常好用的工具
+好，這個就是我們要拿來測試的 apk 了！
+接著你需要一些非常好用的工具：
 
 1. [apktool](http://ibotpeaches.github.io/Apktool/)
 2. [jd-gui](http://jd.benow.ca/)
 3. [dex2jar](https://sourceforge.net/projects/dex2jar/)
 
-如何安裝就不再贅述了，大家看看文件或是上網搜尋一下就會有一堆解答
+如何安裝就不再贅述了，讀者們可以參考看看文件或是上網搜尋一下就會有一堆解答～
 `apktool`是拿來把 apk 拆開用的，可以反編譯 apk 之後，看到 `smali` 檔案跟 `resource`
 `dex2jar`可以把 apk 轉成 jar，再用`jd-gui`檢視 java code
 
 接著我們開啟 terminal，到剛剛那個示範 apk 的目錄底下，執行`apktool d APKNAME.apk`
 ![螢幕快照 2016-03-20 下午3.32.47.png](http://user-image.logdown.io/user/7013/blog/6977/post/661513/Ahk6ZkFOQm7ECISEyxMI_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202016-03-20%20%E4%B8%8B%E5%8D%883.32.47.png)
 
-執行以後，會自動生成一個`APKNAME`的資料夾，裡面就是反編譯出來的東西了
+執行以後，會自動生成一個`APKNAME`的資料夾，裡面就是反編譯出來的東西了。
 
 ```
 .
@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
 └── smali
 ```
 
-其中比較值得講的是`smali`這個資料夾，其實這裡面就是你的 source code，只是格式不太一樣
+其中比較值得講的是`smali`這個資料夾，其實這裡面就是你的 source code，只是格式不太一樣。
 你可以在`smali`這資料夾裡面找到你的`MainActivity.java`，內容如下：
 （覺得長得很奇怪是很正常的事，但是認真多看幾眼，你會發現其實沒那麼難懂）
 
@@ -129,7 +129,7 @@ public class MainActivity extends Activity {
 .end method
 ```
 
-你可以仔細對照一下剛剛自己寫的 java code，會發現只是換了種格式而已
+你可以仔細對照一下剛剛自己寫的 java code，會發現只是換了種格式而已：
 
 ``` java
 setContentView(R.layout.activity_main);
@@ -148,7 +148,7 @@ invoke-virtual {p0, v1}, Lapktest/huli/com/apkdecompile/MainActivity;->setConten
 <public type="layout" name="activity_main" id="0x7f040019" />
 ```
 
-到這裡，應該就可以大概猜出 Android 在編譯時候的流程
+到這裡，應該就可以大概猜出 Android 在編譯時候的流程：
 
 1. 把所有資源檔壓縮、處理並且包在一起，產生`id與記憶體位置對照表`
 2. 把程式碼裡面所有的`R.xx.xxx`透過剛剛產生的表，換成實際的記憶體位置
@@ -164,7 +164,7 @@ const-string v1, "Taiwan No1"
 invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 ```
 
-讓我們把`Taiwan No1`換成`T@iw@n n0!`
+讓我們把`Taiwan No1`換成`T@iw@n n0!`。
 還記得另一個`TextView`有用到`R.string.hello_world`嗎？
 在`res/values/strings.xml`裡面，可以找到這一串的定義：
 ``` xml
@@ -175,15 +175,15 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 <string name="hello_world">HELLO WORLD</string>
 ```
 
-確定都有改完以後，就可以把這些程式碼再度「組裝」回去
+確定都有改完以後，就可以把這些程式碼再度「組裝」回去。
 還記得剛剛反編譯的指令嗎？`apktool d APK_NAME.apk`
-這邊的`d`就是`decompile`的意思，所以如果要逆向組裝回去，就是`b`，`build`
+這邊的`d`就是`decompile`的意思，所以如果要逆向組裝回去，就是`b`，`build`。
 
 `apktool b APK_NAME`
 
-執行完之後可以在`APK_NAME/dist`下面找到一個 apk
-要注意的是這個 apk 還沒有被 sign 過，因此無法安裝
-可以隨便生成一個 keystore 或是找現成的來簽署
+執行完之後可以在`APK_NAME/dist`下面找到一個 apk。
+但要注意的是這個 apk 還沒有被 sign 過，因此無法安裝。
+可以隨便生成一個 keystore 或是找現成的來簽署。
 `jarsigner -verbose -digestalg SHA1 -keystore ~/KEY.keystore APK_NAME.apk KEY_ALIAS`
 
 安裝完以後就會看到這樣的畫面：
@@ -203,13 +203,10 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 
 ## 總結
 沒接觸過反編譯的人可能會很驚訝：什麼！要改掉一個 apk 居然這麼簡單！
-沒錯，就是這麼簡單，而且這只是一個很基本的範例
-事實上，你想要加入新的程式碼、加入新的資源（圖片、聲音等等）也是可以的
-也就是說，你不只可以修改，還可以擴充原本的 apk
+沒錯，就是這麼簡單，而且這只是一個很基本的範例而已。事實上，你想要加入新的程式碼、加入新的資源（圖片、聲音等等）也是可以的。
+也就是說，你不只可以修改，還可以擴充原本的 apk！
 
-但也有些方法可以防止不肖人士反編譯 apk
-例如說加殼、混淆、動態載入等等
-這邊的話以後有機會再介紹
+但也有些方法可以防止不肖人士反編譯 apk，例如說加殼、混淆、動態載入等，關於這些方法我們下次有機會再介紹給大家囉！
 
 ## 延伸閱讀
 1. [Android 反編譯與防止被反編譯](https://magiclen.org/android-decompiler/)
@@ -221,4 +218,4 @@ invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSeque
 
 
 關於作者： 
-@huli 野生工程師，相信分享與交流能讓世界變得更美好
+[@huli](http://huli.logdown.com/) 野生工程師，相信分享與交流能讓世界變得更美好
