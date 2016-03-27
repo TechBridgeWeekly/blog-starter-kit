@@ -117,6 +117,22 @@ feed:
   limit: 30
   hub:  
 
+## category
+category_generator:
+  per_page: 10
+
+## archive
+archive_generator:
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+
+## Search 
+search:
+  path: search.xml
+  field: post
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 

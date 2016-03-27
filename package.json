@@ -15,6 +15,7 @@
     "hexo-generator-feed": "^1.1.0",
     "hexo-generator-index": "^0.2.0",
     "hexo-generator-robotstxt": "^0.2.0",
+    "hexo-generator-search": "^1.0.2",
     "hexo-generator-sitemap": "^1.1.2",
     "hexo-generator-tag": "^0.2.0",
     "hexo-renderer-ejs": "^0.2.0",
