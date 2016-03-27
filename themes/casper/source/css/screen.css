@@ -410,6 +410,19 @@ margin on the iframe, cause it breaks stuff. */
     text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
+/* Navbar */
+.navbar-block {
+    margin-top: 15px;
+}
+
+.navbar-block span a {
+    color: #AAAAAA;
+}
+
+.navbar-block span a:hover {
+    color: #000000;
+}
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
@@ -523,6 +536,12 @@ margin on the iframe, cause it breaks stuff. */
 
 #comment h1 a {
     text-decoration: none;
+}
+
+/* Share this block */
+.sharethis-social-share-block {
+    margin-top: 40px;
+    height: 15px;
 }
 
 /* ==========================================================================
