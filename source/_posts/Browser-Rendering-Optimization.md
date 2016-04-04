@@ -21,20 +21,20 @@ tags:
 
 ok，那要怎麼知道自己的網頁每個frames花了多少時間繪製？拜Google大神所賜，只要打開Chrome的devTool，切換到Timeline的tab，就可以很容易的知道網頁在browser上的render時間。讓我們用畫面超級old school的pchome拍賣來Demo一下：
 
-![Devtool-timeline(點圖放大)](/image/googleDevTool-pchome.png "DevTool-timeline")
+![Devtool-timeline(點圖放大)](/img/googleDevTool-pchome.png "DevTool-timeline")
 
 先別被圖中五顏六色的區塊嚇到，在我們說明這Tool該如何使用之前，必須先瞭解Browser的Render過程，以及這圖片中每個顏色所代表的意義。
 
 接觸過HTML的人一定都知道所謂的DOM Tree，Browser會解析HTML並轉換成DOM Tree做操作，但知道[Render Tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=en)的人可能就不多了，Render tree由DOM tree與CSS結合產生，Browser就是依照Render Tree來決定該在畫面上呈現什麼東西。若你今天在某個div的css上加上`display: none`，那這個div就不會再Render tree上呈現。
 
-![Render Tree (source from google)](/image/RenderTree.png)
+![Render Tree (source from google)](/img/RenderTree.png)
 
 既然Render的過程也是一棵Tree，有點概念的人可能會想：每次style改變或是我更動DOM的位置時，這棵Tree也就會變動了吧？
 沒錯！在整個Browser的Render過程中，就是會不斷去recalculating style、layout的關係，來建構這棵樹。
 
 當然Browser的渲染過程不止這些，還必須載入js, css, web api等等的資源，因此有所謂的Rendering Pipeline
 
-![Render Pipeline (source from google)](/image/render_pipeline.png)
+![Render Pipeline (source from google)](/img/render_pipeline.png)
 從圖上可以發現其順序為：
 1. Javascript: 載入與執行JS/CSS
 2. Style: 根據js與css計算style
@@ -46,14 +46,14 @@ ok，那要怎麼知道自己的網頁每個frames花了多少時間繪製？拜
 
 接下來我們回到Timeline這個tool。
 
-![Timeline record](/image/Timeline2.png)
+![Timeline record](/img/Timeline2.png)
 你可以直接在你想觀察的網頁打開Timeline，並重新整理，他就會自行錄製；或是你可以在你想觀察的操作步驟進行前（ex. 滑動頁面、打開menu bar等等）按下錄製。
 
-![Timeline finish](/image/Timeline3.png)
+![Timeline finish](/img/Timeline3.png)
 
 接著在你覺得適合的地方（通常就是步驟執行完後）按下Finish。
 
-![Timeline result](/image/Timeline1.png)
+![Timeline result](/img/Timeline1.png)
 
 基本上就能得到下列的Timeline結果。
 從這張圖片可以清楚看到每個frame花了多少時間，在Render pipeline中發生了哪些事情，值得注意的是，圖片右上角有個紅色小三角形，若你的frame中有這個標記，就代表Chrome認為這段frame有可以改善的部分。大家不妨到自己的網頁打開Timeline，看看有多少東西需要改進XD
@@ -176,8 +176,8 @@ setInterval(counter.bind(null,timer), 1000);
 在一個網頁的頁面當中，實際上並非是平面的，通常會由許多`Layer`所組成，而在Browser rendering pipeline的最後一個步驟`Composite`中，就是負責將這些Layer組合成完整的頁面。
 
 我們這次以最近Live直播統一獅頗為熱門的Yahoo首頁為例子，依照先前的方式打開Dev tool中的Timeline，選取其中一段frame後，點選下方的`Layers`標籤，應該就可以看到類似下面的圖：
-![Composite Layers](/image/layer.png)
-![Composite Layers (而在Timeline的工具中，旁邊還能讓你拖拉旋轉，方便查看各個Layer的狀況。)](/image/compositeLayers.png )
+![Composite Layers](/img/layer.png)
+![Composite Layers (而在Timeline的工具中，旁邊還能讓你拖拉旋轉，方便查看各個Layer的狀況。)](/img/compositeLayers.png )
 
 可以發現yahoo首頁也是由許多層Layer所組成。
 
