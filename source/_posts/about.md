@@ -11,6 +11,7 @@ TechBridge Weekly 技術週刊團隊是一群對用技術改變世界懷抱熱�
 - 技術週刊：[http://weekly.techbridge.cc/](http://weekly.techbridge.cc/)
 - 技術共筆部落格：[http://blog.techbridge.cc/](http://blog.techbridge.cc/)
 - 粉絲專頁：[https://www.facebook.com/TechBridge.Fans/](https://www.facebook.com/TechBridge.Fans/)
+- 電子郵件：[techbridge.cc@gmail.com](mailto:techbridge.cc@gmail.com)
 
 ## 目前負責的 Curator（歡迎有興趣朋友跳坑加入策展人團隊:P）
 1. [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校

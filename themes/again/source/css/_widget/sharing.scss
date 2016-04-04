@@ -14,16 +14,15 @@
 
   .profile .title {
     margin: 0;
-
-    font-style: italic;
-    font-size: 1rem;
+    font-style: bold;
+    font-size: 1.2rem;
   }
 
   .profile .subtitle {
     margin: 0;
     padding: $gutter / 3 0;
 
-    font-size: .8rem;
+    font-size: .9rem;
     font-style: italic;
 
     color: $sharing-subtitle-color;
