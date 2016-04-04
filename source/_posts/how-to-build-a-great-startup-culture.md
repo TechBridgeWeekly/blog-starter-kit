@@ -27,4 +27,4 @@ author: kdchang
 2. [[翻譯] 是什麼造就了好的軟體工程文化？(下)](http://blog.littlelin.info/posts/2014/09/21/what-makes-good-engineering-culture-2)
 
 關於作者：
-[@kdchang](https://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App. :)
+[@kdchang](https://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobiel 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App.:)

@@ -396,3 +396,7 @@ React.createClass({
 5. [ECMAScript 6入门](http://es6.ruanyifeng.com/)
 6. [React官方網站](https://facebook.github.io/react/index.html)
 7. [React INTRO TO REACT.JS](http://fraserxu.me/intro-to-react/)
+
+
+關於作者：
+[@kdchang](https://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobiel 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App.:)
