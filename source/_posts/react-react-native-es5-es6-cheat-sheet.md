@@ -51,7 +51,7 @@ import MyComponent from './MyComponent';
 
 ```
 export default class MyComponent extends React.Compoent {
-	...
+	
 }
 ```
 
@@ -86,7 +86,7 @@ class Photo extends React.Component {
  
 ```js
 var Photo = React.createClass({
-  componentWillMount: function() { … },
+  componentWillMount: function() {},
 });
 ```
 
@@ -96,8 +96,7 @@ var Photo = React.createClass({
 class Photo extends React.Component {
   constructor(props) {
     super(props);
-    // Operations usually carried out in componentWillMount go here
-    // 因可以將 method 綁定放置於此 
+    // Operations usually carried out in componentWillMount go here 
   }
 }
 ``` 
@@ -110,8 +109,8 @@ ES5 `React.createClass()` 用法：
 ```js
 // The ES5 way
 var Photo = React.createClass({
-  handleClick: function(e) { … },
-  render: function() { … },
+  handleClick: function(e) {},
+  render: function() {},
 });
 ```			 
 
@@ -120,8 +119,8 @@ ES6+ `class` 用法：
 ```js
 // The ES6+ way
 class Photo extends React.Component {
-  handleClick(e) { … }
-  render() { … }
+  handleClick(e) {}
+  render() {}
 }
 ```
 
