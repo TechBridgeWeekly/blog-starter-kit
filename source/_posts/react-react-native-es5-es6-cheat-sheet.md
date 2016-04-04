@@ -81,6 +81,7 @@ class Photo extends React.Component {
   }
 }
 ```
+
 在 ES5 我們會在 `componentWillMount ` 生命週期定義希望在 `render` 前執行，且只會執行一次的任務：
  
 ```js
@@ -88,6 +89,7 @@ var Photo = React.createClass({
   componentWillMount: function() { … },
 });
 ```
+
 在 ES6+ 則是定義在 `constructor ` 建構子中：
 
 ```js
@@ -112,6 +114,7 @@ var Photo = React.createClass({
   render: function() { … },
 });
 ```			 
+
 ES6+ `class` 用法：
 
 ```js
@@ -193,6 +196,7 @@ var Todo = React.createClass({
     },
 })
 ```
+
 在 ES6+ 中我們初始化 `state` 有兩種寫法：
 
 ```js
@@ -235,6 +239,7 @@ var TodoBtn = React.createClass({
     },
 });
 ```
+
 然而自動綁定這種方式反而會讓人容易誤解，所以在 ES6+ 推薦使用 `bind ` 綁定 `this` 或使用 `Arrow functions`（它會绑定當前 `scope` 的 `this context`），你可以參考下面例子：
 
 ```js
@@ -254,6 +259,7 @@ class TodoBtn extends React.Component
     },
 }
 ```
+
 `Arrow functions` 雖然一開始看起來有點怪異，但其實觀念很簡單：一個簡化的函數。函數基本上就是參數（不一定要有參數）、表達式、回傳值（也可能是回傳 undefined）：
 
 ```
@@ -320,6 +326,7 @@ var Todo = React.createClass({
   },
 });
 ```
+
 但在 ES6+中，透過 [enhancements to object literals](https://babeljs.io/blog/2015/06/07/react-on-es6-plus) 和 [template strings](https://babeljs.io/docs/learn-es2015/#template-strings) 可以輕鬆完成動態設定屬性名稱的任務：
 
 ```
