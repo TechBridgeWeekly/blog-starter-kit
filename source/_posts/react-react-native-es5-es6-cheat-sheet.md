@@ -1,13 +1,11 @@
 ---
-title: React ES5、ES6+常見用法對照表
+title: 一看就懂的 React ES5、ES6+ 常見用法對照表
 date: 2016-04-04 23:26:00
 tags: React, React Native, ES5, ES6, ES7, JavaScript, JavaScript2015, Webpack
 author: kdchang
 ---
 
-# React ES5、ES6+常見用法對照表
-
-![React ES5、ES6+常見用法對照表](/img/kdchang/react-es6.jpg)
+![一看就懂的 React ES5、ES6+ 常見用法對照表](/img/kdchang/react-es6.jpg)
 
 ## 前言
 [React](https://facebook.github.io/react/) 是 Facebook 推出的開源 [JavaScript](https://en.wikipedia.org/wiki/JavaScript) Library。自從 React 正式開源後，React 生態系開始蓬勃發展。事實上，透過學習 React 生態系（ecosystem）的過程中，可以讓我們順便學習現代化 Web 開發的重要觀念（例如：ES6、[Webpack](https://github.com/webpack/webpack)、[Bable](https://babeljs.io/)、模組化等），成為更好的開發者。雖然 ES6（JavaScript2015）、ES7 是未來趨勢（本文將 ES6、ES7 稱為 ES6+），然而目前在網路上有許多的學習資源仍是以 ES5 為主，導致讀者在學習上遇到一些坑洞和迷惑（本文假設讀者對於 React 已經有些基本認識，若你對於 React 尚不熟悉，建議先行[閱讀官方文件](https://facebook.github.io/react/)和[本篇入門教學](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)）。因此本文希望透過整理在 React 中 ES5、ES6+ 常見用法對照表，讓讀者們可以在實現功能時（尤其在 [React Native](https://facebook.github.io/react-native/)）時可以更清楚兩者的差異，無痛轉移到 ES6+。 
@@ -22,6 +20,7 @@ author: kdchang
 7. Dynamic property names & template strings
 8. Destructuring & spread attributes
 9. Mixins
+
 
 ## 1. Module
 隨著 Web 技術的進展，模組化開發已經成為一個重要課題。關於 JavaScript 模組化我們這邊不詳述，建議讀者參考 [這份投影片](http://huangxuan.me/js-module-7day/#/) 和 [這篇文章](http://justineo.github.io/singles/writing-modular-js/)。
@@ -49,11 +48,12 @@ import MyComponent from './MyComponent';
 
 輸出則是使用 `export default`：
 
-```
+```js
 export default class MyComponent extends React.Compoent {
 	
 }
 ```
+
 
 ## 2. Classes
 在 React 中元件（Component）是組成視覺頁面的基礎。在 ES5 中我們使用 `React.createClass()` 來建立 Component，而在 ES6+ 則是用 [Classes](https://babeljs.io/docs/learn-es2015/#classes) 繼承 `React.Component` 來建立 Component。若是有寫過 Java 等物件導向語言（OOP）的讀者應該對於這種寫法比較不陌生，不過要注意的是 JavaScript 仍是原型繼承類型的物件導向程式語言，只是使用 `Classes` 讓物件導向使用上更加直觀。
@@ -96,10 +96,11 @@ var Photo = React.createClass({
 class Photo extends React.Component {
   constructor(props) {
     super(props);
-    // Operations usually carried out in componentWillMount go here 
+    // 原本在 componentWillMount 操作的動作可以放在這
   }
 }
-``` 
+```
+
 
 ## 3. Method definition
 在 ES6 中我們使用 `Method` 可以忽略 `function` 和 `,`，使用上更為簡潔！
@@ -123,6 +124,7 @@ class Photo extends React.Component {
   render() {}
 }
 ```
+
 
 ## 4. Property initializers
 Component 屬性值是訊息傳遞重要的元素，在 ES5 中我們使用 `propTypes ` 和  `getDefaultProps ` 來定義屬性（props）的預設值和型別：
@@ -183,6 +185,7 @@ Todo.propTypes = {
 };
 ```
 
+
 ## 5. State
 在 React 中 `Props` 和 `State` 是資料流傳遞的重要元素，不同的是 `state` 可更動，可以去執行一些運算。在 ES5 中我們使用 `getInitialState ` 去初始化 `state`： 
  
@@ -218,6 +221,7 @@ class Todo extends React.Component {
     }
 }
 ```
+
 
 ## 6. Arrow functions
 
@@ -313,6 +317,7 @@ class TodoBtn extends React.Component{
 
 更多 Arrows and Lexical This 特性可以[參考這個文件]((https://babeljs.io/docs/learn-es2015/#arrows)。
 
+
 ## 7. Dynamic property names & template strings
 以前在 ES5 我們要動態設定屬性名稱時，往往需要多寫幾行程式碼才能達到目標：
 
@@ -346,6 +351,7 @@ var name = "Bob", time = "today";
 `Hello ${name}, how are you ${time}?` \\ Hello Bob, how are you today?
 ```
 
+
 ## 8. Destructuring & spread attributes
 在 React 的 Component 中，父元件利用 `props` 來傳遞資料到子元件是常見作法，然而我們有時會希望只傳遞部分資料，此時 ES6+ 中的 [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring) 和 [JSX 的 Spread Attributes
 ](https://facebook.github.io/react/docs/jsx-spread.html) 就可以幫我們達到目標：
@@ -374,6 +380,40 @@ class Todo extends React.Component {
   …
 </div>
 ```
+
+而 `Destructuring` 也可以用在簡化 `Module` 的引入上，這邊我們先用 ES5 中引入方式來看：
+
+```js
+var React = require('react-native');
+var Component = React.component;
+ 
+class HelloWorld extends Component {
+  render() {
+    return <p>Hello, world!</p>;
+  }
+}
+ 
+export default HelloWorld;
+```
+
+在 ES6+ 則可以直接使用 `Destructuring` 來引入模組中的元件：
+
+```js
+import React, {
+	View,
+	Component,
+	Image
+} from 'react-native';
+ 
+class HelloWorld extends Component {
+  render() {
+    return <p>Hello, world!</p>;
+  }
+}
+ 
+export default HelloWorld;
+```
+
 
 ## 9. Mixins
 在 ES5 中，我們會使用 `Mixins` 去新增一些 `method`：
@@ -405,4 +445,4 @@ React.createClass({
 
 
 關於作者：
-[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobiel 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App.:)
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App.:)
