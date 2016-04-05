@@ -56,7 +56,7 @@ export default class MyComponent extends React.Compoent {
 
 
 ## 2. Classes
-在 React 中元件（Component）是組成視覺頁面的基礎。在 ES5 中我們使用 `React.createClass()` 來建立 Component，而在 ES6+ 則是用 [Classes](https://babeljs.io/docs/learn-es2015/#classes) 繼承 `React.Component` 來建立 Component。若是有寫過 Java 等物件導向語言（OOP）的讀者應該對於這種寫法比較不陌生，不過要注意的是 JavaScript 仍是原型繼承類型的物件導向程式語言，只是使用 `Classes` 讓物件導向使用上更加直觀。
+在 React 中元件（Component）是組成視覺頁面的基礎。在 ES5 中我們使用 `React.createClass()` 來建立 Component，而在 ES6+ 則是用 [Classes](https://babeljs.io/docs/learn-es2015/#classes) 繼承 `React.Component` 來建立 Component。若是有寫過 Java 等物件導向語言（OOP）的讀者應該對於這種寫法比較不陌生，不過要注意的是 JavaScript 仍是原型繼承類型的物件導向程式語言，只是使用 `Classes` 讓物件導向使用上更加直觀。對於選擇 `class` 使用上還有疑惑的讀者建議可以閱讀 [React.createClass versus extends React.Component](https://toddmotto.com/react-create-class-versus-component/) 這篇文章。
 
 ES5 `React.createClass()` 用法：
 
@@ -442,6 +442,7 @@ React.createClass({
 5. [ECMAScript 6入门](http://es6.ruanyifeng.com/)
 6. [React官方網站](https://facebook.github.io/react/index.html)
 7. [React INTRO TO REACT.JS](http://fraserxu.me/intro-to-react/)
+8. [React.createClass versus extends React.Component](https://toddmotto.com/react-create-class-versus-component/)
 
 
 關於作者：
