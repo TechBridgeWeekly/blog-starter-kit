@@ -108,17 +108,16 @@ class Photo extends React.Component {
 ES5 `React.createClass()` 用法：
 
 ```js
-// The ES5 way
 var Photo = React.createClass({
   handleClick: function(e) {},
   render: function() {},
 });
 ```			 
 
+
 ES6+ `class` 用法：
 
 ```js
-// The ES6+ way
 class Photo extends React.Component {
   handleClick(e) {}
   render() {}
