@@ -11,7 +11,7 @@ author: kdchang
 [React](https://facebook.github.io/react/) 是 Facebook 推出的開源 [JavaScript](https://en.wikipedia.org/wiki/JavaScript) Library。自從 React 正式開源後，React 生態系開始蓬勃發展。事實上，透過學習 React 生態系（ecosystem）的過程中，可以讓我們順便學習現代化 Web 開發的重要觀念（例如：ES6、[Webpack](https://github.com/webpack/webpack)、[Bable](https://babeljs.io/)、模組化等），成為更好的開發者。雖然 ES6（JavaScript2015）、ES7 是未來趨勢（本文將 ES6、ES7 稱為 ES6+），然而目前在網路上有許多的學習資源仍是以 ES5 為主，導致讀者在學習上遇到一些坑洞和迷惑（本文假設讀者對於 React 已經有些基本認識，若你對於 React 尚不熟悉，建議先行[閱讀官方文件](https://facebook.github.io/react/)和[本篇入門教學](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)）。因此本文希望透過整理在 React 中 ES5、ES6+ 常見用法對照表，讓讀者們可以在實現功能時（尤其在 [React Native](https://facebook.github.io/react-native/)）可以更清楚兩者的差異，無痛轉移到 ES6+。 
 
 ## 大綱
-1. Module
+1. Modules
 2. Classes
 3. Method definition
 4. Property initializers
@@ -20,9 +20,9 @@ author: kdchang
 7. Dynamic property names & template strings
 8. Destructuring & spread attributes
 9. Mixins
+10. Default Parameters
 
-
-## 1. Module
+## 1. Modules
 隨著 Web 技術的進展，模組化開發已經成為一個重要課題。關於 JavaScript 模組化我們這邊不詳述，建議讀者參考 [這份投影片](http://huangxuan.me/js-module-7day/#/) 和 [這篇文章](http://justineo.github.io/singles/writing-modular-js/)。
 
 ES5 若使用 CommonJS 標準，一般使用 `require()` 用法引入模組：
@@ -426,6 +426,24 @@ React.createClass({
 
 但由於官方不打算在 ES6+ 中繼續推行 `Mixins`，若還是希望使用，可以參考看看[第三方套件](https://www.npmjs.com/package/es6-class-mixin)或是[這個文件的用法](https://gist.github.com/sebmarkbage/ef0bf1f338a7182b6775)。
 
+## 10. Default Parameters
+以前 ES5 我們函數要使用預設值需要這樣使用：
+
+```js
+var link = function (height, color) {  
+    var height = height || 50;  
+    var color = color || 'red';  
+}  
+```
+
+現在 ES6+ 的函數可以支援預設值，讓程式碼更為簡潔：
+
+```js
+var link = function(height = 50, color = 'red') {  
+  ...  
+} 
+```
+
 ## 總結
 以上就是 React ES5、ES6+常見用法對照表，能看到這邊的你應該已經對於 React ES5、ES6 使用上有些認識，先給自己一些掌聲吧！確實從 ES6 開始，JavaScript 和以前我們看到的 JavaScript 有些不同，增加了許多新的特性，有些讀者甚至會很懷疑說這真的是 JavaScript 嗎？ES6 的用法對於初學者來說可能會需要寫一點時間吸收，下面我幫大家準備了延伸閱讀，方便大家進一步參考學習。接下來我們也會有一系列從零開始學 React 的文章來帶大家由淺入深學習 ReactJS 生態系，運用 JavaScript 打造跨平台應用程式。
 
@@ -438,7 +456,8 @@ React.createClass({
 6. [React官方網站](https://facebook.github.io/react/index.html)
 7. [React INTRO TO REACT.JS](http://fraserxu.me/intro-to-react/)
 8. [React.createClass versus extends React.Component](https://toddmotto.com/react-create-class-versus-component/)
-
+9. [react-native-coding-style](https://github.com/lzbSun/react-native-coding-style)
+10. [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
 
 關於作者：
 [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App.:)
