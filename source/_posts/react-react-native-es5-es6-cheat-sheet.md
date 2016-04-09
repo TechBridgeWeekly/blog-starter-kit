@@ -240,7 +240,7 @@ var TodoBtn = React.createClass({
 });
 ```
 
-然而自動綁定這種方式反而會讓人容易誤解，所以在 ES6+ 推薦使用 `bind ` 綁定 `this` 或使用 `Arrow functions`（它會绑定當前 `scope` 的 `this context`），你可以參考下面例子：
+然而自動綁定這種方式反而會讓人容易誤解，所以在 ES6+ 推薦使用 `bind ` 綁定 `this` 或使用 `Arrow functions`（它會绑定當前 `scope` 的 `this context`）兩種方式，你可以參考下面例子：
 
 ```js
 class TodoBtn extends React.Component
@@ -250,7 +250,7 @@ class TodoBtn extends React.Component
         this.setState({toggle: true});
     }
     render(){
-        // 手動綁定 this 指到 component instance
+        // 這邊可以用 this.handleButtonClick.bind(this) 手動綁定或是 Arrow functions () => {} 用法
         return (
             <div>
                 <Button onClick={this.handleButtonClick.bind(this)} onClick={(e)=> {this.handleButtonClick(e)} }>{this.props.label}</Button>
