@@ -70,6 +70,7 @@ var Photo = React.createClass({
     	);
   }
 });
+ReactDOM.render(<Photo />, document.getElementById('main'));
 ```
 
 ES6+ `class` 用法：
@@ -80,6 +81,7 @@ class Photo extends React.Component {
     return <img alt={this.props.description} src={this.props.src} />;
   }
 }
+ReactDOM.render(<Photo />, document.getElementById('main'));
 ```
 
 在 ES5 我們會在 `componentWillMount ` 生命週期定義希望在 `render` 前執行，且只會執行一次的任務：
@@ -122,7 +124,7 @@ class Photo extends React.Component {
 
 
 ## 4. Property initializers
-Component 屬性值是訊息傳遞重要的元素，在 ES5 中我們使用 `propTypes ` 和  `getDefaultProps ` 來定義屬性（props）的預設值和型別：
+Component 屬性值是資料傳遞重要的元素，在 ES5 中我們使用 `propTypes ` 和  `getDefaultProps ` 來定義屬性（props）的預設值和型別：
 
 ```js
 var Todo = React.createClass({
@@ -160,7 +162,7 @@ class Todo extends React.Component {
 }
 ```
 
-ES6+ 另外一種寫法，可以留意一下，但不推薦：
+ES6+ 另外一種寫法，可以留意一下，主要是看各團隊喜好和規範，選擇合適的方式：
 
 ```js
 class Todo extends React.Component {
@@ -285,7 +287,7 @@ class TodoBtn extends React.Component{
     componentWillMount(){
         Btn.addEventListener('click', this.handleButtonClick.bind(this));
     }
-    componentDidUnmount(){
+    componentDidmount(){
         Btn.removeEventListener('click', this.handleButtonClick.bind(this));
     }
     onAppPaused(event){
@@ -304,7 +306,7 @@ class TodoBtn extends React.Component{
     componentWillMount(){
         Btn.addEventListener('click', this.handleButtonClick);
     }
-    componentDidUnmount(){
+    componentDidmount(){
         Btn.removeEventListener('click', this.handleButtonClick);
     }
 }
@@ -368,7 +370,7 @@ class Todo extends React.Component {
 }
 ```
 
-但使用上要注意的是若是有重複的屬性值則以後來覆蓋，下面的例子中若 `...this.props`，有 `className`，則被 `main` 所覆蓋：
+但使用上要注意的是若是有重複的屬性值則以後來覆蓋，下面的例子中若 `...this.props`，有 `className`，則被後來的 `main` 所覆蓋：
 
 ```js
 <div {...this.props} className="main">
@@ -384,7 +386,11 @@ var Component = React.component;
  
 class HelloWorld extends Component {
   render() {
-    return <p>Hello, world!</p>;
+    return (
+      <View>
+        <Text>Hello, world!</Text>
+      </View>
+    );
   }
 }
  
@@ -402,7 +408,11 @@ import React, {
  
 class HelloWorld extends Component {
   render() {
-    return <p>Hello, world!</p>;
+    return (
+      <View>
+        <Text>Hello, world!</Text>
+      </View>
+    );
   }
 }
  
@@ -411,7 +421,7 @@ export default HelloWorld;
 
 
 ## 9. Mixins
-在 ES5 中，我們會使用 `Mixins` 去新增一些 `method`：
+在 ES5 中，我們可以使用 `Mixins` 的方式去讓不同的 Component 共用相似的功能，重用我們的程式碼：
 
 ```js
 var PureRenderMixin = require('react-addons-pure-render-mixin');
@@ -445,7 +455,7 @@ var link = function(height = 50, color = 'red') {
 ```
 
 ## 總結
-以上就是 React ES5、ES6+常見用法對照表，能看到這邊的你應該已經對於 React ES5、ES6 使用上有些認識，先給自己一些掌聲吧！確實從 ES6 開始，JavaScript 和以前我們看到的 JavaScript 有些不同，增加了許多新的特性，有些讀者甚至會很懷疑說這真的是 JavaScript 嗎？ES6 的用法對於初學者來說可能會需要寫一點時間吸收，下面我幫大家準備了延伸閱讀，方便大家進一步參考學習。接下來我們也會有一系列從零開始學 React 的文章來帶大家由淺入深學習 ReactJS 生態系，運用 JavaScript 打造跨平台應用程式。
+以上就是 React ES5、ES6+常見用法對照表，能看到這邊的你應該已經對於 React ES5、ES6 使用上有些認識，先給自己一些掌聲吧！確實從 ES6 開始，JavaScript 和以前我們看到的 JavaScript 有些不同，增加了許多新的特性，有些讀者甚至會很懷疑說這真的是 JavaScript 嗎？ES6 的用法對於初學者來說可能會需要寫一點時間吸收，下面我幫大家準備了延伸閱讀，方便大家進一步參考學習。接下來我們也會有一系列從零開始學 React 的文章來帶大家由淺入深學習 ReactJS 生態系，運用 JavaScript 打造跨平台應用程式。筆者才書學淺，若有疏漏歡迎大家一起交流討論：）
 
 ## 延伸閱讀
 1. [React/React Native 的ES5 ES6写法对照表](http://bbs.reactnative.cn/topic/15/react-react-native-%E7%9A%84es5-es6%E5%86%99%E6%B3%95%E5%AF%B9%E7%85%A7%E8%A1%A8)

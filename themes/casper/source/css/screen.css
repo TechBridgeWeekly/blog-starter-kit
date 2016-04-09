@@ -399,8 +399,7 @@ margin on the iframe, cause it breaks stuff. */
     letter-spacing: -1px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: 1px 1px 6px #000000;
-    color: #FFFFFF;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
 }
 
 .blog-description {
@@ -410,8 +409,7 @@ margin on the iframe, cause it breaks stuff. */
     font-weight: 300;
     font-family: 'Noto Serif', serif;
     letter-spacing: 0;
-    text-shadow: 1px 1px 6px #000000;
-    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
 /* Navbar */
@@ -420,12 +418,11 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .navbar-block span a {
-    text-shadow: 1px 1px 6px #000000;
-    color: #FFFFFF;
+    color: #AAAAAA;
 }
 
 .navbar-block span a:hover {
-    color: #DDDDDD;
+    color: #000000;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
