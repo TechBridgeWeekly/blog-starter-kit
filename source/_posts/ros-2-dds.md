@@ -1,5 +1,5 @@
 ---
-title: 用DDS開發ROS 2.0
+title: 用 DDS 開發 ROS 2.0
 date: 2016-04-15 22:18:57
 tags: 機器人, Robot, ROS, DDS
 author: pojenlai
@@ -9,10 +9,10 @@ author: pojenlai
 
 這篇文章想要向大家介紹ROS 2.0的底層實作概念，雖然比較不會有程式實作的討論，但我覺得這一塊的深度滿值得介紹的，因為使用ROS有好幾種層次:
 
-1.使用ROS的各種工具來建立自己的應用
-2.在開發上碰到一些問題，修改現成的package來滿足自己的需求
-3.開發自己的演算法，發布自己的package給其他人使用
-4.協助開發與維護ROS的核心
+1. 使用ROS的各種工具來建立自己的應用
+2. 在開發上碰到一些問題，修改現成的package來滿足自己的需求
+3. 開發自己的演算法，發布自己的package給其他人使用
+4. 協助開發與維護ROS的核心
 
 這篇文章要討論的議題已經落在第四個層次，所以對於一般的使用者來說，可能不太具有直接應用的價值，但如果對於ROS的底層實作有更深入的理解(知道他是怎麼開發出來的、有哪些限制、有哪些優點)，就可以在利用ROS撰寫自己的應用時，更能開發出效能最佳化的應用。
 
@@ -133,11 +133,11 @@ Node::Ptr rclcpp::create_node(const std::string &name)
 OK!簡介就到這邊啦，如果對於實作細節有興趣深入的讀者，不妨去看看ROS 2.0的github repo，詳細的程式碼全部都是開源的，所以可以從中學習開發的細節。
 
 ## 延伸閱讀
-1.[為什麼要開發ROS 2.0?](http://po-jen.github.io/design/articles/why_ros2.html)
-2.[使用ZeroMQ跟相關的函式庫來開發ROS](http://po-jen.github.io/design/articles/ros_with_zeromq.html)
-3.[使用DDS來開發ROS](http://po-jen.github.io/design/articles/ros_on_dds.html) (仍在趕工中，歡迎開issue催促翻譯者QQ)
-4.[ROS 2.0 wiki](https://github.com/ros2/ros2/wiki)
-5.[ROS DDS Prototype (Github Repo)](https://github.com/osrf/ros_dds/tree/master/prototype)
+1. [為什麼要開發ROS 2.0?](http://po-jen.github.io/design/articles/why_ros2.html)
+2. [使用ZeroMQ跟相關的函式庫來開發ROS](http://po-jen.github.io/design/articles/ros_with_zeromq.html)
+3. [使用DDS來開發ROS](http://po-jen.github.io/design/articles/ros_on_dds.html) (仍在趕工中，歡迎開issue催促翻譯者QQ)
+4. [ROS 2.0 wiki](https://github.com/ros2/ros2/wiki)
+5. [ROS DDS Prototype (Github Repo)](https://github.com/osrf/ros_dds/tree/master/prototype)
 
 
 關於作者：
