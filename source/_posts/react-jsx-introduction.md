@@ -1,7 +1,7 @@
 ---
 title: 一次就看懂的 JSX 簡明入門教學指南
 date: 2016-04-21 23:26:00
-tags: React, React Native, ES5, ES6, ES7, JavaScript, JavaScript2015, Webpack
+tags: React, React Native, ES5, ES6, ES7, JavaScript, JavaScript2015, Webpack, JSX
 author: kdchang
 ---
 
