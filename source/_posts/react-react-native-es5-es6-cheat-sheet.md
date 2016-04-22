@@ -351,14 +351,14 @@ var name = "Bob", time = "today";
 
 ## 8. Destructuring & spread attributes
 在 React 的 Component 中，父元件利用 `props` 來傳遞資料到子元件是常見作法，然而我們有時會希望只傳遞部分資料，此時 ES6+ 中的 [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring) 和 [JSX 的 Spread Attributes
-](https://facebook.github.io/react/docs/jsx-spread.html) 就可以幫我們達到目標：
+](https://facebook.github.io/react/docs/jsx-spread.html) ，`...` Spread Attributes 主要是用來迭代物件：
 
 ```js
 class Todo extends React.Component {
   render() {
     var {
       className,
-      ...others,  // contains all properties of this.props except for className
+      ...others,  // ...others 包含 this.props 除了 className 外所有值
     } = this.props;
     return (
       <div className={className}>
@@ -397,15 +397,27 @@ class HelloWorld extends Component {
 export default HelloWorld;
 ```
 
-在 ES6+ 則可以直接使用 `Destructuring` 來引入模組中的元件：
+以下 ES5 寫法：
+
+```
+var React = require('react-native');
+var View = React.View;
+```
+
+```
+var { View } = require('react-native');
+```
+
+在 ES6+ 則可以直接使用 `Destructuring` 這種簡化方式來引入模組中的元件：
+
 
 ```js
 import React, {
 	View,
 	Component,
-	Image
+	Text,
 } from 'react-native';
- 
+
 class HelloWorld extends Component {
   render() {
     return (
