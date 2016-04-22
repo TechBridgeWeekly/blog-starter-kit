@@ -157,6 +157,7 @@ class HelloMessage extends React.Compoent {
     return (
       <div>
         <p>Hello React!</p>
+        <MessageList />
       </div>
     );
   }
