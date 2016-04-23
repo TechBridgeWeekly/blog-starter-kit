@@ -1,7 +1,7 @@
 ---
 title: 一次就看懂的 JSX 簡明入門教學指南
 date: 2016-04-21 23:26:00
-tags: React, React Native, ES5, ES6, ES7, JavaScript, JavaScript2015, Webpack, JSX
+tags: React, React Native, ES5, ES6, ES7, JavaScript, JavaScript2015, Webpack, JSX 
 author: kdchang
 ---
 
@@ -62,7 +62,7 @@ if(this.state.liked) {
 }
 ```
 
-看完上述說明是不是感覺 `JSX` 更易讀易懂？事實上，當 Component 組成越來越複雜時，若使用 JSX 將可以讓整個結構更加直觀，可讀性較高。
+看完上述說明是不是感覺 `React` 結合 `JSX` 的寫法更易讀易懂？事實上，當 Component 組成越來越複雜時，若使用 JSX 將可以讓整個結構更加直觀，可讀性較高。
 
 ### 2. 更加簡潔
 雖然最終 JSX 會轉換成 JavaScript，但使用 JSX 可以讓程式看起來更加簡潔，以下為使用 JSX 和不使用 JSX 的範例：
