@@ -297,6 +297,7 @@ React.createElement("h1", React._spread({}, props, {value: "yo"}), "Hello React!
 ## 延伸閱讀
 1. [Imperative programming or declarative programming](http://www.puritys.me/docs-blog/article-320-Imperative-programming-or-declarative-programming.html)
 2. [JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
+3. [從零開始學 React（ReactJS 101）](https://www.gitbook.com/book/kdchang/react101/details)
 
 image via [adweek](http://www.adweek.com/socialtimes/files/2014/05/LikeButtoniOSApps650.jpg), [codecondo](http://codecondo.com/wp-content/uploads/2015/12/Useful-Features-of-React_7851.png)
 

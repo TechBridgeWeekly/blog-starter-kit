@@ -340,11 +340,11 @@ class Todo extends React.Component {
 }
 ```
 
-Template Strings 是一種語法糖（syntactic sugar），方便我們組織字串：
+Template Strings 是一種語法糖（syntactic sugar），方便我們組織字串（這邊也用上 `let`、`const` 變數和常數宣告的方式，和 `var` 的 `function scope` 不同的是它們是屬於 `block scope`，亦即生存域存在於 `{}` 間）：
 
 ```js
 // Interpolate variable bindings
-var name = "Bob", time = "today";
+const name = "Bob", let = "today";
 `Hello ${name}, how are you ${time}?` \\ Hello Bob, how are you today?
 ```
 
@@ -358,7 +358,7 @@ class Todo extends React.Component {
   render() {
     var {
       className,
-      ...others,  // ...others 包含 this.props 除了 className 外所有值
+      ...others,  // ...others 包含 this.props 除了 className 外所有值。this.props = {value: 'true', title: 'header', className: 'content'}
     } = this.props;
     return (
       <div className={className}>
@@ -404,12 +404,14 @@ var React = require('react-native');
 var View = React.View;
 ```
 
+在 ES6+ 則可以直接使用 `Destructuring` 這種簡化方式來引入模組中的元件：
+
 ```
+// 這邊等於上面的寫法
 var { View } = require('react-native');
 ```
 
-在 ES6+ 則可以直接使用 `Destructuring` 這種簡化方式來引入模組中的元件：
-
+更進一步可以使用 `import` 語法：
 
 ```js
 import React, {
@@ -480,6 +482,7 @@ var link = function(height = 50, color = 'red') {
 8. [React.createClass versus extends React.Component](https://toddmotto.com/react-create-class-versus-component/)
 9. [react-native-coding-style](https://github.com/lzbSun/react-native-coding-style)
 10. [Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+11. [從零開始學 React（ReactJS 101）](https://www.gitbook.com/book/kdchang/react101/details)
 
 關於作者：
 [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile App & Web App.:)
