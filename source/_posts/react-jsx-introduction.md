@@ -71,7 +71,7 @@ if(this.state.liked) {
 <a href="https://facebook.github.io/react/">Hello!</a>
 ```
 
-不使用 JSX（記得我們說過 JSX 是選用的）：
+不使用 JSX 的情況（記得我們說過 JSX 是選用的）：
 
 ```js
 // React.createElement(元件/HTML標籤, 元件屬性，以物件表示, 子元件)
@@ -79,7 +79,7 @@ React.createElement('a', {href: 'https://facebook.github.io/react/'}, 'Hello!')
 ```
 
 ### 3. 結合原生 JavaScript 語法
-JSX 並非一種全新的語言，而是一種語法糖（Syntatic Sugar），一種語法類似 XML 的 ECMAScript 語法擴充，所以並沒有改變 JavaScript 語意。透鍋結合 JavaScript ，可以釋放 JavaScript 語言本身能力。下面例子就是運用 `map` 方法，輕易把 `result` 值迭代出來，產生無序清單（ul）的內容，不用再使用蹩腳的模版語言：
+JSX 並非一種全新的語言，而是一種語法糖（Syntatic Sugar），一種語法類似 XML 的 ECMAScript 語法擴充，所以並沒有改變 JavaScript 語意。透過結合 JavaScript ，可以釋放 JavaScript 語言本身能力。下面例子就是運用 `map` 方法和 `Arrow function`，輕易把 `result` 值迭代出來，產生無序清單（ul）的內容，不用再使用蹩腳的模版語言：
 
 ```js
 // const 為常數
