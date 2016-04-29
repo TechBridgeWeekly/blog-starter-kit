@@ -52,7 +52,7 @@ render: function() {
 
 Store在Flux的架構內，通常是Singleton(一樣，有些framework並非這樣做，尤其是想達成isomorphic時，可以參考[Yahoo Fluxible](http://fluxible.io/))
 
-在Flux的概念中，Store基本上是你唯一可以**操作資料**的地方。去除操作資料的部分，聽起來有點像MVC中的Model? 更明確一點來說，**Store contains Models**
+在Flux的概念中，Store基本上是你唯一可以**操作資料**與**儲存資料**的地方。去除操作資料的部分，聽起來有點像MVC中的Model? 更明確一點來說，**Store contains Models**
 
 舉例來說，當你需要存放一些照片以及其Meta data時，你會Create一個PhotoStore來存放Photo model與Meta model。你會依照資料的`Domain`來切割你的Store。
 
