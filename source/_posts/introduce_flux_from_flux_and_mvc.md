@@ -1,7 +1,7 @@
 ---
 title: 從Flux與MVC的差異來簡介Flux
 date: 2016-04-29 23:09:42
-tags:
+tags: Flux, React, MVC
 ---
 今天這篇主要是想藉由`Flux`的介紹，進而探討`Flux`與`MVC`的差異，到底`Flux`做對了什麼，而`MVC`又犯了什麼錯呢？
 
