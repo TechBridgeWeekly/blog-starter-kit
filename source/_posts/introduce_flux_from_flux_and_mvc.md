@@ -1,5 +1,5 @@
 ---
-title: 從Flux與MVC的差異來簡介Flux
+title: 從 Flux 與 MVC 的差異來簡介 Flux
 date: 2016-04-29 23:09:42
 tags: Flux, React, MVC
 ---
@@ -31,6 +31,7 @@ Flux是一種讓你很容易做到 one-way data flow 的<span style="color:red">
 ```js
 // 假設你initiate一個dispatcher
 var AppDispatcher = new Dispatcher();
+
 //.
 //..
 //...
@@ -46,6 +47,7 @@ render: function() {
   return (<button onClick={ this.createNewPhoto }>New Photo</button>);
 }
 ```
+
 當每次的`onClick`發生後，`View`就會透過`Dispatcher`dispatch出一個`Action`，該Action可以包含一個`payload`，說明`你想做什麼事情`以及`你需要操作什麼資料`。
 
 ### Store Responds to Dispatched Actions
@@ -70,6 +72,7 @@ AppDispatcher.register(function(payload) {
   }
 })
 ```
+
 `Store`會向`Dispatcher`註冊`Callback`，依照各種action的類別執行相對應的資料操作。
 
 ### Store Emits "Change" Event to View
@@ -86,6 +89,7 @@ AppDispatcher.register(function(payload) {
   }
 })
 ```
+
 接著，如果你是搭配React當作你的View的話，可能會在`componentDidMount`時，binding一個Store listener
 
 ```js
@@ -93,7 +97,9 @@ componentDidMount: function() {
     PhotoStore.bind( 'change', this.photoChange );
 },
 ```
+
 在listener中重新fetch store資料，並且setState來re-render Component
+
 ```js
 photoChange: function() {  
     var newPhotoData = PhotoStore.getPhoto();
@@ -102,6 +108,7 @@ photoChange: function() {
     });
 }
 ```
+
 你的Component的render function大概會像這樣：
 
 ```js
@@ -123,6 +130,7 @@ render: function() {
 }
 
 ```
+
 看完簡單的Flux介紹後，讓我們再複習一次Flux的流程圖
 
 ![facebook Flux](/img/arvinh/flux-react.png "facebook Flux")
