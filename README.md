@@ -17,7 +17,7 @@ TechBridge 技術共筆部落格
 	- `$ git remote add upstream https://github.com/TechBridgeHQ/blog-starter-kit`
 	- `$ git fetch upstream`
 	- `$ git merge upstream/master`
-8. 完成後，請發 Pull Request 到 [TechBridgeHQ/blog-starter-kit](https://github.com/TechBridgeHQ/blog-starter-kit)，負責編輯審核通過即會刊出，若有任何問題歡迎[來信](techbridge.cc@gmail.com)或是發 issue :)
+8. 完成後，請發 Pull Request 到 [TechBridgeHQ/blog-starter-kit](https://github.com/TechBridgeHQ/blog-starter-kit)，負責編輯審核通過即會刊出。若有任何問題歡迎[來信](techbridge.cc@gmail.com)或是發 issue :)
 
 ## Format（文章格式）
 - 文章內容請遵守[中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
