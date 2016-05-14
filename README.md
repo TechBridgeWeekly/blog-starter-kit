@@ -14,7 +14,7 @@ TechBridge 技術共筆部落格
 5. 重新 compile 一次，將 .md 檔案轉成 .html 等靜態檔案 `$ hexo g ` (若有圖片請存在/sources/img/your_name/下)
 6. 在本地端 [http://localhost:4000](http://localhost:4000) 觀看效果 `$ hexo s`，（若遇到問題請多 `$ hexo g ` compile 幾次）
 7. 與上游保持同步
-	- `git remote add upstream https://github.com/YOUR_USERNAME/YOUR_FORK.git`
+	- `git remote add upstream https://github.com/TechBridgeHQ/blog-starter-kit`
 	- `git fetch upstream`
 	- `git merge upstream/master`
 8. 完成後，請發 Pull Request 到 [TechBridgeHQ/blog-starter-kit](https://github.com/TechBridgeHQ/blog-starter-kit)，負責編輯審核通過即會刊出
