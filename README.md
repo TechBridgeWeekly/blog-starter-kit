@@ -1,5 +1,5 @@
-TechBridge 技術共筆部落格
-由 TechBridge Weekly 技術週刊團隊維護的技術部落格。本技術共筆部落格初期專注於Web前後端、行動網路、機器人/物聯網、數據分析與產品設計等正體中文原創文章、國外好文翻譯分享。This is TechBridge Weekly Team's Tech Blog, which focus on web, mobile, robot, IoT, data analytics technology sharing. 
+# TechBridge 技術共筆部落格
+TechBridge 技術共筆部落格是由 TechBridge Weekly 技術週刊團隊維護的技術部落格。本技術共筆部落格初期專注於Web前後端、行動網路、機器人/物聯網、數據分析與產品設計等正體中文原創文章、國外好文翻譯分享。This is TechBridge Weekly Team's Tech Blog, which focus on web, mobile, robot, IoT, data analytics technology sharing. 
 
 - 技術共筆部落格：[http://blog.techbridge.cc/](http://blog.techbridge.cc/)
 - 技術日報：[http://www.techbridge.cc/](http://www.techbridge.cc/)
@@ -7,6 +7,7 @@ TechBridge 技術共筆部落格
 - 粉絲專頁：[https://www.facebook.com/TechBridge.Fans/](https://www.facebook.com/TechBridge.Fans/)
 
 ## Contribute 
+0. TechBridge 技術共筆部落格使用 Github 和 Hexo 平台，若您對於 Hexo 並不熟悉，請先閱讀[官方文件](https://hexo.io/)
 1. `$ npm install -g hexo-cli`
 2. 請先 Fork 一份檔案後 git clone 至本地端
 3. `$ npm install`
