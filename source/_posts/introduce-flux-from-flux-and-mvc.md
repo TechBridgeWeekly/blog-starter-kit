@@ -44,7 +44,7 @@ createNewItem: function( evt ) {
 }
 
 render: function() {
-  return (<button onClick={ this.createNewPhoto }>New Photo</button>);
+  return (<button onClick={ this.createNewItem }>New Photo</button>);
 }
 ```
 
