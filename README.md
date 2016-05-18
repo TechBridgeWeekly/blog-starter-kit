@@ -9,19 +9,22 @@ TechBridge 技術共筆部落格是由 TechBridge Weekly 技術週刊團隊維�
 ## Contribute 
 0. TechBridge 技術共筆部落格使用 Github 和 Hexo 平台，若您對於 Hexo 並不熟悉，請先閱讀[官方文件](https://hexo.io/)
 1. `$ npm install -g hexo-cli`
-2. 請先 Fork 一份檔案後 git clone 至本地端
+2. 請先 Fork 一份檔案後 git clone 至本地端，並開啟自己的 branch
 3. `$ npm install`
 4. 寫新文章 `$ hexo new post <title>`，在 source > _post 資料夾下開始使用 Markdown 撰寫文章（寫靜態檔案為 new page、草稿：new draft）
 5. 重新 compile 一次，將 .md 檔案轉成 .html 等靜態檔案 `$ hexo g ` (若有圖片請存在/sources/img/your_name/下)
 6. 在本地端 [http://localhost:4000](http://localhost:4000) 觀看效果 `$ hexo s`，（若遇到問題請多 `$ hexo g ` compile 幾次）
 7. 與上游保持同步
 	- `$ git remote add upstream https://github.com/TechBridgeHQ/blog-starter-kit`
+	- `$ git remote update`  #更新所有Repository branch
 	- `$ git fetch upstream`
-	- `$ git merge upstream/master`
-8. 完成後，請發 Pull Request 到 [TechBridgeHQ/blog-starter-kit](https://github.com/TechBridgeHQ/blog-starter-kit)，負責編輯審核通過即會刊出。若有任何問題歡迎[來信](techbridge.cc@gmail.com)或是發 issue :)
+	- `$ git rebase upstream/master`
+8. 請持續於自己的 brach 開發，完成後 Push 到你的 Repo
+9. 完成後，請發 Pull Request 到 [TechBridgeHQ/blog-starter-kit](https://github.com/TechBridgeHQ/blog-starter-kit)，負責編輯審核通過即會刊出。若有任何問題歡迎[來信](techbridge.cc@gmail.com)或是發 issue :)
 
 ## Format（文章格式）
 - 文章內容請遵守[中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)
+- 若為翻譯文章，用詞請先搜尋相關用法，或可以參考這個[網站](http://jjhou.boolan.com/terms.htm)
 
 ```
 ---
