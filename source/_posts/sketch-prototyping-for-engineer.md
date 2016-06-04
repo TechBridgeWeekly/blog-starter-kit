@@ -63,6 +63,7 @@ Sketch 是一個 Mac 上的輕量級介面設計工具。2010 年由荷蘭公司
 ![給工程師的 Sketch Prototyping 簡易入門教學](/img/kdchang/sketch-4.png)
 
 ## 從 Mockup 到 Prototype
+![給工程師的 Sketch Prototyping 簡易入門教學](/img/kdchang/sketch-flinto.png)
 透過 Sketch 設計完成靜態檔案，若我們想將靜態檔案轉成 Prototype 進行使用者測試，我們可以使用 Flinto 好工具！透過簡單的連結就可以讓你的 Sketch 動起來啦（目前支援了簡單的手勢和動畫）！
 
 ![給工程師的 Sketch Prototyping 簡易入門教學](/img/kdchang/flinto-3.png)
