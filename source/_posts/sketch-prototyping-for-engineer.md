@@ -24,7 +24,7 @@ Sketch 是一個 Mac 上的輕量級介面設計工具。2010 年由荷蘭公司
 2. 專為 UI 設計而生（Artboard 設計可以方便 UI 設計） 
 3. 輕量級，簡單好上手（工程師 OS：就像 Sublime 之於 Eclipse）
 4. 內建和可擴充的豐富 UI 模版（iOS、Material Design 等）
-5. 搭配 Flinto、Zeplin 可讓工程師更開心，設計師提早下班
+5. 搭配 [Flinto](https://www.flinto.com/)、[Zeplin](https://zeplin.io/) 可讓工程師更開心，設計師提早下班
 6. 可以取代大部分 PS、以拉、Fireworks 等功能
 7. 知名網路、科技公司都在用
 
