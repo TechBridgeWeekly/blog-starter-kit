@@ -1,5 +1,5 @@
 ---
-title: 使用 Object Recogniton Kitchen 的 Linemod 演算法辨識物體
+title: 使用 Object Recognition Kitchen 的 Linemod 演算法辨識物體
 date: 2016-05-14 11:21:49
 tags: 機器人, 物體辨識, ROS, Object Recognition Kitchen, Linemod
 author: pojenlai
