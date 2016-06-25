@@ -1,7 +1,7 @@
 ---
 title: 一看就懂的 React ES5、ES6+ 常見用法對照表
 date: 2016-04-04 23:26:00
-tags: React, React Native, ES5, ES6, ES7, JavaScript, JavaScript2015, Webpack
+tags: React, React Native, ES5, ES6, ES7, JavaScript, ECMAScript2015, Webpack
 author: kdchang
 ---
 
