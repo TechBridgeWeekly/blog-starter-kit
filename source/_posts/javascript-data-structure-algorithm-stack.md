@@ -164,7 +164,7 @@ console.log(stack.isEmpty());
 2. [資料結構(Data Structures) (Data Structures) Course 5: Stack and Queue](http://sjchen.im.nuu.edu.tw/Datastructure/98/course05.pdf)
 3. [nzakas/computer-science-in-javascript](https://github.com/nzakas/computer-science-in-javascript)
 
-image via [stack-machine](https://igor.io/img/stack-machine/stack-ops.png)
+(image via [stack-machine](https://igor.io/img/stack-machine/stack-ops.png))
 
 關於作者：
 [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile/IoT App & Web App.:)
