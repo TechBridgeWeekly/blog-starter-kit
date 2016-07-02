@@ -5,7 +5,7 @@ tags: Messenger, Wit.ai, Bot
 author: ArvinH
 ---
 
-上回我們利用 Facebook Messenger API 製作了一個粉絲專頁的 Chat Bot，今天我們要讓他更加聰明，利用被 Facebook 收購的 Wit.ai 所提供之 API，可以很方便的讓 Chat Bot 有了 NLP 的支援，讓他/她更加聰明！
+今天我們要讓我們的 Chat Bot 更加聰明，利用被 Facebook 收購的 Wit.ai 所提供之 API，可以很方便的讓 Chat Bot 有了 NLP 的支援，讓他/她更加聰明！
 
 實際上 Wit.ai 的介面並沒有我想像中的好用，需要很有耐心地把官網上的教學一步步做完，並且了解他所定義的名詞代表之含義，雖然寫得很詳細，但畢竟是英文，因此就記錄一下整個過程，並跟大家分享。
 
