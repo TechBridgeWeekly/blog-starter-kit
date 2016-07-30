@@ -69,7 +69,7 @@ author: kdchang
 `，Browserify 是一個可以讓你在瀏覽器端也能使用像 Node 用的 [CommonJS](https://en.wikipedia.org/wiki/CommonJS) 規範一樣，用輸出（export）和引用（require）來管理模組。此外，也能使用許多在 NPM 中的模組
 
 [Gulp](http://gulpjs.com/)
-- `Gulp` 是一個前端任務工具自動化管理工具。隨著前端工程的發展（Task Runner），我們在開發前端應用程式時有許多工作是必須重複進行，例如：打包文件、uglify、將 LESS 轉譯成一般的 CSS 的檔案，轉譯 ES6 語法等工作。若是使用一般手動的方式，往往會造成效率的低下，所以透過像是 [Grunt](http://gruntjs.com/)、Gulp 這類的 Task Runner 不但可以提昇效率，也可以更方便管理這些任務。由於 Gulp 是透過 pipeline 方式來處理檔案，在使用上比起 Grunt 的方式方便許多，所以這邊我們主要討論的是 Gulp
+- `Gulp` 是一個前端任務工具自動化管理工具。隨著前端工程的發展（Task Runner），我們在開發前端應用程式時有許多工作是必須重複進行，例如：打包文件、uglify、將 LESS 轉譯成一般的 CSS 的檔案，轉譯 ES6 語法等工作。若是使用一般手動的方式，往往會造成效率的低下，所以透過像是 [Grunt](http://gruntjs.com/)、Gulp 這類的 Task Runner 不但可以提昇效率，也可以更方便管理這些任務。由於 Gulp 是透過 pipeline 方式來處理檔案，在使用上比起 Grunt 的方式直觀許多，所以這邊我們主要討論的是 Gulp
 
 [Babelify](https://github.com/babel/babelify)
 - `Babelify` 是一個使用 Browserify 進行 Babel 轉換的外掛，你可以想成是一個翻譯機，可以將 React 中的 `JSX` 或 `ES6` 語法轉成瀏覽器相容的 `ES5` 語法
