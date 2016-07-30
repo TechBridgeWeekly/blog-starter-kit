@@ -1,6 +1,6 @@
 ---
 title: 一看就懂的 React 開發環境建置與 Webpack 入門教學
-date: 2016-07-20 23:26:00
+date: 2016-07-30 23:26:00
 tags: React, React Native, ES5, ES6, ES7, JavaScript, ECMAScript2015, Webpack, Browserify, CommonJS, UMD, ES6 Module, CMD
 author: kdchang
 ---
