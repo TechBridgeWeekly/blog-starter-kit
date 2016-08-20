@@ -1,5 +1,5 @@
 ---
-title: d3v4-pokemon-weaknesses
+title: 用 D3.js v4 看 Pokemon 屬性表
 date: 2016-08-20 22:11:52
 tags: d3, pokemon
 ---
