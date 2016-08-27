@@ -1,6 +1,6 @@
 ---
-title: 一看就懂的 React Redux Sever Rendering（Isomorphic）入門教學
-date: 2016-07-30 23:26:00
+title: 一看就懂的 React Sever Rendering（Isomorphic）入門教學
+date: 2016-08-27 23:26:00
 tags: React, Redux, Server Rendering, Isomorphic, JavaScript, Node, Express, Universal JavaScript, 
 author: kdchang
 ---
@@ -12,8 +12,7 @@ author: kdchang
 
 根據 [Isomorphic JavaScript](http://isomorphic.net/) 這個網站的說明：
 
->Isomorphic JavaScript
-Isomorphic JavaScript apps are JavaScript applications that can run both client-side and server-side.
+>Isomorphic JavaScript apps are JavaScript applications that can run both client-side and server-side.
 The backend and frontend share the same code. 
 
 Isomorphic JavaScript 係指瀏覽器端和伺服器端共用 JavaScript 的程式碼。
@@ -74,7 +73,7 @@ ReactDOMServer.renderToString(<HelloButton name="Mark" />);
 
 ## 專案成果截圖
 
-![React Redux Sever Rendering（Isomorphic）入門](./images/react-server-rendering-demo.png "React Redux Sever Rendering（Isomorphic）入門")
+![React Redux Sever Rendering（Isomorphic）入門](/img/kdchang/react-server-rendering-demo.png "React Redux Sever Rendering（Isomorphic）入門")
 
 ## 環境安裝與設定
 1. 安裝 Node 和 NPM
@@ -169,7 +168,7 @@ ReactDOMServer.renderToString(<HelloButton name="Mark" />);
 
 先看一下我們整個專案的資料結構，我們把整個專案分成三個主要的資料夾（`client`、`server`，還有共用程式碼的 `common`）：
 
-![React Redux Sever Rendering（Isomorphic）入門](./images/react-server-rendering-folder.png "React Redux Sever Rendering（Isomorphic）入門")
+![React Redux Sever Rendering（Isomorphic）入門](/img/kdchang/react-server-rendering-folder.png "React Redux Sever Rendering（Isomorphic）入門")
 
 ## 動手實作
 
@@ -447,10 +446,10 @@ export default connect(
 
 若一切順利，在終端機打上 `$ npm start`，你將可以在瀏覽器的 `http://localhost:3000` 看到自己的成果！
 
-![React Redux Sever Rendering（Isomorphic）入門](./images/react-server-rendering-demo.png "React Redux Sever Rendering（Isomorphic）入門")
+![React Redux Sever Rendering（Isomorphic）入門](/img/kdchang/react-server-rendering-demo.png "React Redux Sever Rendering（Isomorphic）入門")
 
 ## 總結
-本章闡述了 Web 頁面瀏覽的進程和 Isomorphic JavaScript 的優勢，並介紹了如何使用 React Redux 進行 Server Side Rendering 的應用程式設計。若想參考更進一步資料可以參考 [《從零開始學 ReactJS》](https://github.com/kdchang/reactjs101)，相關範例程式碼可以[參考這裡]()，若有任何問題或建議歡迎一起學習討論：）
+本章闡述了 Web 頁面瀏覽的進程和 Isomorphic JavaScript 的優勢，並介紹了如何使用 React Redux 進行 Server Side Rendering 的應用程式設計。若想參考更進一步資料可以參考筆者撰寫的 React 入門教學書 [《從零開始學 ReactJS》](https://github.com/kdchang/reactjs101)，相關範例程式碼可以[參考這裡](https://github.com/kdchang/reactjs101/tree/master/Ch10/react-redux-server-rendering)，若有任何問題或建議歡迎一起學習討論：）
 
 ## 延伸閱讀
 1. [DavidWells/isomorphic-react-example](https://github.com/DavidWells/isomorphic-react-example)
