@@ -485,4 +485,5 @@ var link = function(height = 50, color = 'red') {
 11. [從零開始學 React（ReactJS 101）](https://www.gitbook.com/book/kdchang/react101/details)
 
 關於作者：
-[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & iOS/Android lover. Keep Shipping Cool Mobile/IoT App & Web App.:)
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
