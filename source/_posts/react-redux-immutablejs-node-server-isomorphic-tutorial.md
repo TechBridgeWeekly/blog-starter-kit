@@ -1,7 +1,7 @@
 ---
-title: 一看就懂的 React Server Rendering（Isomorphic）入門教學
+title: 一看就懂的 React Server Rendering（Isomorphic JavaScript）入門教學
 date: 2016-08-27 23:26:00
-tags: React, Redux, Server Rendering, Isomorphic, JavaScript, Node, Express, Universal JavaScript, 
+tags: React, Redux, Server Rendering, Isomorphic, JavaScript, Node, Express, Universal JavaScript, Isomorphic JavaScript
 author: kdchang
 ---
 
