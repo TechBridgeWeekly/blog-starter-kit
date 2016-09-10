@@ -866,7 +866,7 @@ $ react-native run-android
 ![用 React Native + Firebase 開發跨平台行動應用程式](/img/kdchang/firebase-database-2.png)
 
 ## 總結
-恭喜你！你已經完成了你的第一個 React Native App，若你希望將你開發的應用程式簽章後上架，請參考[官方的說明文件](https://facebook.github.io/react-native/docs/signed-apk-android.html)，當你完成簽章打包等流程後，我們可以獲得 .apk 檔，這時就可以上架到市集讓隔壁班心儀的女生，啊不是，是廣大的 Android 使用者使用你的 App 啦！完整程式碼請[參考這裡](https://github.com/kdchang/reactjs101/tree/master/Appendix02)。原文連載於 [從零開始學 ReactJS](https://github.com/kdchang/reactjs101)。
+恭喜你！你已經完成了你的第一個 React Native App，若你希望將你開發的應用程式簽章後上架，請參考[官方的說明文件](https://facebook.github.io/react-native/docs/signed-apk-android.html)，當你完成簽章打包等流程後，我們可以獲得 .apk 檔，這時就可以上架到市集讓隔壁班心儀的女生，啊不是，是廣大的 Android 使用者使用你的 App 啦！當然，由於我們的程式碼可以 100% 共用於 iOS 和 Android 端，所以你也可以同步上架到 Apple Store！完整程式碼請[參考這裡](https://github.com/kdchang/reactjs101/tree/master/Appendix02)。原文連載於 [從零開始學 ReactJS](https://github.com/kdchang/reactjs101)。
 
 ## 延伸閱讀
 1. [React Native 官方網站](https://facebook.github.io/react-native/)
