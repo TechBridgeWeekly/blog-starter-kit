@@ -113,8 +113,8 @@ const students[2] = 'Woz';
 列印出結果：
 
 ```javascript
-	for(let i; i < students.length; i++) {
-		for(let j; j < students[j].length; j++) {
+	for(let i = 0; i < students.length; i++) {
+		for(let j = 0; j < students[i].length; j++) {
 			console.log(students[i][j]);
 		}
 	}
