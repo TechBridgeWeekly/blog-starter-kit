@@ -230,7 +230,13 @@ const render = (data) => {
 
 `line 8 ~ line 26` 定義了兩個 method: secondArc 和 minuteArc，分別用來將傳入的資料依據其所設定的 `innerRadius` 、 `outerRadius` 、 `startAngle` 與 `endAngle` 來繪製成弧形。 `d3.arc()` 在 d3 v4 中屬於 [d3-shape](https://github.com/d3/d3-shape) 的一環。
 
+![d3-arc](/img/arvinh/d3-arc.png)
+
 在 `endAngle()` 中，我們將接收到的參數（也就是傳入的資料）放入我們先前定義好的 `scaleSecs()` 與 `scaleMins()` 中，讓 `d3.arc()` 能接收到我們映射過後的值，進而繪出正確的 scale。
+
+我們讓秒針的 startAngle 與 endAngle 設定為一樣，以呈現 針 的狀態。而 分鐘區塊 則讓其 startAngle 固定為 0，只在 endAngle 中傳入每次更新的時間，如此一來，每次時間更新時，區塊會隨之改變大小！
+
+此外，這邊的innerRadius 都設為 0，讓其等同於圓中心，才能產生扇形。
 
 `line 28 ~ line 56` ： 還記得最一開始我們有將最外層的 svg 指定給變數 clockGroup 嗎？
 ```js
