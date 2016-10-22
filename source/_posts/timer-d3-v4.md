@@ -253,7 +253,7 @@ let clockGroup = vis.append("svg:g")
     .append("svg:path")
 ```
 
-在最後一段裡面，利用 `clockGroup.selectAll(".clockhand")` 我們把資料 import 到擁有 `.clockhand` 這個 classname 的 `svg:path` 底下，透過設置 `svg:path` 的 attribute `d`來繪製 秒針 與 分鍾區塊。
+在最後一段裡面，利用 `clockGroup.selectAll(".clockhand")` 我們把資料 import 到擁有 `.clockhand` 這個 classname 的 `svg:path` 底下，透過設置 `svg:path` 的 attribute `d`來繪製 秒針 與 分鍾區塊（利用先前提到的 `secondArc()` 與 `minuteArc()` ）。
 
 `attr()` 函式可以接受 `callback`，所以我們可以根據資料的不同來設定不同的 style，讓秒針與分鍾區塊做個分別。
 
