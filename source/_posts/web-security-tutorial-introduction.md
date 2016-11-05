@@ -9,7 +9,7 @@ author: kdchang
 ![Web 資訊安全（Security）簡明入門教學指南](/img/kdchang/website-security.jpg "Web 資訊安全（Security）簡明入門教學指南")
 
 # 前言
-隨著越來越多的服務和資料連上網路，Web 資訊安全已經是 Web 開發中一個重要的環節，然而許多開發者往往希望專注在應用程式的研發，而忽略了資訊安全的重要性。不過若是沒有嚴謹地考慮資訊安全的問題，等到事情發生後反而會造成更嚴重的財務和名譽上的損失。本文希望整理一些 Web 常見資訊安全（Security）的議題和學習資源和讀者一起教學相長，成為一個好的白帽駭客（White Hat Hacker）。
+隨著越來越多的服務和資料連上網路，Web 資訊安全已經是 Web 開發中一個重要的環節，然而許多開發者往往希望專注在應用程式的研發，而忽略了資訊安全的重要性。不過若是沒有嚴謹地考慮資訊安全的問題，等到事情發生後反而會造成更嚴重的財務和名譽上的損失。本文希望整理一些 Web 常見資訊安全（Security）的議題和學習資源和讀者一起教學相長，下次建構網路服務時可以更留心 Web 的資訊安全，甚至努力成為一個好的白帽駭客（White Hat Hacker）。
 
 # 常見 Web 資訊安全（Security）議題
 一般而言 Web 資訊安全（Security）需要符合三點安全要素：
@@ -147,3 +147,6 @@ author: kdchang
 5. [FallibleInc/security-guide-for-developers](https://github.com/FallibleInc/security-guide-for-developers/blob/master/security-checklist.md)
 6. [[資訊安全]防範Cross-Site-Scripting(XSS)](https://dotblogs.com.tw/jimmyyu/2009/08/16/10098)
 7. [網站防範XSS攻擊的關鍵思考](http://www.ithome.com.tw/node/66888)
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
