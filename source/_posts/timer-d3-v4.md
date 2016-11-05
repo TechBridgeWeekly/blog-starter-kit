@@ -2,6 +2,7 @@
 title: 詳解簡易 Timer 來學習 D3
 date: 2016-10-22 16:46:48
 tags: d3, timer, pomodoro
+author: arvinh
 ---
 
 **The Pomodoro Technique** 是一個簡易又廣為人知的時間管理方法，其主軸在於將工作時段切割成多個**蕃茄時間**，每個蕃茄時間包含：
