@@ -6,7 +6,7 @@ tags: Web, Security
 author: kdchang
 ---
 
-![Web 資訊安全（Security）簡明入門教學指南](/img/kdchang/web-security.jpg "Web 資訊安全（Security）簡明入門教學指南")
+![Web 資訊安全（Security）簡明入門教學指南](/img/kdchang/website-security.jpg "Web 資訊安全（Security）簡明入門教學指南")
 
 # 前言
 隨著越來越多的服務和資料連上網路，Web 資訊安全已經是 Web 開發中一個重要的環節，然而許多開發者往往希望專注在應用程式的研發，而忽略了資訊安全的重要性。不過若是沒有嚴謹地考慮資訊安全的問題，等到事情發生後反而會造成更嚴重的財務和名譽上的損失。本文希望整理一些 Web 常見資訊安全（Security）的議題和學習資源和讀者一起教學相長，成為一個好的白帽駭客（White Hat Hacker）。
