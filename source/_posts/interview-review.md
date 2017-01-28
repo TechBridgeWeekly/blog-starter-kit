@@ -244,7 +244,7 @@ var a = {
 a.test = a;
 ```
 
-有些 library 提供的 depp clone 函式，碰到這個 case 一樣也會掛掉。但在面試的時候這個 case 我依舊解不掉，需要再花點時間想想。
+有些 library 提供的 deep clone 函式，碰到這個 case 一樣也會掛掉。但在面試的時候這個 case 我依舊解不掉，需要再花點時間想想。
 
 ### 第四題
 寫一個 closure（什麼樣子的都可以）  
