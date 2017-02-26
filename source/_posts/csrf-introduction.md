@@ -5,7 +5,11 @@ tags: csrf, security
 author: huli
 ---
 
+Update:
+經過朋友指出文章中缺漏的地方，於 2/26 早上新增一段講 SameSite Cookie 的段落。感謝 shik 的提點。
+
 ## 前言
+
 最近剛好碰到一些 CSRF 的案例，趁著這次機會好好研究了一下。深入研究之後才發現這個攻擊其實滿可怕的，因為很容易忽略它。但幸好現在有些 Framework 都有內建防禦 CSRF 的功能，可以很簡單的開啟。
 
 但儘管如此，我認為還是有必要瞭解一下 CSRF 到底在幹嘛，是透過怎樣的手段攻擊，以及該如何防禦。就讓我們先來簡單的介紹一下它吧！
@@ -231,11 +235,75 @@ xsrfHeaderName: 'X-XSRF-TOKEN', // default
 
 那為什麼由 client 來生這個 token 也可以呢？因為這個 token 本身的目的其實不包含任何資訊，只是為了「不讓攻擊者」猜出而已，所以由 client 還是由 server 來生成都是一樣的，只要確保不被猜出來即可。Double Submit Cookie 靠的核心概念是：「攻擊者的沒辦法讀寫目標網站的 cookie，所以 request 的 csrf token 會跟 cookie 內的不一樣」
 
+### browser 本身的防禦
+
+我們剛剛提到了使用者自己可以做的事、網頁前後端可以做的事情，那瀏覽器呢？之所以能成立 CSRF，是因為瀏覽器的機制所導致的，有沒有可能從瀏覽器方面下手，來解決這個問題呢？
+
+有！而且已經有了。而且啟用的方法非常非常簡單。
+
+Google 在 Chrome 51 版的時候正式加入了這個功能：[SameSite cookie](https://www.chromestatus.com/feature/4672634709082112)，對詳細運行原理有興趣的可參考：[draft-west-first-party-cookies-07](https://tools.ietf.org/html/draft-west-first-party-cookies-07)。
+
+先引一下 Google 的說明：
+
+> Same-site cookies (née "First-Party-Only" (née "First-Party")) allow servers to mitigate the risk of CSRF and information leakage attacks by asserting that a particular cookie should only be sent with requests initiated from the same registrable domain.
+
+啟用這個功能有多簡單？超級無敵簡單。
+
+你原本設置 Cookie 的 header 長這樣：
+
+```
+Set-Cookie: session_id=ewfewjf23o1;
+```
+
+你只要在後面多加一個 `SameSite` 就好：
+
+```
+Set-Cookie: session_id=ewfewjf23o1; SameSite
+```
+
+但其實 `SameSite` 有兩種模式，`Lax`跟`Strict`，默認是後者，你也可以自己指定模式：
+
+```
+Set-Cookie: session_id=ewfewjf23o1; SameSite=Strict
+Set-Cookie: foo=bar; SameSite=Lax
+```
+
+我們先來談談默認的 `Strict`模式，當你加上 `SameSite` 這個關鍵字之後，就代表說「我這個 cookie 只允許 same site 使用，不應該在任何的 cross site request 被加上去」。
+
+意思就是你加上去之後，我們上面所講的`<a href="">`, `<form>`, `new XMLHttpRequest`，只要是瀏覽器驗證不是在同一個 site 底下發出的 request，全部都不會帶上這個 cookie。
+
+可是這樣其實會有個問題，連`<a href="..."`都不會帶上 cookie 的話，當我從 Google 搜尋結果或者是朋友貼給我的連結點進某個網站的時候，因為不會帶 cookie 的關係，所以那個網站就會變成是登出狀態。這樣子的使用者體驗非常不好。
+
+有兩種解法，第一種是跟 Amazon 一樣，準備兩組不同的 cookie，第一組是讓你維持登入狀態，第二組則是做一些敏感操作的時候會需要用到的（例如說購買、設定帳戶等等）。第一組不設定 `SameSite`，所以無論你從哪邊來，都會是登入狀態。但攻擊者就算有第一組 cookie 也不能幹嘛，因為不能做任何操作。第二組因為設定了 `SameSite` 的緣故，所以完全避免掉 CSRF。
+
+但這樣子還是有點小麻煩，所以你可以考慮第二種，就是調整為 `SameSite` 的另一種模式：`Lax`。
+
+Lax 模式放寬了一些限制，例如說`<a>`, `<link rel="prerender">`, `<form method="GET">` 這些都還是會帶上 cookie。但是 POST 方法 的 form，或是只要是 POST, PUT, DELETE 這些方法，就不會帶上 cookie。
+
+所以一方面你可以保有彈性，讓使用者從其他網站連進你的網站時還能夠維持登入狀態，一方面也可以防止掉 CSRF 攻擊。但 `Lax` 模式之下就沒辦法擋掉 GET 形式的 CSRF，這點要特別注意一下。
+
+講到這種比較新的東西，相信大家一定都很想知道瀏覽器的支援度如何，[caniuse](http://caniuse.com/#search=samesite) 告訴我們說：目前只有 Chrome 支援這個新的特性（畢竟是 Google 自己推的方案，自己當然要支持一下）。
+
+雖然瀏覽器的支援度不太高，但日後其他瀏覽器可能也會跟進實做這個方案，不妨在現在就把 `SameSite` 加上去，以後就不用再為 CSRF 煩惱了。
+
+我其實只是大略的介紹一下，[draft-west-first-party-cookies-07](https://tools.ietf.org/html/draft-west-first-party-cookies-07) 裡面講到很多細節，例如說到底怎樣算是 cross site? 一定要在同一個 domain 嗎？那 sub domain 行不行？
+
+好奇的可以自己研究一下，或者是這篇：[SameSite Cookie，防止 CSRF 攻击](http://www.cnblogs.com/ziyunfei/p/5637945.html)也有提到。
+
+SameSite 相關的參考資料：
+1. [Preventing CSRF with the same-site cookie attribute](https://www.sjoerdlangkemper.nl/2016/04/14/preventing-csrf-with-samesite-cookie-attribute/)
+2. [再见，CSRF：讲解set-cookie中的SameSite属性](http://bobao.360.cn/learning/detail/2844.html)
+3. [SameSite Cookie，防止 CSRF 攻击](http://www.cnblogs.com/ziyunfei/p/5637945.html)
+4. [SameSite——防御 CSRF & XSSI 新机制](https://rlilyyy.github.io/2016/07/10/SameSite-Cookie%E2%80%94%E2%80%94%E9%98%B2%E5%BE%A1-CSRF-XSSI/)
+5. [Cross-Site Request Forgery is dead!](https://scotthelme.co.uk/csrf-is-dead/)
+
 ## 總結
 
 這篇主要介紹了 CSRF 的攻擊原理以及兩種防禦方法，針對比較常見的場景做介紹。一般在做網頁開發的時候，比起 XSS，CSRF 是一個比較常被忽略的重點。在網頁上有任何比較重要的操作時，都要特別留意是否有被 CSRF 的風險。
 
 這次找了很多參考資料，但發現跟 CSRF 有關的文章其實都大同小異，想知道更細節的地方需要花很多的心力去找，但幸好 Stackoverflow 上面也有不少資料可以參考。因為我在資訊安全這塊沒有涉獵太多，如果文章有哪部分講錯的話，還麻煩各位在留言不吝指出。
+
+也感謝我朋友 shik 的指點，告訴我有 SameSite 這麼一個東西，讓我補上最後一段。
 
 希望這篇文章能讓大家對 CSRF 有更全面的認識。
 
