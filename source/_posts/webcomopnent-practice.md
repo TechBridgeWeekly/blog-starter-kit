@@ -289,7 +289,7 @@ Inline Demo：
 
 當然這也只是我的猜測，若有讀者了解原因請不吝指教！
 
-在試著整合 React 的過程中也有發現，babel 再處理 extends HTMLElement 的元件上有些衝突，需要透過 [babel-plugin-transform-custom-element-classes](https://github.com/github/babel-plugin-transform-custom-element-classes) 來解，不過沒有真正試過，畢竟我會希望 webcomponent 是獨立的，
+在試著整合 React 的過程中也有發現，babel 在處理 extends HTMLElement 的元件上有些衝突，需要透過 [babel-plugin-transform-custom-element-classes](https://github.com/github/babel-plugin-transform-custom-element-classes) 來解，不過沒有真正試過，畢竟我會希望 webcomponent 是獨立的，
 不需要跟 React 一起經過 babel 的 compile，而在支援 webcomponent 的 browser 上，理論上也不需要 babel 編譯 es6 的 code 才對...
 
 ## 結論
