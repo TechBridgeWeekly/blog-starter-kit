@@ -17,14 +17,16 @@ author: huli
 
 像是語法錯誤那種顯而易見的就不用說了，除此之外你可能會答說：寫完全不同 domain 的 Cookie。例如說你的網頁在 `http://a.com` 卻硬要寫 `http://b.com` 的 Cookie，這種情形當然寫不進去。
 
-或者，你可能會回答：不在 https 底下卻想加上 `Secure` flag 的 Cookie。  
-沒錯，像是這種情形也會寫不進去。那你還能想到什麼嗎？
+或者，你可能會回答：不在 https 卻想加上 `Secure` flag 的 Cookie。  
+沒錯，像是這種情形也會寫不進去。
+
+除了這些，你還能想到什麼嗎？
 
 如果想不太到，那就聽我娓娓道來吧！
 
 ## 悲劇的開始
 
-在一個月前我寫了一篇跟 CSRF 有關的文章（[讓我們來談談 CSRF](http://blog.techbridge.cc/2017/02/25/csrf-introduction/)），正是因為工作上需要實作 CSRF 的防禦，所以趁機研究了一下。簡單來說，就是要在 Cookie 設置一個 `csrftoken`，還不知道 CSRF 是什麼的可以參考那篇文章。
+在一個月前我寫了一篇跟 CSRF 有關的文章（[讓我們來談談 CSRF](http://blog.techbridge.cc/2017/02/25/csrf-introduction/)），正是因為工作上需要實作 CSRF 的防禦，所以趁機研究了一下。簡單來說，就是要在 Cookie 設置一個 `csrftoken`。
 
 可是那天我卻發現，我怎麼寫都寫不進去。
 
@@ -34,15 +36,15 @@ author: huli
 document.cookie = "csrftoken=11111111; expires=Wed, 29 Mar 2020 10:03:33 GMT; domain=.huli.com; path=/"
 ```
 
-我就只是想對`.huli.com`寫一個名稱是`csrftoken`的 Cookie。
+我就只是想對`.huli.com`寫一個名稱是`csrftoken`的 Cookie。而我碰到的問題，就是怎麼寫都寫不進去。
 
-這段語法完全沒有問題，我檢查過好幾遍了，但就是不知道為什麼寫不進去，我們開頭講的那幾種 case 這邊都完全沒碰到。這只是一個簡單的 http 網站，而且是寫自己 domain 的 Cookie，怎麼會寫不進去？
+這段語法完全沒有問題，我檢查過好幾遍了，但就是不知道為什麼寫不進去。我們開頭講的那幾種 case 這邊都完全沒碰到。這只是一個簡單的 http 網站，而且是寫自己 domain 的 Cookie，怎麼會寫不進去？
 
 剛開始碰到這情形，我還想說會不會是我電腦的靈異現象，在其他人的電腦上就好了，就暫時沒有管它，直到有一天 PM 跟我說：「咦，這個頁面怎麼壞了？」，我仔細檢查後才發現是因為他也寫不進去這個 Cookie，導致 server 沒有收到 `csrftoken` 而驗證失敗。
 
 好了，看來現在已經確認不是我電腦上的問題了，而是大家都會這樣。可是，卻有其他人是正常的。其他人都可以，但就只有我跟 PM 兩個人不行。
 
-幸好見過小風小浪的我知道，每次碰到這種詭異的問題，先開無痕式視窗再說，至少可以知道你的瀏覽器不會被其他因素給干擾。打開無痕模式之後發現，可以了，可以設定 Cookie 了。就只有在 Chrome 瀏覽器的時候不行設定，但是開無痕瀏覽模式卻可以。
+幸好見過小風小浪的我知道，每次碰到這種詭異的問題，先開無痕模式再說，至少可以知道你的瀏覽器不會被其他因素給干擾。打開無痕模式之後發現，可以了，可以設定 Cookie 了。在一般情況下不行設定，但是開無痕瀏覽模式卻可以。
 
 這就真的很奇怪了，到底為什麼不行呢？而且若是我把 Cookie 換了一個名字，叫做`csrftoken2`，就可以寫入了！就唯獨`csrftoken`這個名稱不行，可是 Cookie 總不可能有保留字這種東西吧！就算真的有，`csrftoken`也絕對不會是保留字。
 
@@ -56,7 +58,7 @@ document.cookie = "csrftoken=11111111; expires=Wed, 29 Mar 2020 10:03:33 GMT; do
 
 最後不知道哪來的靈感，我就去 Chrome 的設定那邊檢視所有 `huli.com` 的 Cookie，並且一個一個看過之後刪掉。刪完之後，就可以正常寫入 Cookie 了。
 
-其實還滿合理的啦，畢竟無痕模式可以就代表是以前做的一些事情會影響到寫 Cookie 這件事，再經由刪除 Cookie 就可以確認問題一定是出在其他有關的 Domain 身上，推測是其他 Domain 做了一些事情，才會造成 `http://test.huli.com` 沒辦法寫入 Cookie。
+仔細想想其實還滿合理的，畢竟無痕模式可以，就代表是以前做的一些事情會影響到寫 Cookie 這件事，再經由刪除 Cookie 就可以確認問題一定是出在其他有關的 Domain 身上，推測是其他 Domain 做了一些事情，才會造成 `http://test.huli.com` 沒辦法寫入 Cookie。
 
 後來我回想起剛剛刪掉的那幾個 Cookie，發現存在一個也叫做`csrftoken`的同名 cookie。
 
@@ -76,11 +78,11 @@ document.cookie = "csrftoken=11111111; expires=Wed, 29 Mar 2020 10:03:33 GMT; do
 
 看來答案很明顯了，那就是：
 
-> 只要`.admin.huli.com`的那個同名 Cookie 存在，`http://test.huli.com`就沒辦法寫入同名的 Cookie。
+> 只要`.admin.huli.com`的那個同名 Cookie 存在，`http://test.huli.com`就沒辦法對`.huli.com`寫入同名的 Cookie。
 
 解法其實到這邊就很明顯了，第一個是改一個 Cookie 名稱，第二個是改一個 Domain。
 
-有關於第二個解法，還記得我們在 `http://test.huli.com` 是寫入 `.huli.com` 這個 Domain 的 Cookie 嗎？只要改成寫入 `.test.huli.com` 的 Cookie，一樣可以正常運作。
+有關於第二個解法，還記得我們在 `http://test.huli.com` 是寫入 `.huli.com` 這個 Domain 的 Cookie 嗎？只要改成寫入 `.test.huli.com` 這個 Domain，一樣可以正常運作。
 
 所以若是講得更詳細一點，這個寫不進去 Cookie 的問題就發生在：
 
@@ -149,7 +151,7 @@ spelled out in some detail in [COOKIE-INTEGRITY].
 ```
 附註中的參考資料是這個：[Cookies Lack Integrity: Real-World Implications](https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/zheng)，裡面有附一段二十幾分鐘的影片，可以看一看，看完之後就會知道為什麼不能寫入了。
 
-如果你還沒看，這邊可以幫大家做一個總結，要知道為什麼剛開始那個 case 不能寫入 Cookie，可以先想想看如果可以寫入，會發生什麼事情。
+如果你還沒看，這邊可以幫大家做一個總結。要知道為什麼剛開始那個 case 不能寫入 Cookie，可以先想想看如果可以寫入，會發生什麼事情。
 
 假如 `http://test.huli.com` 成功寫入 `.huli.com` 的 `csrftoken` 這個 cookie 的話，對 `http://test.huli.com` 似乎沒什麼影響，就多帶一個 Cookie 上去，看起來合情合理。
 
