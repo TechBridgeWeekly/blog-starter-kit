@@ -33,7 +33,7 @@ Direct method 是直接根據 pixel 值來計算相機姿態，這個方法要�
 
 ![reprojection_err_vs_photometric_error](/img/pojenlai/lsd-slam-2-2.JPG)
 
-在世界中的一點 $p_i$，會投影在兩個時刻 ($k-1$ 與 $k$) 相機拍到的畫面上，形成 $u_i$ 以及 $u'_i$，我們要做的事情，就變成找出讓 $$\sum_{i} || I_k(u'_i)-I_k(u'_i)||^2 $$  最小的 Transform - $T_k,k-1$。
+在世界中的一點 $p_i$，會投影在兩個時刻 ($k-1$ 與 $k$) 相機拍到的畫面上，形成 $u_i$ 以及 $u'_i$，我們要做的事情，就變成找出讓 $ \sum_{i} || I_k(u\prime_i)-I_k-1(u_i)||^2 \ $  最小的 Transform - $T_k,k-1$。
 
 於是我們得到了一個可以被最佳化的東西，稱為 Photometric error，有了這個 error，我們就知道寫程式的時候要優化的值是什麼、什麼叫做好的 pose estimation，也才有機會進行下一步。
 
