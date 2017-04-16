@@ -92,4 +92,4 @@ A要傳給B之前，把要傳的內容，先用B的公鑰加密再用A的私鑰�
 密碼學跟我們生活息息相關，下一篇會講最常用的例子 HTTPS 。
 
 關於作者：
-[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近覺得 Anti pattern 比 Design pattern 有趣
+[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近覺得 Anti pattern 比 Design pattern 有趣。
