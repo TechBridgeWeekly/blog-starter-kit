@@ -69,7 +69,7 @@ A 要傳給 B 之前，把要傳的內容，先用 B 的公鑰加密再用 A 的
 
 1. 在一開始 A 要傳送 A 的公鑰給 B 的時候，要是被 C 攔截，C 就可以爽拿 A 的公鑰。然後呢？自己再生個公私鑰 pair，把 C 的公鑰 1 給 B，跟他說這是 A 的公鑰。
 ![Alt text](/img/jyt0532/cryptography-step1.png)
-2. 在一開始 B 要傳送 B 的公鑰給 A 的時候，要是被 C 攔截，C 就可以爽拿 B 的公鑰。然後呢？自己再生另一個公私鑰 pair ，把 C 的公鑰 2 給 A，跟他說這是 B 的公鑰。
+2. 在一開始 B 要傳送 B 的公鑰給 A 的時候，要是被 C 攔截，C 就可以爽拿 B 的公鑰。然後呢？自己再生另一個公私鑰 pair，把 C 的公鑰 2 給 A，跟他說這是 B 的公鑰。
 ![Alt text](/img/jyt0532/cryptography-step2.png)
 3. A 和 B 以為拿著對方的公鑰。
 ![Alt text](/img/jyt0532/cryptography-step3.png)
