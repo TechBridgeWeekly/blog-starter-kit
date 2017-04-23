@@ -45,13 +45,13 @@ function Person(name, age) {
   this.age = age;
 }
   
-var nick = new Persone('nick', 18);
-var peter = new Persone('peter', 18);
+var nick = new Person('nick', 18);
+var peter = new Person('peter', 18);
 ```
 
 就如同上面講到的一樣，`Person`就是一個構造函數，可以用`new`這個關鍵字 new 出一個 instance 來。
 
-如果你只看下面宣告 nick 那一行（`var nick = new Persone('nick', 18);`），語法是不是跟你在寫 Java 的時候有 87 分像？除此之外，你也可以幫`Person`加入一些方法。
+如果你只看下面宣告 nick 那一行（`var nick = new Person('nick', 18);`），語法是不是跟你在寫 Java 的時候有 87 分像？除此之外，你也可以幫`Person`加入一些方法。
 
 ``` js
 function Person(name, age) {
