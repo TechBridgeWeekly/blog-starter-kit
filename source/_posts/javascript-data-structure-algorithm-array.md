@@ -323,4 +323,4 @@ const students[2] = 'Woz';
 （image via [speakingcs](http://2.bp.blogspot.com/-Ek2hzh7Uef8/VcseOEkfxaI/AAAAAAAAAIo/wkiGtnpZcGo/s1600/ArrayJS.JPG)、[dhananjay25](https://dhananjay25.files.wordpress.com/2012/11/image7.png)、[tooto1985](https://github.com/tooto1985/js-array-operations)）
 
 關於作者：
-[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校，目前專注在 Mobile 和 IoT 應用開發。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 

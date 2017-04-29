@@ -68,6 +68,7 @@ theme: casper
 plugins:
   hexo-generator-cname
   hexo-generator-robotstxt
+  hexo-renderer-mathjax
 
 # hexo sitemap
 sitemap:
