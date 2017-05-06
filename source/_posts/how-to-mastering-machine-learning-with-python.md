@@ -114,3 +114,5 @@ author: kdchang
 11. [Using Python and R together: 3 main approaches](http://www.kdnuggets.com/2015/12/using-python-r-together.html)
 12. [机器学习最佳入门学习资源](http://blog.csdn.net/shadow_mi/article/details/51829389)
 13. [机器学习(Machine Learning)&深度学习(Deep Learning)资料(Chapter 1)](https://github.com/ty4z2008/Qix/blob/master/dl.md)
+
+（image via [respondr](http://respondr.io/wp-content/uploads/2016/03/machine_learning-1024x724.jpg)）
