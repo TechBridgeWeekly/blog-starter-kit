@@ -167,7 +167,8 @@ Access control 也就是每個檔案的存取權限設定好，或是最重要�
 
 ### CSRF 解法
 
-1. 一個 request 過來前先一下他的 header，看他是不是自己網站的 header，還是 cross site 的 header。
+1. 一個 request 過來前先看一下他的 header，先看 Origin 的值跟現在這個網頁的網址或 Domain 一不一樣，沒有 Origin 值就看 Referer值。不一樣的話就很可能是CSRF。
+
 2. 對於非 get 的重要 request，要求提供驗證碼，或是重新驗證使用者。
 
 
