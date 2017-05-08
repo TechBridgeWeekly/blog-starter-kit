@@ -208,3 +208,11 @@ A3 A8: 偷偷拿你的 cookie/session 做壞事。
 A5 A9: 乖乖看 doc 乖乖更新。
 
 我認為這主題的投資報酬率實在是挺高的，因為重要的問題都是換湯不換藥，即使之後會出新的top10也大概就是這十項再交換順序。如果有幾項沒聽過，總覺得跟人家聊天搭不上話，手腳不好施展。這篇文章的都看懂就夠了，真的有需要寫 server 的時候你再去深入研究細節即可。
+
+## 延伸閱讀
+
+1. [網路安全(1) - 基礎密碼學](http://blog.techbridge.cc/2017/04/16/simple-cryptography/)
+2. [用什麼樣的密碼比較安全呢](https://www.jyt0532.com/2017/02/19/password-security/)
+
+關於作者：
+[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近覺得 Anti pattern 比 Design pattern 有趣。
