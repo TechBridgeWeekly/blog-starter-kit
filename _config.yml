@@ -69,6 +69,7 @@ plugins:
   hexo-generator-cname
   hexo-generator-robotstxt
   hexo-renderer-mathjax
+  hexo-math
 
 # hexo sitemap
 sitemap:
