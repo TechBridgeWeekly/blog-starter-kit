@@ -139,9 +139,9 @@ chicagoStore.orderPizza("cheese");
 可是為了 reuse 工廠的 code，我們使用了繼承。
 ![Alt text](/img/jyt0532/factory3.png)
 
-現在我的 SimplePizzaFactory 其實只是一個介面，我定義了所有繼承了我的 class 應該要做什麼事(返回 customized defined pizza)，真正實際創造物件的地方是子類別的實體工廠。
+現在我的 SimplePizzaFactory 其實只是一個介面，我定義了所有繼承了我的 class 應該要做什麼事（返回 customized defined pizza），真正實際創造物件的地方是子類別的實體工廠。
 
-這兩種功能(decouple + hierarchy)同時需要的時候，我們就可以用上今天的主角。
+這兩種功能（decouple + hierarchy）同時需要的時候，我們就可以用上今天的主角。
 
 ### 工廠方法模式
 
@@ -180,7 +180,7 @@ public class NYPizzaStore extends PizzaStore {
 
 原本我物件的建立，交給一個外來的工廠處理，現在我把它交給我的子類別處理，而且父類別還可以 call子類別實作的函數。
 ![Alt text](/img/jyt0532/factory2.png)
-這種會互 call 的 function 通常依賴性都很高，但我們利用工廠模式讓父類別跟子類別的依賴鬆綁(decouple)了。
+這種會互 call 的 function 通常依賴性都很高，但我們利用工廠模式讓父類別跟子類別的依賴鬆綁（decouple）了。
 
 套用了工廠方法模式之後，怎麼點 pizza 呢？
 
@@ -195,13 +195,13 @@ Pizza pizza = nyStore.orderPizza("cheese");
 
 ![Alt text](/img/jyt0532/factory4.png)
 
-* Product(Pizza): 定義 factoryMethod(createPizza) 所造物件的介面。
+* Product（Pizza）: 定義 factoryMethod（createPizza） 所造物件的介面。
 
-* ConcreteProduct(NYStyleCheesePizza): 實作 Product。
+* ConcreteProduct（NYStyleCheesePizza）: 實作 Product。
 
-* Creator(PizzaStore): 宣告 factoryMethod(必須傳回Product)，和其他 client 可以 call 的 API。
+* Creator（PizzaStore）: 宣告 factoryMethod（必須傳回Product），和其他 client 可以 call 的 API。
 
-* ConcreteCreator(NYPizzaStore): 實作 factoryMethod，回傳 ConcreteProduct 的 instance。
+* ConcreteCreator（NYPizzaStore）: 實作 factoryMethod，回傳 ConcreteProduct 的 instance。
 
 有個小細節，其實工廠方法不一定是 abstract。也可以 Creator 就先偷偷實作 factoryMethod，回傳 Product，subclass 可以選擇要不要 override 工廠方法。
 
@@ -220,7 +220,7 @@ Client 的用法都是一樣不需要改，完全符合[開放封閉守則](http
 
 工廠方法的 factoryMethod，只能創建一個對象，比如說 Pizza 。
 
-但如果我們想要更加細分想創建的東西，比如說 Pizza 的所需原料(麵團、醬料、起司、蛤蠣)。如果我們用工廠方法的話，我們需要為每一個原料都創一個工廠。
+但如果我們想要更加細分想創建的東西，比如說 Pizza 的所需原料（麵團、醬料、起司、蛤蠣）。如果我們用工廠方法的話，我們需要為每一個原料都創一個工廠。
 
 在這個例子就是 NY 麵團工廠、NY 醬料工廠、NY 起司工廠、NY 蛤蠣工廠、Chicago 麵團工廠、Chicago 醬料工廠、Chicago 起司工廠、Chicago 蛤蠣工廠。
 
@@ -251,15 +251,15 @@ public class NYPizzaStore extends PizzaStore {
 }
 ```
 
-這樣實在是太難 maintain 了。**所以我們把相關的產品(NY 麵團工廠、NY 醬料工廠、NY 起司工廠、NY 蛤蠣工廠)組成一個產品族，交給同一個工廠來生產**，鼎鼎大名的抽象工廠就誕生了。
+這樣實在是太難 maintain 了。**所以我們把相關的產品（NY 麵團工廠、NY 醬料工廠、NY 起司工廠、NY 蛤蠣工廠）組成一個產品族，交給同一個工廠來生產**，鼎鼎大名的抽象工廠就誕生了。
 
 ![Alt text](/img/jyt0532/abstractfactory1.png)
 
 抽象的 Pizza 原料工廠定義了每個原料工廠要創建的東西的介面。
 每個繼承了 Pizza 原料工廠的具體原料工廠乖乖 implement **所有**需要創建的東西。
 
-再來些例子，如果工廠方法生產的是房子，抽象工廠可以生產一個房子的所有家具(沙發電視電風扇)。
-如果工廠方法生產的是武士，抽象工廠可以生產一個武士的所有配備(盔甲、鞋子、手套)。
+再來些例子，如果工廠方法生產的是房子，抽象工廠可以生產一個房子的所有家具（沙發電視電風扇）。
+如果工廠方法生產的是武士，抽象工廠可以生產一個武士的所有配備（盔甲、鞋子、手套）。
 
 第一眼看起來很可怕，但其實只是把工廠的責任從生產一個產品，變成生產一個產品族。
 
@@ -324,19 +324,19 @@ Pizza pizza = nyStore.orderPizza("cheese");
 
 ![Alt text](/img/jyt0532/abstractfactory3.png)
 
-* AbstractFactory(PizzaIngredientFactory): 宣告出各個創建同一產品族產品的介面。
+* AbstractFactory（PizzaIngredientFactory）: 宣告出各個創建同一產品族產品的介面。
 
-* ConcreteFactory(NYPizzaIngredientFactory): 實作 AbstractFactory。
+* ConcreteFactory（NYPizzaIngredientFactory）: 實作 AbstractFactory。
 
-* AbstractProduct(Dough): 宣告產品等級結構的物品介面。
+* AbstractProduct（Dough）: 宣告產品等級結構的物品介面。
 
-* Product(ThickCrustDough): ConcreteFactory 所建構的成品，需要實作 AbstractProduct。
+* Product（ThickCrustDough）: ConcreteFactory 所建構的成品，需要實作 AbstractProduct。
 
 ### 優缺點
 
 1.一樣區隔了每個產品的生成和使用，client 被隔離在產品的 class 之外。client 甚至不知道什麼產品被創建了。他只要知道那個產品有哪些函數可以給他 call，這個特點使得抽換具體工廠這件事變得非常容易。
 
-2.性質類似的產品集中管理(所有 NY 的原料一起管理，或是所有日式的傢俱一起管理)。今天有新的工廠要進來，他需要 implement 的 method 非常明確，照著 AbstractFactory 定義的介面實作就對了。某種程度而言也算是給 client 方便，我保證他只會用到同一個產品族的對象。
+2.性質類似的產品集中管理（所有 NY 的原料一起管理，或是所有日式的傢俱一起管理）。今天有新的工廠要進來，他需要 implement 的 method 非常明確，照著 AbstractFactory 定義的介面實作就對了。某種程度而言也算是給 client 方便，我保證他只會用到同一個產品族的對象。
 
 3.缺點非常致命，就是當**我想在產品族加一個產品**非常困難。因為我所有子工廠要跟著改，這被稱為開閉原則的傾斜性：**新增產品族容易，但新增產品結構困難**。
 
@@ -357,14 +357,14 @@ Pizza pizza = nyStore.orderPizza("cheese");
 
 ![Alt text](/img/jyt0532/abstractfactory7.png)
 
-由此圖可以看得出來，如果我們用抽象工廠來實作 pizza 店，我們只需要實作2個工廠(ChicagoPizzaIngredientFactory、NYPizzaIngredientFactory)，但如果我們用工廠方法來實作，我們需要實作8個工廠。
+由此圖可以看得出來，如果我們用抽象工廠來實作 pizza 店，我們只需要實作2個工廠（ChicagoPizzaIngredientFactory、NYPizzaIngredientFactory），但如果我們用工廠方法來實作，我們需要實作8個工廠。
 
 所以當你發現你的工廠方法們，遵循著一個產品族的 pattern，試著把這產品族分離出來寫稱抽象工廠的 interface，然後用具體工廠實現。
 這就是 **Design Pattern rule #2: Program to an interface, not an implementation**。
 
 3.退化成工廠模式
 
-如果你的抽象工廠裡定義的創建方法只有一個(只有一個產品等級結構)，那你的抽象工廠就退化成工廠方法。
+如果你的抽象工廠裡定義的創建方法只有一個（只有一個產品等級結構），那你的抽象工廠就退化成工廠方法。
 ![Alt text](/img/jyt0532/abstractfactory5.png)
 你把上圖的 Dough 改成 Pizza，就是前半段工廠方法在說的東西
 
