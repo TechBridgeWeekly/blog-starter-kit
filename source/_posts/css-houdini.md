@@ -86,7 +86,7 @@ var(--VAR_NAME)
 :root {
   --main-color: #ff00ff;
   --main-bg: rgb(200, 255, 255);
-  --block-font-size): 1rem;
+  --block-font-size: 1rem;
 }
 
 .btn__active::after{
@@ -297,6 +297,8 @@ registerPaint('simpleRect', class {
 });
 ```
 
+同理，Layout API 則是 `layoutWorklet.addModule('blockLike.js')`。
+
 **Worklets** 光名字就有點像 Web Worker 了，都是獨立於主要執行緒之外，並且不直接與 DOM 互動。你可能會想那為何還需要有一個 Worklets？
 
 因為 Houdini 是希望將開發者的程式碼 hook 到 CSS engine 中運作，而根據規範內的敘述，web worker 相對笨重，不適合用來處理 CSS engine 這種可能會牽扯到數百萬畫素圖片的工作。
@@ -392,6 +394,7 @@ Web 開發基本上就是由 HTML、JS、CSS 三大要素構成，然而 JS 與 
 3. [Deep dive CSS: font metrics, line-height and vertical-align](http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
 4. [Houdini: Maybe The Most Exciting Development In CSS You’ve Never Heard Of](https://www.smashingmagazine.com/2016/03/houdini-maybe-the-most-exciting-development-in-css-youve-never-heard-of/)
 5. [houdini-samples](https://github.com/GoogleChrome/houdini-samples)
+6. [Houdini API Draft](https://github.com/w3c/css-houdini-drafts)
 
 關於作者： 
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
