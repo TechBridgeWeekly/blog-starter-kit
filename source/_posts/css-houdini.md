@@ -15,10 +15,12 @@ author: arvinh
 這邊讓我們回想一下，瀏覽器在網頁的渲染過程中，做了哪些事情？
 
 ![Render Pipeline (source from google)](/img/arvinh/render_pipeline.png)
+*source from google*
 
 瀏覽器的 Render Pipeline 中，**JavaScript** 與 **Style** 兩個階段會解析 HTML 並為載入的 JS 與 CSS 建立 Render Tree，也就是所謂的 DOM 與 CSSOM：（對於 Render Pipeline 與 Render Tree 若不了解，可以先看看我先前的文章 [Front-end kata 60fps的快感](https://blog.arvinh.info/2016/03/26/Front-end%20kata%2060fps%E7%9A%84%E5%BF%AB%E6%84%9F/)）
 
 ![Render Tree (source from google)](/img/arvinh/RenderTree.png)
+*source from google*
 
 而就現階段的 Web 技術來看，開發者們能操作的就是透過 JS 去控制 DOM 與 CSSOM，來影響畫面的變化，但是對於接下來的 **Layout**、**Paint** 與 **Composite** 就幾乎沒有控制權了。
 
@@ -326,6 +328,7 @@ interface CSSStyleValue {
 ```
 
 你可以如下操作 CSS style: (source from [CSS Houdini- the bridge between CSS, JavaScript and the browser](http://slides.com/malyw/houdini-codemotion#/27))
+*source from [CSS Houdini- the bridge between CSS, JavaScript and the browser*
 
 ```js
 // CSS -> JS
@@ -356,6 +359,7 @@ Font Metrics 也沒有出現在上方的 **Houdini API on render pipeline** 中�
 不同 font-family 在相同 font-size 下，所產生的 span 高度會不同。
 
 ![source from http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align](/img/arvinh/font-size.png)
+*source from http://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align*
 
 要想控制 Font metrics，也就是控制字所佔的寬高的話，目前可以先用 CSS Properties 來處理，根據已知字體的 font-metrics 動態算出我們要 apply 多少的 font-size：
 
