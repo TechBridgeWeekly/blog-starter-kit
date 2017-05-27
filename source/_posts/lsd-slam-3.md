@@ -112,4 +112,4 @@ $$\begin{equation} SE(3) = \left\{ \mathbf{T} = \left[ {\begin{array}{*{20}{c}} 
 4. [Multiple View Geometry - Lecture 3 (Prof. Daniel Cremers)](https://www.youtube.com/watch?v=khLM8VV8LuM)
 
 關於作者：
-[@pojenlai](https://pojenlai.wordpress.com/) 演算法工程師，對機器人跟電腦視覺有>少許研究，最近在鍛鍊自己的執行力
+[@pojenlai](https://pojenlai.wordpress.com/) 演算法工程師，對機器人跟電腦視覺有少許研究，最近在鍛鍊自己的執行力
