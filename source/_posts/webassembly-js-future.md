@@ -8,7 +8,7 @@ tags: Web, WASM, JavaScript
 
 時間過得很快，記得第一次聽到 WebAssembly 這個名詞是在 2015 年，小弟還在服役...當時看到的文章以聳動的標題訴說著 JavaScript 即將要被取代，各家大廠紛紛投入開發...（我就不轉貼這種文章了）害我想說是不是退役後會找不到工作...
 
-還好事實總是背離記者，WebAssembly 當然不是來取代 JavaScript 的，可以看看 [JavaScript 的發明人 Brendan Eich 怎麼說](https://brendaneich.com/2015/06/from-asm-js-to-webassembly/) 以及 [他在 Fluent conference 的 keynote](https://www.youtube.com/watch?time_continue=1108&v=aZqhRICne_M)。
+還好記者說的總是不一定對，WebAssembly 當然不是來取代 JavaScript 的，可以看看 [JavaScript 的發明人 Brendan Eich 怎麼說](https://brendaneich.com/2015/06/from-asm-js-to-webassembly/) 以及 [他在 Fluent conference 的 keynote](https://www.youtube.com/watch?time_continue=1108&v=aZqhRICne_M)。
 
 但即便知道 WebAssembly 並非要取代 JavaScript，我其實也還是一直搞不太懂身為開發者，到底要如何使用 WebAssembly，只知道它似乎讓 C/C++ 跑在 Browser 上這件事變成可行，也能大幅提升 JavaScript 的效能。
 
@@ -226,7 +226,7 @@ fetchAndInstantiateWasm('./add.wasm', {
 (module
   (type $FUNCSIG$vi (func (param i32)))
   (import "env" "consoleLog" (func $consoleLog (param i32)))
-  ++(import "lib" "log" (func $log (param i32)))++
+  ++(import "lib" "log" (func $log (param i32)))
   (table 0 anyfunc)
   (memory $0 1)
   (export "memory" (memory $0))
@@ -276,7 +276,7 @@ int add(int num1, int num2) {
 ## 現在我知道如何在 JS 與 WebAssembly 中互相使用函式了，但前面好像有提到他還能讓你操作 Memory?!
 
 前面範例中的 wast 都有將 memory export 出來：`(export "memory" (memory $0))`
-我們可以利用前面提及的 JavaScript Typed Array 來取得 memory buffer，並利用 TextDecoder 這個較新的 Web API 來解碼：
+我們可以利用前面提及的 JavaScript Typed Array 來取得 memory buffer，並利用 [TextDecoder](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder) 這個較新的 Web API 來解碼：
 
 ```js
 const memory = wasmModule.memory;
@@ -327,7 +327,8 @@ function writeString (str, offset) {
 3. [WebAssembly Design](https://github.com/WebAssembly/design)
 4. [W3C Community Group](https://www.w3.org/community/webassembly/)
 5. [WebAssembly 系列（四）WebAssembly 工作原理](https://www.w3ctech.com/topic/2024)
-6. [Get Started Using WebAssembly (wasm)](https://egghead.io/courses/get-started-using-webassembly-wasm)
+6. [guybedford/wasm-intro](https://github.com/guybedford/wasm-intro)
+7. [guybedford/wasm-demo](https://github.com/guybedford/wasm-demo))
 
 關於作者： 
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
