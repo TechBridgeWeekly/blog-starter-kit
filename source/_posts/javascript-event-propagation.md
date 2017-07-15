@@ -49,7 +49,7 @@ DOM 畫成圖大概是長這樣：
 要幫一個 DOM 加上 click 的事件，你會這樣寫：
 
 ``` js
-const list = document.getElementById('list');
+const $list = document.getElementById('list');
 $list.addEventListener('click', (e) => {
   console.log('click!');
 })
@@ -58,7 +58,7 @@ $list.addEventListener('click', (e) => {
 而這邊的`e`裡面就蘊含了許多這次事件的相關參數，其中有一個叫做`eventPhase `，是一個數字，表示這個事件在哪一個 Phase 觸發。
 
 ``` js
-const list = document.getElementById('list');
+const $list = document.getElementById('list');
 $list.addEventListener('click', (e) => {
   console.log(e.eventPhase);
 })
