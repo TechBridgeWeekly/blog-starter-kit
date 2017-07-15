@@ -1,14 +1,17 @@
 ---
-title: JavaScript 的事件傳遞機制：捕獲與冒泡
+title: DOM 的事件傳遞機制：捕獲與冒泡
 date: 2017-07-15 13:08:56
-tags: javascript, event, bubble, capture, propagation
+tags: DOM, event, bubble, capture, propagation
 author: huli
 ---
 
 # 前言
-今天為大家帶來的內容是 JavaScript 裡面的事件傳遞機制，而與這些事件相關的程式碼，相信大家應該不太陌生，就是`addEventListener`, `preventDefault`跟`stopPropagation`。
 
-簡單來說，就是事件在 JavaScript 裡面傳遞的順序，以及你可以對這些事件做什麼。
+（補充：感謝 othree 前輩的指點，指出這其實是在講 DOM 裡面事件傳遞的順序，因此把標題以及內文修正，原標題為：JavaScript 的事件傳遞機制：捕獲與冒泡）
+
+今天為大家帶來的內容是 DOM 裡面的事件傳遞機制，而與這些事件相關的程式碼，相信大家應該不太陌生，就是`addEventListener`, `preventDefault`跟`stopPropagation`。
+
+簡單來說，就是事件在 DOM 裡面傳遞的順序，以及你可以對這些事件做什麼。
 
 為什麼會有「傳遞順序」這一詞呢？假設你有一個`ul`元素，底下有很多`li`，代表不同的 item。當你點擊任何一個`li`的時候，其實你也點擊了`ul`，因為`ul`把所有的`li`都包住了。
 
@@ -42,7 +45,7 @@ DOM 畫成圖大概是長這樣：
 ![](/img/huli/event/event_p1.png)
 
 
-有了這一個簡單的 HTML 結構之後，就可以很清楚的說明 JavaScript 的事件傳遞機制了。
+有了這一個簡單的 HTML 結構之後，就可以很清楚的說明 DOM 的事件傳遞機制了。
 
 # 事件的三個 Phase
 
@@ -75,7 +78,7 @@ const unsigned short      BUBBLING_PHASE                 = 3;
 
 這三個階段，就是我們今天的重點。
 
-JavaScript 的事件在傳播時，會先從根節點開始往下傳遞到`target`，這邊你如果加上事件的話，就會處於`CAPTURING_PHASE`，捕獲階段。
+DOM 的事件在傳播時，會先從根節點開始往下傳遞到`target`，這邊你如果加上事件的話，就會處於`CAPTURING_PHASE`，捕獲階段。
 
 `target`就是你所點擊的那個目標，這時候在`target`身上所加的`eventListenr`會是`AT_TARGET`這一個 Phase。
 
@@ -413,11 +416,11 @@ window.addEventListener('click', (e) => {
 
 # 結論
 
-事件傳遞機制算是 JavaScript 眾多經典面試題裡面相對簡單很多的，只要能掌握事件傳遞的原則跟順序，其實就差不多了。
+DOM 的事件傳遞機制算是 JavaScript 眾多經典面試題裡面相對簡單很多的，只要能掌握事件傳遞的原則跟順序，其實就差不多了。
 
 而`e.preventDefault`與`e.stopPropagation`的差別在知道事件傳遞順序之後也大概能理解，前者就只是取消預設行為，跟事件傳遞沒有任何關係，後者則是讓事件不再往下傳遞。
 
-希望這篇能讓大家理解 JavaScript 的事件傳遞機制，如果有哪邊有講錯，也麻煩大家不吝指證，感謝。
+希望這篇能讓大家理解 DOM 的事件傳遞機制，如果有哪邊有講錯，也麻煩大家不吝指證，感謝。
 
 參考資料（比較推薦後面那些原文資料）：
 
