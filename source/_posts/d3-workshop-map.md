@@ -232,8 +232,7 @@ renderLine() {
       .attr('d', lineFunction(pathCoordinates))
       .attr('fill', 'none')
       .attr('stroke', 'red')
-      .attr('stroke-width', '5px')
-      .attr('className', 'linepath');
+      .attr('stroke-width', '5px');
 
     // add marker
     d3Select('svg')
