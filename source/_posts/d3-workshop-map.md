@@ -232,8 +232,7 @@ renderLine() {
       .attr('d', lineFunction(pathCoordinates))
       .attr('fill', 'none')
       .attr('stroke', 'red')
-      .attr('stroke-width', '5px')
-      .attr('className', 'linepath');
+      .attr('stroke-width', '5px');
 
     // add marker
     d3Select('svg')
@@ -351,7 +350,7 @@ self.state.typhoonPath.forEach((path) => {
       });
 ```
 
-但這邊還有個小問題，資料中，半徑的單位是 km，我要怎麼讓它轉換成 svg 中的距離呢？！我們之前的投影函式 `projection*()` 只能接受座標參數，沒辦法直接轉換距離啊！
+但這邊還有個小問題，資料中，半徑的單位是 km，我要怎麼讓它轉換成 svg 中的距離呢？！我們之前的投影函式 `projection()` 只能接受座標參數，沒辦法直接轉換距離啊！
 
 別慌張，那我們就先計算出中心點到這段半徑後的座標，在轉換成地圖上的點，接著利用國高中數學計算出距離即可！
 
@@ -366,13 +365,16 @@ distanceCalculate(pixelLocSource, [longitude, latitude], distance){
     const E = longitude + Math.abs(lon_diff);
     const pixelLoc = this.projection()([E, latitude]);
     // distance calculate
-    return Math.sqrt(Math.pow(pixelLocSource[0] - pixelLoc[0], 2) + Math.pow(pixelLocSource[1] - pixelLoc[1], 2));
+    return Math.sqrt(Math.pow(pixelLocSource[0] - pixelLoc[0], 2)
+        + Math.pow(pixelLocSource[1] - pixelLoc[1], 2));
 }
 ```
 
 取巧的點是，利用已知的經緯度距離來做運算：
     Latitude: 1 deg = 110.574 km
     Longitude: 1 deg = 111.320*cos(latitude) km
+
+`pixelLocSource` 是映射過後的中心點位置，`[longitude, latitude]` 則是中心點的原始經緯度，而 `distance` 就是我們要算的暴風半徑。
 
 （其實這是我想出來比較暴力的解法啦，歡迎知道有更簡單更好的方式映射距離的朋友告知我！非常感謝）
 
