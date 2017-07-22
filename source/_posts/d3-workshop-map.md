@@ -10,7 +10,7 @@ tags: d3, svg, map, animation
 
 想了想發現最好的替代方案就是直接用 svg 來繪製，雖然沒有辦法像 Google Map 那般詳細，但在某些應用上來說就非常足夠，效果也很好，因此今天就來紀錄一下該如何使用 D3.js 與 svg 來繪製出有動態路線功能的地圖，讓大家可以做出類似中央氣象局的颱風路線預覽圖的作品！
 
-先看一下成品：(P.S. 最近發現 [codesandbox](https://codesandbox.io) 這個服務，比起在 jsbin 或是 jsfiddle 上寫 React 來說好用一些)
+先看一下成品：(P.S. 最近發現 [codesandbox](https://codesandbox.io) 這個服務，比起在 jsbin 或是 jsfiddle 上寫 React 來說好用一些，缺點是 mobile 體驗較差)
 
 <iframe src="https://codesandbox.io/embed/Wv9kBrJW?hidenavigation=1&view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
@@ -372,9 +372,10 @@ distanceCalculate(pixelLocSource, [longitude, latitude], distance){
 
 取巧的點是，利用已知的經緯度距離來做運算：
     Latitude: 1 deg = 110.574 km
-    Longitude: 1 deg = 111.320*cos(latitude) km
+    Longitude: 1 deg = 111.320*cos(latitude) km // 該緯度上每一個經度的距離算法
 
 `pixelLocSource` 是映射過後的中心點位置，`[longitude, latitude]` 則是中心點的原始經緯度，而 `distance` 就是我們要算的暴風半徑。
+由於我們並不需要算出真正半徑內每個點的經緯度，所以這邊我只抓該緯度上的精度來做投影計算，找出該半徑後的精度，再套用普通的兩點距離公式。
 
 （其實這是我想出來比較暴力的解法啦，歡迎知道有更簡單更好的方式映射距離的朋友告知我！非常感謝）
 
