@@ -10,7 +10,7 @@ tags: d3, svg, map, animation
 
 想了想發現最好的替代方案就是直接用 svg 來繪製，雖然沒有辦法像 Google Map 那般詳細，但在某些應用上來說就非常足夠，效果也很好，因此今天就來紀錄一下該如何使用 D3.js 與 svg 來繪製出有動態路線功能的地圖，讓大家可以做出類似中央氣象局的颱風路線預覽圖的作品！
 
-先看一下成品：(P.S. 最近發現 [codesandbox](https://codesandbox.io) 這個服務，比起在 jsbin 或是 jsfiddle 上寫 React 來說好用一些)
+先看一下成品：(P.S. 最近發現 [codesandbox](https://codesandbox.io) 這個服務，比起在 jsbin 或是 jsfiddle 上寫 React 來說好用一些，缺點是 mobile 體驗較差)
 
 <iframe src="https://codesandbox.io/embed/Wv9kBrJW?hidenavigation=1&view=preview" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
