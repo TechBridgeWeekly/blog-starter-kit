@@ -431,3 +431,7 @@ author: kdchang
 1. [字符编码笔记：ASCII，Unicode和UTF-8](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 
 （image via [algolist](http://www.algolist.net/img/hash-table-chaining.png)、[mcgill](http://cim.mcgill.ca/~gamboa/cs202/Material/class20/img/class20/dictionary.png)、[mindcrackerinc](http://csharpcorner.mindcrackerinc.netdna-cdn.com/UploadFile/BlogImages/08052016045037AM/Map1.png)、[hws](http://math.hws.edu/javanotes/c10/hash-table.png)、[cecilsunkure](http://1.bp.blogspot.com/-glyiSfW0o4E/T_IP8EeqlMI/AAAAAAAAAFk/hXf5GT57SpA/s1600/LinearProbeCollisionClusters.png)）
+
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
