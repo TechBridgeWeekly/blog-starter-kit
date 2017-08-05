@@ -11,7 +11,7 @@ author: pojenlai
 
 ## 為什麼要會 Eigen？
 
-首先，Eigen 是一個 C++ 的 open source library，提供了許多
+首先，Eigen 是一個 C++ 的 open source library，提供了許多線性代數運算相關的函式。
 
 然後，我們這一系列是要介紹 LSD-SLAM，所以當然是因為 LSD-SLAM 也使用 Eigen 這個 library 來處理線性代數的運算，你可以在 lsd-slam 的 repository 裡搜尋 eigen，就會看到 [以下的結果](https://github.com/tum-vision/lsd_slam/search?utf8=%E2%9C%93&q=eigen&type=)。
 
