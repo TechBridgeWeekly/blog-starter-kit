@@ -13,7 +13,7 @@ Web 開發涉及層面很廣，包含了前後端開發、資料庫優化、平�
 # 什麼是 Python？
 [Python](https://zh.wikipedia.org/wiki/Python) 是一種物件導向、直譯式的跨平台電腦程式語言，它包含了一組功能完備的標準庫和豐富套件生態系，可以輕鬆完成很多常見的任務（例如：讀寫檔案、自然語言處理、網路爬蟲、網站開發、機器學習等），因為它可以很輕易整合其他底層語言（例如：C/C++ 等），所以又稱為膠水語言。它的語法簡單，與其它大多數程式設計語言使用大括弧不一樣，它使用空白縮進來定義語句塊。由於具備簡潔易學等特性，許多開發者推薦 Python 為初學者第一個學習的程式語言。由於版本更迭，我們接下來討論的主要是以 Python3 為主，若電腦沒有安裝的話，你可以在[官方網站下載](https://www.python.org/)，若你不是安裝 [Anaconda](https://www.continuum.io/downloads) 這個 all-in-one 版本的話（自帶許多套件和科學運算工具，也可以建立虛擬開發環境），記得要安裝 [pip](https://pypi.python.org/pypi/pip)、[IPython](https://ipython.org/)。 
 
-接下來我們將以 Anaconda 這個開發環境為主要講解環境。由於我們假定讀者已經有一些 Python 基礎，所以我們會跳過有關 Python 語法的基本較邵，若您對於 Python 入門基礎較不熟悉的話建議參考 [Python 101 快速入門教學](/2016/12/31/python101-tutorial/) ，此外我們也提供了 [Python Web 程式設計入門實戰線上課程](http://pics.ee/c34g) 可以參考。那就讓我們開始吧！
+接下來我們將以 Anaconda 這個開發環境為主要講解環境。由於我們假定讀者已經有一些 Python 基礎，所以我們會跳過有關 Python 語法的基本教學。
 
 # 什麼是 Flask？
 
