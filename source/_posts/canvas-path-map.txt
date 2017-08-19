@@ -65,7 +65,7 @@ var ctx = canvas.getContext('2d');
 * `ctx.beginPath()` 的範例中還有用到 `moveTo()`, `lineTo()` 與 `stroke()`，也都是很常用的 API，但從字面上就很好理解:
 
     * moveTo(x, y): 移動畫筆到 point x,y
-    * lineTo(x, y): 從現在畫筆位置畫一條直線到 point x,y
+    * lineTo(x, y): 從現在畫筆位置畫一條直線到 point x,y（但光呼叫 `lineTo()` 還不會畫出線段，需透過 `stroke()` 等相似 API）
     * stroke(): 實際下筆繪畫的 API
 
 * `ctx.closePath()`:
@@ -151,7 +151,6 @@ Demo: （可以切換模式看 code，或是到[上一篇](http://blog.techbridg
 這邊說明在 Canvas 上繪製動態路線的原理與步驟：
 
 ### 線段動畫原理：
-
 <span style="color: red">
 跟 svg 要製作動態路線一樣的原理，我們都是先將線畫好後，利用線段的 **line dash** 與 **dash offset** 來製作出路徑的動畫效果。（可參考 [上一篇](http://blog.techbridge.cc/2017/07/21/d3-workshop-map/)）
 </span>
