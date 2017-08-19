@@ -142,8 +142,8 @@ setInterval(counter.bind(null,timer), 1000);
 		    var ps = document.querySelectorAll('.article .article-block');
 		    var i = ps.length;
 		    var size;
-		    var finalHeight = sizer.offsetHeight;
 		    while (i--) {
+		      finalHeight = sizer.offsetHeight;
 		      ps[i].style.height = finalHeight + 'px';
 		    }
 		    event.preventDefault();
@@ -160,8 +160,8 @@ setInterval(counter.bind(null,timer), 1000);
 		    var ps = document.querySelectorAll('.article .article-block');
 		    var i = ps.length;
 		    var size;
+		    var finalHeight = sizer.offsetHeight;
 		    while (i--) {
-		      finalHeight = sizer.offsetHeight;
 		      ps[i].style.height = finalHeight + 'px';
 		    }
 		    event.preventDefault();
