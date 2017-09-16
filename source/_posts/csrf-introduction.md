@@ -317,3 +317,6 @@ SameSite 相關的參考資料：
 
 [1]: https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)#Prevention_measures_that_do_NOT_work
 [2]: https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet
+
+關於作者： 
+[@huli](http://huli.logdown.com/) 野生工程師，相信分享與交流能讓世界變得更美好
