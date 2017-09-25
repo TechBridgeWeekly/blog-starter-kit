@@ -9,7 +9,7 @@ author: weihanglo
 
 存在許久但最近才變為 ES6 標準「**Typed Array**」就是解放 JavaScript 操作 binary data 能力的好工具！一起來了解 Typed Array 吧！
 
-_（撰於 2017-09-03，基於 ECMAScript 6+，Node.js 8.3）_
+_（基於 ECMAScript 6+，Node.js 8.3）_
 
 <!-- more -->
 
