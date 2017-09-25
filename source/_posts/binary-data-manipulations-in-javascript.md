@@ -5,8 +5,6 @@ tags: JavaScript, Endianness, Binary Data, Memory Alignment
 author: weihanglo
 ---
 
-![](https://i.imgur.com/Mx1Rbus.png)
-
 由於高度封裝與抽象，JavaScript 的執行效率比不上 C 的語言。例如 JavaScript 的 Array 下標（subscript）是根據 hash key 而非實體記憶體位址 offset 取值，雖然方便，卻多了效能開銷。當 Canvas、WebGL、WebVR 開始走紅，效能越來越受重視，如何讓 JavaScript 達到如同 C 指標般操作 binary data 變得至關重要。
 
 存在許久但最近才變為 ES6 標準「**Typed Array**」就是解放 JavaScript 操作 binary data 能力的好工具！一起來了解 Typed Array 吧！
