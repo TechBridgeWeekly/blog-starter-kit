@@ -423,6 +423,7 @@ Blob 的 spec 寫在 [W3C File API draft][w3c-blob] 中，為 `File` class 的�
 - [OPass：關於記憶體對齊(Alignment) ][opass-memory-alignment]
 - [阮一峰：ECMAScript 6 入门][rungyifeng-es6]
 
+關於作者：  
 [@weihanglo](https://weihanglo.github.io) 掛著 iOS 工程師之名，行開發 Web App 之實。
 
 [html5rocks-typedarray]: https://www.html5rocks.com/en/tutorials/webgl/typed_arrays/
