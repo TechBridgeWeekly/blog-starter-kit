@@ -87,4 +87,6 @@ myHeader1.h:
 
 以前在學生時代學習程式語言的時候，常常會有學了某個東西不知道好用在哪裡的感覺，header guard 就是一個好例子。透過開源專案，我們很容易欣賞到某個功能的美，也希望大家看完這篇之後，每次看到 header guard 都能感覺世界真美好 XD
 
+關於作者：
+[@pojenlai](https://pojenlai.wordpress.com/) 演算法工程師，對機器人跟電腦視覺有>少許研究，最近在學習[看清事物的本質與改進自己的觀念](https://buzzorange.com/techorange/2017/07/10/elon-musk-first-principle/)
 
