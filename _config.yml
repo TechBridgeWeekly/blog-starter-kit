@@ -141,3 +141,9 @@ deploy:
   type: git
   repo: https://github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
+
+# hexo-math
+math:
+  engine: 'mathjax'
+  mathjax:
+    src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"  
