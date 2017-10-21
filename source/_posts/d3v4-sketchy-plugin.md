@@ -166,6 +166,12 @@ export default d3sketchy;
 
 ![檔案結構](/img/arvinh/file_structure.png)
 
+在你的 `index.js` 中加入：
+
+`export {default as sketchy} from "./src/sketchy";`
+
+當作 module 的入口，也方便 require。
+
 接著在你的 package.json 中加入 script：
 
 ```json package.json
@@ -188,7 +194,7 @@ import babel from 'rollup-plugin-babel';
 export default {
     entry: 'index.js',
     dest: 'build/d3-sketchy.js',
-    format: 'umd',
+    format: 'umd', // umd 的格式能透過 CommonJS 或是 AMD 載入
     moduleName: 'd3', // 設定為 d3 可以將你的 plugin 放入 global.d3 底下
     sourceMap: true,
     plugins: [
@@ -205,7 +211,8 @@ export default {
 1. rollup 不會幫你打包你從 node_modules 裡面 import 進來的檔案，所以如果你有用到其他的 d3 plugin，變成在你的 plugin 說明內要告知使用者，記得載入相依的 plugin。或是你也可以向我這邊一樣，透過 `rollup-plugin-node-resolve` 這個 rollup plugin 來幫我們把 `node_modules` 底下的 lib 也打包
 
 2. rollup 不會幫你編譯 babel，如果你真的想用 babel，就像我一樣加入 `rollup-plugin-babel` 即可。
-3. 最雷的一點在這邊！目前用 rollup 打包 d3 plugin 的話，你需要將 roullup 的版本鎖在 0.41，否則你會發現你編譯出來的 `build/d3-xxx.js` 內的最前面幾行長得像這樣：
+3. format 記得設為 umd，這樣才能夠在 CommonJS 或 AMD 環境下都能使用。
+4. 最雷的一點在這邊！目前用 rollup 打包 d3 plugin 的話，你需要將 roullup 的版本鎖在 0.41，否則你會發現你編譯出來的 `build/d3-xxx.js` 內的最前面幾行長得像這樣：
 
 ```js
 (function (global, factory) {
@@ -229,6 +236,24 @@ export default {
 ```
 
 可能有其他解法，但看了 d3 的一些 plugin 也是先將版本卡在 0.41。
+
+當你做完上述工作後，在你的 repo 底下執行 `npm install`，就會產生 `build` folder，裡面含有：
+
+1. d3-sketchy.js
+2. d3-sketchy.min.js
+3. d3-sketchy.js.map (如果你 rollup.config.js 有設定 sourceMap: true 就會有此檔案)
+
+如此一來別人就能使用你的 plugin 了：
+
+```html
+<script src="../build/d3-sketchy.js"></script>
+
+<script>
+    var sketchyBar = d3.sketchy.rect();
+    //...
+    //..
+</script>
+```
 
 ## 結論
 
