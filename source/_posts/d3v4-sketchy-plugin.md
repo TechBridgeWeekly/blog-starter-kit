@@ -1,7 +1,7 @@
 ---
 title: D3v4 工作坊 - 製作 D3 plugin 來繪製草圖風格長條圖
 date: 2017-10-21 18:16:38
-tags:
+tags: d3, plugin, rollup
 ---
 
 ## 前言
@@ -177,6 +177,8 @@ export default d3sketchy;
 }
 ```
 
+可以看到這邊在 publish 前都會用 uglify.js 來產生 min.js 檔案，如此一來你的 user 就可以選擇要不要下載 minify 過的套件。
+
 最後就是撰寫你的 `rollup.config.js`：
 
 ```js rollup.config.js
@@ -226,7 +228,12 @@ export default {
   <script src="../build/d3-sketchy.js"></script> <!-- 裡面的 d3 object 會蓋掉上面 d3.v4.js 產生的--->
 ```
 
-可能有其他解法，但看了 d3 的一些 plugin 也是先將版本卡在 0.41 就是了。
+可能有其他解法，但看了 d3 的一些 plugin 也是先將版本卡在 0.41。
+
+## 結論
+
+有些時候看似很複雜的東西，其實原理卻非常簡單，只是需要發揮點創意。剛好透過這篇也學習了一下 rollup 的相關設定，雖然我私人猜測 rollup 應該還是會慢慢被 webpack 壓過去，即便 rollup 作者寫了[這篇文章](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c)。
+這篇算是一個小小的筆記，不是太完整，若有任何疑問或建議歡迎留言討論！
 
 ## 資料來源
 1. [d3-sketchy](https://github.com/emeeks/d3-sketchy)
