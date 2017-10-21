@@ -162,6 +162,8 @@ export default d3sketchy;
 
 不過其實也沒什麼準則 XD...主要比較特別的就是 D3 的 plugin 大多是用 rollup 來打包，我猜想是因為當時 webpack 1.x 還沒有加入 tree-shaking 的功能，而針對 plugin 這種小型模組來說，也用不到 webpack 的許多功能，rollup 反而比較適合用來打包 plugin 模組。
 
+完整的 code 與結構可以直接到 github 上參考：[d3-sketchy](https://github.com/ArvinH/d3-sketchy/)
+
 檔案結構大概就是這樣：
 
 ![檔案結構](/img/arvinh/file_structure.png)
