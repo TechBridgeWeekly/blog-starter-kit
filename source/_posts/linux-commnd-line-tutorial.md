@@ -428,6 +428,12 @@ $ 指令 [選項] [選項值]
     $ man
     ```
 
+    例如我們可以使用 `man` 來查詢 `ls` 的使用用法：
+
+    ```
+    $ man ls
+    ```
+
 2. find：查詢檔案
 
     在目前目錄下尋找檔名為 README.md 檔案
@@ -449,15 +455,15 @@ $ 指令 [選項] [選項值]
 
     ```
 
-4. corontab：例行性工作排程
+4. crontab：例行性工作排程
 
-    編輯 corontab
+    編輯 crontab
 
     ```
     $ crontab -e
     ```
 
-    corontab 格式：
+    crontab 格式：
 
     ```
     分 時 日 月 星期 要執行的指令
