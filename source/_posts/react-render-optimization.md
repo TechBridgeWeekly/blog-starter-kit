@@ -1,6 +1,6 @@
 ---
 title: React 性能優化大挑戰：一次理解 Immutable data 跟 shouldComponentUpdate
-date: 2017-12-30 18:48:27
+date: 2018-01-05 18:48:27
 tags: react
 author: huli
 ---
@@ -79,12 +79,12 @@ class Row extends Component {
   
 class Table extends Component {
   render() {
-    const {list, style} = this.props;
+    const {list} = this.props;
     const itemStyle = {
       color: 'red'
     }
     return (
-      <table style={style}>
+      <table>
           {list.map(item => <Row key={item.id} item={item} style={itemStyle} />)}
       </table>
     )
@@ -121,12 +121,12 @@ class App extends Component {
 ``` js
 class Table extends PureComponent {
   render() {
-    const {list, style} = this.props;
+    const {list} = this.props;
     const itemStyle = {
       color: 'red'
     }
     return (
-      <table style={style}>
+      <table>
           {list.map(item => <Row key={item.id} item={item} style={itemStyle} />)}
       </table>
     )
@@ -163,12 +163,12 @@ class Row extends Component {
   
 class Table extends PureComponent {
   render() {
-    const {list, style} = this.props;
+    const {list} = this.props;
     const itemStyle = {
       color: 'red'
     }
     return (
-      <table style={style}>
+      <table>
           {list.map(item => <Row key={item.id} item={item} style={itemStyle} />)}
       </table>
     )
@@ -214,12 +214,12 @@ class Row extends PureComponent {
   
 class Table extends PureComponent {
   render() {
-    const {list, style} = this.props;
+    const {list} = this.props;
     const itemStyle = {
       color: 'red'
     }
     return (
-      <table style={style}>
+      <table>
           {list.map(item => <Row key={item.id} item={item} style={itemStyle} />)}
       </table>
     )
@@ -650,12 +650,12 @@ class Row extends PureComponent {
   
 class Table extends PureComponent {
   render() {
-    const {list, style} = this.props;
+    const {list} = this.props;
     const itemStyle = {
       color: 'red'
     }
     return (
-      <table style={style}>
+      <table>
           {list.map(item => <Row key={item.id} item={item} style={itemStyle} />)}
       </table>
     )
