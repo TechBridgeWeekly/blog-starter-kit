@@ -630,6 +630,88 @@ const nextProps = {
 props.list === nextProps.list // false
 ```
 
+這邊還有一個要注意的地方，那就是 spread operator 只會複製第一層的資料而已，它並不是 deep clone：
+
+``` js
+const test = {
+  a: 1,
+  nest: {
+    title: 'hello'
+  }
+}
+
+const copy = {...test}
+
+copy.nest === test.nest // true
+```
+
+所以當你的 state 是比較複雜的結構時，要改變資料就會變得比較麻煩一點，因為你必須要對每一層都做差不多的事情，避免直接去改到你要改的物件：
+
+``` js
+// 沒有 Immutable 的概念前 
+const props = {
+  title: '123',
+  list: [
+    {
+      id: 1,
+      name: 'hello'
+    }, {
+      id: 2,
+      name: 'world'
+    }
+  ]
+}
+
+const list = props.list;
+list[1].name = 'world2'; // 直接改
+nextProps = {
+  ...props,
+  list
+}
+
+props.list === nextProps.list // true
+props.list[1] === nextProps.list[1] // true
+
+// 有了 Immutable 的概念後
+const props = {
+  title: '123',
+  list: [
+    {
+      id: 1,
+      name: 'hello'
+    }, {
+      id: 2,
+      name: 'world'
+    }
+  ]
+}
+
+// 要注意這邊只是 shallow copy 而已
+// list[0] === props.list[0] => true
+const list = [...props.list.slice(0, 1)]
+const data = props.list[1];
+  
+const nextProps = {
+  ...props,
+  list: [...list, {
+    ...data, // 再做一次 spread oprator
+    name: 'world2'
+  }]
+}
+  
+props.list === nextProps.list // false
+props.list[0] === nextProps.list[0] // true
+props.list[1] === nextProps.list[1] // false
+```
+
+若你的 state 結構很多層，那就會變得非常非常難改，這時候你有三個選擇：
+
+1. 避免這麼多層的 state，盡量壓平（可參考[normalizr](https://github.com/paularmstrong/normalizr)）
+2. 找一個會幫你做 Immutable 的 library，例如說 Facebook 的 [Immutable.js](https://facebook.github.io/immutable-js/)
+3. 直接用 deep clone 把資料全部複製下來，之後你愛怎麼改就怎麼改（不推薦）
+
+註：感謝網友 KanYueh Chen 的指正，讓我補上上面這一段。
+
 # PureComponent 的陷阱
 
 當我們遵守 Immutable 的規則之後，理所當然的就會想把所有的 Component 都設成 PureComponent，因為 PureComponent 的預設很合理嘛，資料沒變的話就不呼叫 render function，可以節省很多不必要的比較。
