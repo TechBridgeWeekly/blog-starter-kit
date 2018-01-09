@@ -639,9 +639,9 @@ const test = {
     title: 'hello'
   }
 }
-
+  
 const copy = {...test}
-
+  
 copy.nest === test.nest // true
 ```
 
@@ -661,17 +661,17 @@ const props = {
     }
   ]
 }
-
+  
 const list = props.list;
 list[1].name = 'world2'; // 直接改
 nextProps = {
   ...props,
   list
 }
-
+  
 props.list === nextProps.list // true
 props.list[1] === nextProps.list[1] // true
-
+  
 // 有了 Immutable 的概念後
 const props = {
   title: '123',
@@ -685,7 +685,7 @@ const props = {
     }
   ]
 }
-
+  
 // 要注意這邊只是 shallow copy 而已
 // list[0] === props.list[0] => true
 const list = [...props.list.slice(0, 1)]
