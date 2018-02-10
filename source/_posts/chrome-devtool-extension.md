@@ -305,7 +305,7 @@ chrome.runtime.onConnect.addListener(function (port) {
 
 <!-- 資料來源 -->
 ## 資料來源
-1. [google offical doc](https://developer.chrome.com/extensions/devtools)
+1. [Google offical doc](https://developer.chrome.com/extensions/devtools)
 2. [Chrome Extension CSP 開發小記](https://div.io/topic/1669)
 3. [Chrome 插件(擴展)全攻略](http://www.360doc.com/content/17/1212/14/26662048_712402137.shtml)
 
