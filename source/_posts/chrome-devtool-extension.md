@@ -305,9 +305,9 @@ chrome.runtime.onConnect.addListener(function (port) {
 
 <!-- 資料來源 -->
 ## 資料來源
-1. [p5-deeplearn-js](https://github.com/ITPNYU/p5-deeplearn-js)
-2. [deeplearn-chrome_extension](https://github.com/cvalenzuela/deeplearn-chrome_extension)
-3. [deeplearnjs](https://github.com/PAIR-code/deeplearnjs)
+1. [google offical doc](https://developer.chrome.com/extensions/devtools)
+2. [Chrome Extension CSP 開發小記](https://div.io/topic/1669)
+3. [Chrome 插件全攻略](http://www.360doc.com/content/17/1212/14/26662048_712402137.shtml)
 
 關於作者： 
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
