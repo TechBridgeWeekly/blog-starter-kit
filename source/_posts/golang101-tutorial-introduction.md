@@ -167,3 +167,6 @@ func main() {
 7. [從Go看現代程式語言](http://www.ithome.com.tw/voice/99698)
 
 （image via [cuelogic](http://www.cuelogic.com/blog/wp-content/uploads/2017/06/go_lang1.png)）
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
