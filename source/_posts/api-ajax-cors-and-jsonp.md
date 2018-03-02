@@ -226,7 +226,7 @@ requested resource. Origin 'null' is therefore not allowed access.
 
 因此，同源政策的確是規範非同源就被擋下來，但與此同時其實又有另外一個規範，是說：「如果你想在不同 origin 之間傳輸資料的話，你應該怎麼做」，這規範就叫做 CORS。
 
-CORS，全名為 Cross-Origin HTTP request，跨來源 HTTP 請求。
+CORS，全名為 Cross-Origin Resource Sharing，跨來源資源共享。
 
 這套規範跟你說，如果你想開啟跨來源 HTTP 請求的話，Server 必須在 Response 的 Header 裡面加上`Access-Control-Allow-Origin`。
 
