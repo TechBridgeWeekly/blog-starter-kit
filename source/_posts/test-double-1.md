@@ -280,6 +280,7 @@ when(databaseStub.authorize(anyString(), anyString()))
 
 ## 總結
 
+本文介紹了何謂測試替身以及測試替身的目的，還介紹了 Dummy 和 Stub 兩種替身，下一篇會介紹另外三種測試替身，儘請期待。
 
 ## 延伸閱讀
 
