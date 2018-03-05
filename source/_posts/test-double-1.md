@@ -14,7 +14,7 @@ author: jyt0532
 ![Alt text](/img/jyt0532/the_prestige.jpg)
 ## 名詞解釋
 
-SUT: System under test。就是需要被測試的東西。
+SUT: System Under Test。就是需要被測試的東西。
 
 DOC: Depended On Component。就是SUT需要依賴的東西。
 
@@ -28,7 +28,7 @@ DOC 非常常見，幾乎無可避免。
 
 這實在開銷太大，也非常不實際。
 
-### 測試替身的目的
+## 測試替身的目的
 
 1.第一個也是最重要的一個，是隔離你的 SUT，不被任何 DOC 干擾。
 
@@ -50,9 +50,7 @@ DOC 非常常見，幾乎無可避免。
 
 這點也很重要，如果真的遇到了不預期的狀況(比如剛剛說的429)，最慘就是等一陣子，database 正常後，就可以過了。
 
-但有時候我們就是想要知道，當真的回傳429的時候，我們處理的方法是不是正確。
-如果沒有 test doubles，根本無法保證這種狀況一定發生。
-也不可能去 DDOS 自己的 database 製造這種情況。
+但有時候我們就是想要知道，當真的回傳429的時候，我們處理的方法是不是正確。如果沒有 test doubles，根本無法保證這種狀況一定發生。也不可能去 DDOS 自己的 database 製造這種情況。
 
 5.可以讓你測試到你不想公開的資訊
 
@@ -105,7 +103,7 @@ public class TestDatabase extends Database{
 
 看完了為什麼需要測試替身之後，之後會一一介紹每個測試替身的使用時機跟用法。
 
-### Dummy
+## Dummy
 
 首先登場的，就是最簡單的替身，也就是 Dummy。
 
@@ -166,7 +164,7 @@ public class PeopleTestWithDummy{
 
 其實很多人在測試的時候，直接傳 null 進去，如果你要傳進去的 function 沒有 nullCheck，這也是個可行的方式。但如果有 nullCheck 那還是只能用 Dummy。
 
-#### Mockito
+### Mockito - Dummy
 
 如果你寫的是 java，你會很常看到 Mickito。
 在 Mockito 裡面，如何生一個 Dummy object 呢?
@@ -187,11 +185,11 @@ public class PeopleTestWithDummy{
 **我們是以用法來區分 TestDoubles，不是syntax**，因為很多 framework 不會為每一個 TestDoubles 都給一個專屬 syntax。
 
 
-### Stub
+## Stub
 
 Stub 是我們介紹的替身中第一個可以讓我們獨立測試 SUT 的測試替身。
 
-#### Stub使用時機
+### Stub使用時機
 
 當我們需要測試一個 SUT，但我們卻不想要依賴真實的DOC，我們可以用 STUB 去取代我們的 DOC。
 
@@ -242,7 +240,7 @@ public class TestWithStub{
 
 搞定，這樣就不用真的去 query database。
 
-#### Stub Mockito
+### Mockito - Stub
 
 有 Mockito 的話，並不需要真的寫一個新的 DatabaseStub。
 ```java
@@ -255,7 +253,7 @@ assertEquals(42, webserver.getSecretNumber("BoYu", "jyt"));
 你把一個 class Mock 了之後，他的每一個 function 都只會回傳 null。
 **你需要去指定你會用到的method的行為** 輸入值是什麼回傳什麼。
 
-#### 測試特殊情況
+### 測試特殊情況
 
 如介紹時所說，stub 還能模擬測試的特殊狀況。
 
@@ -280,7 +278,7 @@ when(databaseStub.authorize(anyString(), anyString()))
 
 當你的 SUT 有一些 indirect input(並不是在你測試的程式提供的 input，而是 DOC 提供的 input)，需要事先定義好 DOC 的回傳值，就是用 STUB。
 
-#### 總結
+## 總結
 
 
 ## 延伸閱讀
@@ -288,4 +286,4 @@ when(databaseStub.authorize(anyString(), anyString()))
 1. [我聊的不是金庸 是測試替身](https://www.jyt0532.com/2018/01/24/jinyong-test-double/)
 
 關於作者：
-[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近覺得 Anti pattern 比 Design pattern 有趣。
+[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近在寫一本關於JVM的教學書。
