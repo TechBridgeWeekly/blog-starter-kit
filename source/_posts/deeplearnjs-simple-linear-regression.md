@@ -246,7 +246,8 @@ const chart = Highcharts.chart('app', options);
 2. [Deeplearn js API doc](https://deeplearnjs.org/docs/api/index.html#dl.train.sgd)
 3. [機器學習 玩具資料與線性迴歸](https://ithelp.ithome.com.tw/articles/10186905)
 4. [史丹佛大學機器學習（Machine Learning）上課筆記](https://blog.gtwang.org/statistics/standford-machine-learning-1/)
-5. [8 大JavaScript 機器學習框架之探索](http://mp.weixin.qq.com/s/X0k2JPze7x8nkSxkoHtWnw)
+5. [deeplearn.js的線性迴歸](http://blog.csdn.net/ns2250225/article/details/79414790)
+6. [8 大JavaScript 機器學習框架之探索](http://mp.weixin.qq.com/s/X0k2JPze7x8nkSxkoHtWnw)
 
 關於作者： 
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
