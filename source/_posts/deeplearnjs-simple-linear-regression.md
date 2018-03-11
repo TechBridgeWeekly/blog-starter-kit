@@ -175,7 +175,7 @@ const awPredict = aw.dataSync();
 const baPredict = ba.dataSync();
 ```
 
-很容易看出 `dataSync()` 是 Synchronously 的，會 block Browser 的 UI thread，直到 data 被你讀出。另外還有個 Asynchronously 的 `data()` method，會回傳 promise，當讀取結束時在呼叫 `resolves`。
+很容易看出 `dataSync()` 是 Synchronously 的，會 block Browser 的 UI thread，直到 data 被你讀出。另外還有個 Asynchronously 的 `data()` method，會回傳 promise，當讀取結束時再呼叫 `resolves`。
 
 在我們的範例中，因為接下來要用 Highcharts 畫圖，我們需要 block 著 UI thread 等資料讀出後再繼續，因此採用 `dataSync()`。
 
