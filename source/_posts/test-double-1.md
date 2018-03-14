@@ -5,7 +5,7 @@ tags: unitTest testDouble
 author: jyt0532
 ---
 
-如果你在工作時寫過一些測試程式，也許你聽過什麼是 Mock，但其實 Mock 只是測試替身的其中一種，測試替身包含了 Dummy、Mock、Fake、Stub、Spy。而不同語言或不同framework有時候會把類似的概念合在一起。
+如果你在工作時寫過一些測試程式，也許你聽過什麼是 Mock，但其實 Mock 只是測試替身的其中一種，測試替身包含了 Dummy、Mock、Fake、Stub、Spy。而不同語言或不同 framework 有時候會把類似的概念合在一起。
 
 本系列的目的是讓你寫單元測試的時候，對應不同情況，知道應該用哪一種替身。像筆者常用的 Mockito 基本上把大部份的測試替身都用 Mock 取代，雖然用起來容易，但我以前從來不知道自己用的是哪一種測試替身 。
 
@@ -67,8 +67,8 @@ public class WebServer {
 }
 ```
 
-比如說這樣，我想知道我 webser.create 的時候，database.insert的確被呼叫，要怎麼測試？
-我不想要開放一個 public function getDatabase 供大家存取 database 的**狀態**，僅僅只是為了測試用途。
+比如說這樣，我想知道我 `webser.create` 的時候，`database.insert`的確被呼叫，要怎麼測試？
+我不想要開放一個 `public function getDatabase` 供大家存取 database 的**狀態**，僅僅只是為了測試用途。
 
 該怎麼辦呢？這時候來一個漂亮的替身。
 
@@ -96,9 +96,9 @@ public class TestDatabase extends Database{
 
 1. TestDatabase 需要 extends Database，不然丟不進 Webserver 的 constructor。
 
-2. 原本的 Database 這個 Class 沒有 isInsert 這個函式，是我自己加的。
+2. 原本的 Database 這個 Class 沒有 `isInsert` 這個函式，是我自己加的。
 
-搞定。prod 上的 Database 完全不用動，我就可以知道當 webserver.create 被呼叫的時候，我的的確確呼叫了 database.insert。
+搞定。prod 上的 Database 完全不用動，我就可以知道當 `webserver.create` 被呼叫的時候，我的的確確呼叫了 `database.insert`。
 
 
 看完了為什麼需要測試替身之後，之後會一一介紹每個測試替身的使用時機跟用法。
@@ -109,7 +109,7 @@ public class TestDatabase extends Database{
 
 當我們需要傳一個變數給某個 method 的時候，需要一個跟 signature 一樣型態的變數，**可是這個變數以後又不會用到**。為了加速跟省記憶體空間，我們可以丟一個 Dummy 替身給這個 method。
 
-比如說，我們想要測試 People 的 getNumberOfPerson 這個函式。
+比如說，我們想要測試 People 的 `getNumberOfPerson` 這個函式。
 
 ```java
 public class People {
@@ -145,7 +145,7 @@ public class DummyPerson extends Person {
 }
 
 ```
-這個 class 的目的就是要通過 addPerson 的型別限制，所以只要 extends Person 就可以。
+這個 class 的目的就是要通過 `addPerson` 的型別限制，所以只要 extends Person 就可以。
 ```java
 public class PeopleTestWithDummy{
   @Test
@@ -160,7 +160,7 @@ public class PeopleTestWithDummy{
 
 就是這麼簡單，Person 的其他 method 我們都全部不管，那如果 getNumberOfPerson 呼叫了 Person 的其他 method 我們無法知道，但這也不是這個 unit test 在乎的重點。
 
-但如果你真的想確保其他 method 不會被call，那就在 DummyPerson 裡面覆寫 Person 的其他 method。然後都 throw Exception就可以。
+但如果你真的想確保其他 method 不會被 call，那就在 DummyPerson 裡面覆寫 Person 的其他 method。然後都 throw Exception就可以。
 
 其實很多人在測試的時候，直接傳 null 進去，如果你要傳進去的 function 沒有 nullCheck，這也是個可行的方式。但如果有 nullCheck 那還是只能用 Dummy。
 
@@ -182,20 +182,20 @@ public class PeopleTestWithDummy{
 
 小心不要被這裡的 mock 搞混，他只是 syntax 是 mock，但在 mockito 裡面，如果你只 mock 一個 class 但沒有給他任何預期的行為，他就是個dummy。
 
-**我們是以用法來區分 TestDoubles，不是syntax**，因為很多 framework 不會為每一個 TestDoubles 都給一個專屬 syntax。
+**我們是以用法來區分 TestDoubles，不是 syntax**，因為很多 framework 不會為每一個 TestDoubles 都給一個專屬 syntax。
 
 
 ## Stub
 
 Stub 是我們介紹的替身中第一個可以讓我們獨立測試 SUT 的測試替身。
 
-### Stub使用時機
+### Stub 使用時機
 
 當我們需要測試一個 SUT，但我們卻不想要依賴真實的DOC，我們可以用 STUB 去取代我們的 DOC。
 
 STUB 並不需要真的表現的跟 DOC 一樣。他只要 api 長得一樣(也就是輸入輸出長得一樣)，讓 SUT 以為是真正的 DOC 就可以。
 
-來個例子，今天我們想測試 getSecretNumber 是不是能正確回傳。
+來個例子，今天我們想測試 `getSecretNumber` 是不是能正確回傳。
 
 ```java
 public class WebServer {
