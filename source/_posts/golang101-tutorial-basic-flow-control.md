@@ -1,7 +1,7 @@
 ---
 title: Go Web 程式設計入門教學：語法基礎之流程控制（flow control）篇
 date: 2018-02-17 11:23:23
-author: HappyCoder 自學程式好好玩
+author: kdchang
 tags: GO, GO lang, golang, web, go web, 自學程式, 自學程式設計, 程式設計, 線上自學, coding, coder, programming, computer, computer science, code, 電腦科學, 學寫程式, 學程式
 ---
 
