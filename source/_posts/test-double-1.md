@@ -287,4 +287,4 @@ when(databaseStub.authorize(anyString(), anyString()))
 1. [我聊的不是金庸 是測試替身](https://www.jyt0532.com/2018/01/24/jinyong-test-double/)
 
 關於作者：
-[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近在寫一本關於JVM的教學書。
+[@jyt0532](https://www.jyt0532.com/) 後端工程師，喜歡學習新知挑戰新事物，最近在寫一本關於[JVM的教學書](https://www.jyt0532.com/toc/jvm/)。
