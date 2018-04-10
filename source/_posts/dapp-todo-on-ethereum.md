@@ -211,7 +211,7 @@ truffle migrate
 其中 0x21e4624c5a0b3fda81d0833d412dded2bb3a7a7c 就是合約部署在區塊鏈上的位址
 
 ### Step5. 測試
-由於已經佈署在區塊鏈上的合約無法再被修改，最多只能利用事先設定的函數調整參數，因此每一次的合約更新都會導致地址的改變，在實際的應用上代表著每次合約的更新都需要改變利用到的合約位址，這是非常麻煩的事情，因此佈署前的測試相當重要，另外測試對於 TDD（Test Drive Development） 或是 CI,CD 的流程也是不可或缺的。truffle 內建測試用的框架，利用 Mocha 和 Chai 這兩個在 javasript 中常用的套件（兩者所使用的版本可以從 [ganache-core](https://github.com/trufflesuite/ganache-core/blob/develop/package.json) 查看）
+由於已經佈署在區塊鏈上的合約無法再被修改，最多只能利用事先設定的函數調整參數，因此每一次的合約更新都會導致地址的改變，在實際的應用上代表著每次合約的更新都需要改變利用到的合約位址，這是非常麻煩的事情，因此佈署前的測試相當重要，另外測試對於 TDD（Test Drive Development） 或是 CI,CD 的流程也是不可或缺的。truffle 內建測試用的框架，利用 Mocha 和 Chai 這兩個在 javascript 中常用的套件（兩者所使用的版本可以從 [ganache-core](https://github.com/trufflesuite/ganache-core/blob/develop/package.json) 查看）
 
 以下的測試可以驗證合約是否正常發佈
 ```javascript
