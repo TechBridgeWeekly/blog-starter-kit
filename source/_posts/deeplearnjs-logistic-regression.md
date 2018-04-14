@@ -1,6 +1,6 @@
 ---
 title: 用 Javascript 進行邏輯迴歸分析
-date: 2018-03-30 20:00:08
+date: 2018-04-07 20:00:08
 tags: deeplearnjs, machine learning, logistic-regression, javascript
 ---
 
