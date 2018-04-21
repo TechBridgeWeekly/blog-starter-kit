@@ -29,89 +29,25 @@ author: pojenlai
 
 首先，我們考慮最簡單的關係，
 
-$$
-\begin{bmatrix}
- u \\\
- v
-\end{bmatrix}\\
-=
-\begin{bmatrix}
- f & 0 & 0 \\\
- 0 & f & 0 \\\
- 0 & 0 & 1
-\end{bmatrix}\\
-\begin{bmatrix}
- X \\\
- Y \\\
- Z
-\end{bmatrix}\\
-$$
+![1](/img/pojenlai/cam-model-1.png)
 
-但是，我們的相機會因為有組裝誤差等等，不會非常理想，principal axis 不一定會落在 virtual image plane 的中心，可能會在 u 方向跟 v 方向各自有一個平移量，若這兩個平移量分別為 $t_u$ 跟 $t_v$，我們就可以將剛剛的矩陣寫成
+但是，我們的相機會因為有組裝誤差等等，不會非常理想，principal axis 不一定會落在 virtual image plane 的中心，可能會在 u 方向跟 v 方向各自有一個平移量，若這兩個平移量分別為 t_u 跟 t_v，我們就可以將剛剛的矩陣寫成
 
-$$
-\begin{bmatrix}
- u \\\
- v
-\end{bmatrix}\\
-=
-\begin{bmatrix}
- f & 0 & t_u \\\
- 0 & f & t_v \\\
- 0 & 0 & 1
-\end{bmatrix}\\
-\begin{bmatrix}
- X \\\
- Y \\\
- Z
-\end{bmatrix}\\
-$$
+![2](/img/pojenlai/cam-model-2.png)
 
 剛剛我們提到，目前所使用的單位還是真實世界中的單位（例如公分）。但是，在影像中的座標都是用像素的位置來呈現，所以我們希望可以將單位轉換成 pixel 數。那要怎麼換呢？其實很簡單，我們只要將所有以 cm 為單位的值，都乘上 pixel/cm（每公分有多少個 pixel），自然就可以換成 pixel 數啦。
 
-在一般情況下，u 方向跟 v 方向的單位像素個數不會相同，所以我們就分別用 $m_u$、$m_v$ 來表示 u 方向跟 v 方向每公分有幾個像素。這樣的話，矩陣就會變成下面的形式，u、v 的單位就變成 pixel 了：
+在一般情況下，u 方向跟 v 方向的單位像素個數不會相同，所以我們就分別用 m_u、m_v 來表示 u 方向跟 v 方向每公分有幾個像素。這樣的話，矩陣就會變成下面的形式，u、v 的單位就變成 pixel 了：
 
-$$
-\begin{bmatrix}
- u \\\
- v
-\end{bmatrix}\\
-=
-\begin{bmatrix}
- m_uf & 0 & m_ut_u \\\
- 0 & m_vf & m_vt_v \\\
- 0 & 0 & 1
-\end{bmatrix}\\
-\begin{bmatrix}
- X \\\
- Y \\\
- Z
-\end{bmatrix}\\
-$$
+![3](/img/pojenlai/cam-model-3.png)
 
 到這邊為止，就是大家常看到的內部參數矩陣的長相。但是，如果要寫成最完整的的形式，還需要考慮 u 軸跟 v 軸不垂直的狀況，這會使得每一個像素變成一個平行四邊形，如下圖所示：
 
 ![img](https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.15752-9/31044603_10156564185611844_2601010801225498624_n.png?_nc_fx=ftpe7-2&_nc_cat=0&oh=47e721d978b7bf3ee026fad2f1b8a866&oe=5B502634)
 
-從圖中可以看到，在這個像素裡面，u 的值會隨著 v 的增加而增加，所以 u 應該要額外加上 $tan(\alpha)v$，也就會可以讓我們將矩陣寫成下面的形式：（其中 $ s = \alpha_ytan(\alpha)$）
+從圖中可以看到，在這個像素裡面，u 的值會隨著 v 的增加而增加，所以 u 應該要額外加上 tan(a)*v (這邊先用 a 代替 alpha)，也就會可以讓我們將矩陣寫成下面的形式：（其中 s = a_y*tan(a)）
 
-$$
-\begin{bmatrix}
- u \\\
- v
-\end{bmatrix}\\
-=
-\begin{bmatrix}
- m_uf & s & m_ut_u \\\
- 0 & m_vf & m_vt_v \\\
- 0 & 0 & 1
-\end{bmatrix}\\
-\begin{bmatrix}
- X \\\
- Y \\\
- Z
-\end{bmatrix}\\
-$$
+![4](/img/pojenlai/cam-model-4.png)
 
 ## 總結
 
