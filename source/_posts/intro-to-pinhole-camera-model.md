@@ -113,14 +113,29 @@ $$
 \end{bmatrix}\\
 $$
 
+## 外部參數矩陣
+
+經過上面的介紹，我們已經了解，內部參數矩陣可以幫助我們將相機座標系的某一個三維點座標投影到影像平面上的二維像素座標，但是，如果只用相機座標的話，在應用上常常會遇到一些麻煩的地方。舉例來說，如果我們現在是要用一個 camera 做 3D SLAM，在過程中，我們的相機會一直移動，這會造成我們之前已經有的某些點座標，也必須隨著相機的移動，而不斷更新。這時候，如果可以有一個世界座標系一直維持不動，就可以有一個錨定的座標系，而物體的座標點就由是藉座標系定義。
+
+下面這張圖很清楚地可以看出外部參數矩陣的功能：
+
+![extrinsic](https://www.mathworks.com/help/vision/ug/calibration_cameramodel_coords.png)
+
 ## 總結
 
 用一張圖來總結，可以再將整個定位複習一次。
 
 - 內部參數矩陣：處理相機座標系到影像座標系的投影
+- 外部參數矩陣：處理世界座標系到相機座標系的座標轉換
 
 ![summary](http://openmvg.readthedocs.io/en/latest/_images/pinholeCamera.png)
 
 ## 延伸閱讀
 
 1. [Pinhole Camera: 針孔相機座標成像原理](http://silverwind1982.pixnet.net/blog/post/134551091)
+2. [計算機視覺-相機內參數和外參數](https://blog.csdn.net/liulina603/article/details/52953414)
+3. [What Is Camera Calibration?](https://www.mathworks.com/help/vision/ug/camera-calibration.html)
+
+關於作者：
+- [@pojenlai](https://pojenlai.wordpress.com/) 演算法工程師，對機器人、電腦視覺和人工智慧有少許研究，正在學習[用心體會事物的本質](https://buzzorange.com/techorange/2017/07/10/elon-musk-first-principle/)跟[不斷進入學生心態改進](https://www.ted.com/talks/eduardo_briceno_how_to_get_better_at_the_things_you_care_about)。
+- @sherrychuang
