@@ -11,8 +11,7 @@ tags: javascript
 
 ### Goal
 
-目標是建構一個 js library，可以將數字做一些簡化約分，像是我在 [Web Component 實戰](http://blog.techbridge.cc/2017/03/04/webcomopnent-practice/) 中所實作的 function。
-並讓 user 透過 `<script src="formatNum.js" />` 的方式就能載入使用。
+目標是建構一個 js library，可以將數字做一些簡化約分，像是我在 [Web Component 實戰](http://blog.techbridge.cc/2017/03/04/webcomopnent-practice/) 中所實作的 function。並讓 user 透過 `<script src="formatNum.js" />` 的方式就能載入使用。
 
 完整的 code 在下面這個 jsbin 中：
 
@@ -34,8 +33,7 @@ tags: javascript
 }(window));
 ```
 
-而我們需要將 lib 能夠 export 到外部供人使用，所以在這個立即執行函式中需要傳入 window 物件，在函式內我們則取名為 global，這樣未來如果想要執行在不同環境，像是 nodejs 裡面時，可以不用更改內部的變數名稱，
-只要修改傳入的 window 變數即可。
+而我們需要將 lib 能夠 export 到外部供人使用，所以在這個立即執行函式中需要傳入 window 物件，在函式內我們則取名為 global，這樣未來如果想要執行在不同環境，像是 nodejs 裡面時，可以不用更改內部的變數名稱，只要修改傳入的 window 變數即可。
 
 另外最前方可以加上個分號，以免有其他人的 code 沒有用分號做結尾而造成問題，不過這個並不是必須的。
 
