@@ -166,9 +166,7 @@ tags: javascript
 ### 結論與小問題
 
 建造 js lib 的概念不難，只是如果很少開發的話，確實容易忘記一些眉眉角角，透過這次的文章也算是稍稍再複習了一下先前課程的內容。
-另外，在實作範例時，本來想直接全用 ES6 寫（課程主要都是 ES5），但是在這邊的 function 都不能用 ES6 的 arrow function 取代，`this` 的作用域不同，會造成問題。
-[這篇有提到](https://derickbailey.com/2015/09/28/do-es6-arrow-functions-really-solve-this-in-javascript/)
-arrow function 會 binding 到整個 module 的 scope，而非 object。所以如果是想透過 ES6 來撰寫的話，應該是需要換另一種寫法，之後找到好作法再來補上。
+另外，在實作範例時，本來想直接全用 ES6 寫（課程主要都是 ES5），但是在這邊的 function 都不能用 ES6 的 arrow function 取代，`this` 的作用域不同，會造成問題。[這篇有提到](https://derickbailey.com/2015/09/28/do-es6-arrow-functions-really-solve-this-in-javascript/)，arrow function 會 binding 到整個 module 的 scope，而非 object。所以如果是想透過 ES6 來撰寫的話，應該是需要換另一種寫法，之後找到好作法再來補上。
 
 
 ## 資料來源
