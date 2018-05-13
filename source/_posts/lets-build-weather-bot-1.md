@@ -62,18 +62,18 @@ Messenger Bot 相較於 Line Bot 來說更加強大，因為他有更多 API 可
 ```js
 const { LineBot } = require('Bottender');
 const { createServer } = require('Bottender/express');
-
+  
 const bot = new LineBot({
   channelSecret: process.env.channelSecret, // 填上 Channel Secret
   accessToken: process.env.accessToken // 填上 Access Token
 });
-
+  
 bot.onEvent(async context => {
   await context.sendText('Hello World');
 });
-
+  
 const server = createServer(bot);
-
+  
 server.listen(5000, () => {
   console.log('server is running on 5000 port...');
 });
@@ -94,7 +94,7 @@ const {
     LineBot,
     MessengerBot
 } = require('Bottender');
-
+  
 const bot = (process.env.chatbotPlatform == 'messenger') ?
             new MessengerBot({
                 accessToken: process.env.messengerAccessToken,
@@ -103,13 +103,13 @@ const bot = (process.env.chatbotPlatform == 'messenger') ?
                 channelSecret: process.env.lineChannelSecret,
                 accessToken: process.env.lineChannelAccessToken
             });
-
+  
 bot.onEvent(async context => {
   await context.sendText('Hello World');
 });
-
+  
 const server = createServer(bot);
-
+  
 server.listen(5000, () => {
   console.log('server is running on 5000 port...');
 });
@@ -129,7 +129,7 @@ server.listen(5000, () => {
 
 ```js
 async function platformReplyImage(context, url) {
-    if (config.chatroomPlatform == 'messenger') {
+    if (process.env.chatroomPlatform == 'messenger') {
         await context.sendImage(url)
     } else {
         await context.replyImage(url);
