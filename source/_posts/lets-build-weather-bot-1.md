@@ -6,6 +6,8 @@ author: tigercosmos
 ---
 # Let's build a weather bot!
 
+![weather bot](/img/tigercosmos/weather_bot.png)
+
 ## 簡介
 
 沒有人會懷疑了解天氣的重要性，我們總是看氣象預報或查天氣來決定等下外出時要不要帶傘，衣服要穿多厚是否需要帶件外套，或是需不需要先擦防曬油戴一副墨鏡出門等等。
@@ -22,8 +24,8 @@ author: tigercosmos
 
 可以先玩看看，第一次使用請先輸入 `help` 來查看指令：
 
-- [Messenger Bot 連結](https://m.me/weather.bot.tw)
-- [Line Bot 連結](https://line.me/R/ti/p/%40lbz9453s)
+- [氣象機器人 Messenger Bot 連結](https://m.me/weather.bot.tw)
+- [氣象機器人 Line Bot 連結](https://line.me/R/ti/p/%40lbz9453s)
 
 接下來我會介紹如何建立一個氣象機器人，一一介紹聊天機器人建立、使用 Bottender 框架、部署、比較細節的設定、氣象資料的來源和處理。本篇屬於進階的探討文章，基礎的部分不會特別著墨，但我會將需必備的基礎資料都提供給大家。
 
@@ -141,7 +143,7 @@ async function platformReplyImage(context, url) {
 
 ## 未完待續
 
-下一篇將介紹氣象機器人的核心，氣象資料取得與處理，敬請期待。
+下一篇：[來寫個氣象機器人吧！(Part 2)](/2018/05/21/lets-build-weather-bot-2/)，將介紹氣象機器人的核心，氣象資料取得與處理。
 
 > 你可以在這邊查看[氣象機器人的 Github Repo](https://github.com/ntu-as-cooklab/weather-bot)
 
