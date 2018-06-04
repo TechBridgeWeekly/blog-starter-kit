@@ -100,7 +100,7 @@ FooBarProxy = new Proxy(FooBar, {
       console.log('不能存取私有變數！');
       return false;
     }
-    return target[prop]; // 飛斯有變數，那就回傳原物件的原屬性值
+    return target[prop]; // 非私有變數，那就回傳原物件的原屬性值
   },
   set: function(target, prop, value) {
     if (prop.startsWith('_')) {
