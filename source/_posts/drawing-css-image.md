@@ -264,7 +264,7 @@ Codepen 上有許多 css 的活動，像是 `#Codevember`、`#DailyCSS` 等等�
 
 `background-image` 在我這次的範例中沒有使用到，但基本原理差不多，可以看這邊的範例：
 
-<p data-height="300" data-theme-id="29194" data-slug-hash="XKBwoZ" data-default-tab="css,result" data-user="yumeeeei" data-embed-version="2" data-pen-title="Pure CSS  Hotdog   🌭" class="codepen">See the Pen <a href="https://codepen.io/yumeeeei/pen/XKBwoZ/">Pure CSS  Hotdog   🌭</a> by yumeeeei (<a href="https://codepen.io/yumeeeei">@yumeeeei</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="29194" data-slug-hash="XKBwoZ" data-default-tab="css,result" data-user="yumeeeei" data-embed-version="2" data-pen-title="Pure CSS  Hotdog   🌭" class="codepen">See the Pen <a href="https://codepen.io/yumeeeei/pen/XKBwoZ/">Pure CSS  Hotdog   🌭</a> by yumeeeei (<a href="https://codepen.io/yumeeeei">@yumeeeei</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### 總結

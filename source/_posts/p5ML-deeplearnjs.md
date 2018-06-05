@@ -74,7 +74,7 @@ knn.predict(video, function(data) {
 
 疑？為什麼需要 `option.html`？這次的範例應該還用不著需要使用者設定什麼參數吧？
 
-原因是為了取得使用者的**攝影機權限**。
+原因是為了取得使用者的**攝影機權限**。
 
 一般 Web 上是呼叫 `navigator.mediaDevices.getUserMedia(options, callback)`來取得使用者 WebCam 權限：
 

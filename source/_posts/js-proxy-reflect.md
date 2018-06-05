@@ -11,7 +11,7 @@ tags:
 
 # 前言
 
-在眾多 ES6 提供的新功能上，Proxy 與 Reflect 算是最少被提及的，主要原因我想還是因為瀏覽器的支援度較低，不過在我前陣子看到 [Frameworkless JavaScript Part 3: One-Way Data Binding](https://jack.ofspades.com/frameworkless-javascript-part-3-one-way-data-binding/) 這篇文章時（好文推薦！很有趣），特意去查了一下才發現目前支援度已經越來越好：
+在眾多 ES6 提供的新功能上，Proxy 與 Reflect 算是最少被提及的，主要原因我想還是因為瀏覽器的支援度較低，不過在我前陣子看到 [Frameworkless JavaScript Part 3: One-Way Data Binding](https://jack.ofspades.com/frameworless-javascript-part-3-one-way-data-binding/) 這篇文章時（好文推薦！很有趣），特意去查了一下才發現目前支援度已經越來越好：
 
 ![Can I Use Proxy](/img/arvinh/caniuseproxy.png)
 
@@ -270,7 +270,7 @@ proxy.FooBar
 
 # Reflect
 
-接著我們來看看 Reflect。Reflect 不能建構實例，就像 Math 一樣，單純包含了一系列的靜態方法。
+接著我們來看看 Reflect。Reflect 不能建構實例，就像 Math 一樣，單純包含了一系列的靜態方法。
 
 ## Reflect 與 Proxy 的完美搭配
 

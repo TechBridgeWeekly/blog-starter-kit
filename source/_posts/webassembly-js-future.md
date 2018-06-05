@@ -154,7 +154,7 @@ function fetchAndInstantiateWasm (url, imports) {
 
 ArrayBuffer 是 JavaScript 的一種 data type，用來表示 generic, fixed-length 的 binary data buffer，屬於 **typed arrays** 的一部分，而關於 **typed arrays** 雖然在 WebAssembly 中很重要，但是難以在這邊詳述，[mdn 的文件](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)寫得很清楚，值得閱讀。
 
-我們目前只要知道他是一個 array-like 的物件，讓我們能在 JavaScript 中存取 raw binary data，有 `Int8Array`、`Int32Array` 與 `Float32Array` 等 [DataView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) 可以使用即可。（又一個名詞...DataView 提供 getter/setter API 來對 buffer 中的 data 做讀取。）
+我們目前只要知道他是一個 array-like 的物件，讓我們能在 JavaScript 中存取 raw binary data，有 `Int8Array`、`Int32Array` 與 `Float32Array` 等 [DataView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) 可以使用即可。（又一個名詞...DataView 提供 getter/setter API 來對 buffer 中的 data 做讀取。）
 
 回到主題，如果你剛剛有先點進 [mdn 的 example](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L6) 看，可能會發現他怎麼沒有 `WebAssembly.compile` 這個步驟？
 

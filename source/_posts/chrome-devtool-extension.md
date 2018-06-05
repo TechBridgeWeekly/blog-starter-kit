@@ -5,22 +5,22 @@ tags: Chrome, devtools, extension
 ---
 # 前言
 
-身為工程師，想辦法提高自己的工作效率是一件很重要的事情，~~畢竟這樣才有多餘的時間打電動~~，除了平時加強各種知識與累積經驗外，撰寫工具的能力也值得培養。剛好在前不久，公司舉辦了一次內部的 hackday，我就利用這個時間針對公司內部的 framework 寫了一個簡單的 chrome devtools 的 extension，增加開發上的便利性。而在開發的過程中，發現關於 Chrome devtools extension 的文章並不是很多，中文的更少。總之，雖然[官方文件](https://developer.chrome.com/extensions/devtools)該有的都有，但跟 vscode extension 的文件比起來就是差了很多，光是排版就讓人不太想閱讀...
-因此希望藉此篇文章介紹開發 chrome devtools extension 的方法與一些注意事項。（註：可能需要先有點 Chrome extension 的相關知識會比較好懂） 
+身為工程師，想辦法提高自己的工作效率是一件很重要的事情，~~畢竟這樣才有多餘的時間打電動~~，除了平時加強各種知識與累積經驗外，撰寫工具的能力也值得培養。剛好在前不久，公司舉辦了一次內部的 hackday，我就利用這個時間針對公司內部的 framework 寫了一個簡單的 chrome devtools 的 extension，增加開發上的便利性。而在開發的過程中，發現關於 Chrome devtools extension 的文章並不是很多，中文的更少。總之，雖然[官方文件](https://developer.chrome.com/extensions/devtools)該有的都有，但跟 vscode extension 的文件比起來就是差了很多，光是排版就讓人不太想閱讀...
+因此希望藉此篇文章介紹開發 chrome devtools extension 的方法與一些注意事項。（註：可能需要先有點 Chrome extension 的相關知識會比較好懂）
 
-先給大家看其中一個範例（共有兩個），主要是能自動將 DOM 物件的 element inline style 轉化為 [Atomic CSS](https://acss.io/) 的 class 名稱（[不知道 Atomic CSS 的可以看這篇](https://blog.techbridge.cc/2017/04/29/css-methodology-atomiccss/)），如此一來，在 Inspector 中調整完 style 後，就能直接將轉換好的 Atomic CSS 複製貼上到 code 當中，省去一次自己轉換的時間（有時還會忘記 class name...）
+先給大家看其中一個範例（共有兩個），主要是能自動將 DOM 物件的 element inline style 轉化為 [Atomic CSS](https://acss.io/) 的 class 名稱（[不知道 Atomic CSS 的可以看這篇](https://blog.techbridge.cc/2017/04/29/css-methodology-atomiccss/)），如此一來，在 Inspector 中調整完 style 後，就能直接將轉換好的 Atomic CSS 複製貼上到 code 當中，省去一次自己轉換的時間（有時還會忘記 class name...）
 
-![Sidebar Demo](/img/arvinh/devtools-acss-demo.gif)
+![Sidebar Demo](/img/arvinh/devtools-acss-demo.gif)
 
 # Chrome devtools extension 基本介紹
 
-有開發過 Chrome extension 的人應該都知道，我們會有所謂的 `Content Script` 與 `Background page` 兩種不同的 context 存在於我們的 extension 中，而 `Devtools page` 也是一個獨立的 context，從下面這張官方圖可以很清楚的看到其之間的差異：
+有開發過 Chrome extension 的人應該都知道，我們會有所謂的 `Content Script` 與 `Background page` 兩種不同的 context 存在於我們的 extension 中，而 `Devtools page` 也是一個獨立的 context，從下面這張官方圖可以很清楚的看到其之間的差異：
 
-![官方圖片](/img/arvinh/devtools-extension-overview.png)
+![官方圖片](/img/arvinh/devtools-extension-overview.png)
 
-* Content Script: 可以存取實際頁面的 DOM 物件與事件。
-* Background page: 可以調用多數 extension API，像是 `chrome.runtime.*` 與 `chrome.tabs.onUpdated`，並負責 extension 與 Content script、Devtools page 之間的溝通。
-* Devtools page: 可以調用 `chrome.extensions.*` 與 `chrome.devtools.*` Devtools API，其他的就都無法存取。可以透過 `chrome.devtools.inspectedWindow.eval` 能與目前開啟 inspector 的頁面互動。
+* Content Script: 可以存取實際頁面的 DOM 物件與事件。
+* Background page: 可以調用多數 extension API，像是 `chrome.runtime.*` 與 `chrome.tabs.onUpdated`，並負責 extension 與 Content script、Devtools page 之間的溝通。
+* Devtools page: 可以調用 `chrome.extensions.*` 與 `chrome.devtools.*` Devtools API，其他的就都無法存取。可以透過 `chrome.devtools.inspectedWindow.eval` 能與目前開啟 inspector 的頁面互動。
 
 與一般 Extension 不同的地方就在於多了 Devtools API 需要了解，而主要的 Devtools API 其實也只有三種：
 
@@ -32,7 +32,7 @@ chrome.devtools.inspectedWindow.eval(
   "window.$0.style.cssText",
   function callback(result, Error) {
     // result 為 window.$0.style.cssText
-    // 在當前頁面的 context 下支執行結果 
+    // 在當前頁面的 context 下支執行結果 
 });
 ```
 ### 2. chrome.devtools.network
@@ -40,7 +40,7 @@ chrome.devtools.inspectedWindow.eval(
 network api 可以取得你在 `Network panel` 看到的資訊。
 ![network panel](/img/arvinh/devtools-networkpanel.png)
 ```js
-// 取得當前開啟 inspector 的頁面所發出的 request 中，bodySize > 40*1024 的 url
+// 取得當前開啟 inspector 的頁面所發出的 request 中，bodySize > 40*1024 的 url
 chrome.devtools.network.onRequestFinished.addListener(
       function(request) {
         if (request.response.bodySize > 40*1024) {
@@ -51,7 +51,7 @@ chrome.devtools.network.onRequestFinished.addListener(
   });
 ```
 ### 3. chrome.devtools.panels
-panels api 應該是最重要的一塊了，因為我們必須透過它來創建 Panel 或 Sidebar。
+panels api 應該是最重要的一塊了，因為我們必須透過它來創建 Panel 或 Sidebar。
 
 ![panel-sidebar](/img/arvinh/devtools-panel&sidebar.png)
 
@@ -71,7 +71,7 @@ chrome.devtools.panels.create("Simple Panel",
 
 # Chrome devtools extension - Sidebar 實作
 
-開頭的範例中，就是採取 Sidebar 的 UI，屬於 `ElementPanel` 底下的 sidebar。
+開頭的範例中，就是採取 Sidebar 的 UI，屬於 `ElementPanel` 底下的 sidebar。
 
 接著先看一下我們的檔案結構：
 
