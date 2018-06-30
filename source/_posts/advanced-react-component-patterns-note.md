@@ -470,7 +470,7 @@ getTogglerProps = ({ onClick, otherMethod, ...props } = {}) => ({
 
 1. [Advanced React Patterns workshop](https://frontendmasters.com/courses/advanced-react-patterns/)
 2. [Advanced React Patterns V2 codesandbox](https://codesandbox.io/s/github/kentcdodds/advanced-react-patterns-v2)
-3. [Advanced React Patterns Blop](https://blog.kentcdodds.com/advanced-react-component-patterns-56af2b74bc5f)
+3. [Advanced React Patterns Blog](https://blog.kentcdodds.com/advanced-react-component-patterns-56af2b74bc5f)
 4. [什麼是設計模式](https://juejin.im/post/59b78dfe5188257e7e115cae)
 5. [Answers to common questions about render props](https://blog.kentcdodds.com/answers-to-common-questions-about-render-props-a9f84bb12d5d)
 6. [Do more with less using render props](https://hackernoon.com/do-more-with-less-using-render-props-de5bcdfbe74c)
