@@ -11,7 +11,7 @@ TechBridge Weekly 技術週刊團隊是一群對用技術改變世界懷抱熱�
 - 粉絲專頁：[https://www.facebook.com/TechBridge.Fans/](https://www.facebook.com/TechBridge.Fans/)
 - 電子郵件：[techbridge.cc@gmail.com](mailto:techbridge.cc@gmail.com)
 
-## 目前負責的 Curator（歡迎有興趣朋友跳坑加入策展人團隊:P）
+## 目前負責的 Curator
 1. [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校
 2. [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
 3. [@huli](http://huli.logdown.com) 野生工程師，相信分享與交流能讓世界變得更美好

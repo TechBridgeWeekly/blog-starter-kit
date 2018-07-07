@@ -245,7 +245,7 @@ Google 在 Chrome 51 版的時候正式加入了這個功能：[SameSite cookie]
 
 先引一下 Google 的說明：
 
-> Same-site cookies (née "First-Party-Only" (née "First-Party")) allow servers to mitigate the risk of CSRF and information leakage attacks by asserting that a particular cookie should only be sent with requests initiated from the same registrable domain.
+> Same-site cookies (ne "First-Party-Only" (ne "First-Party")) allow servers to mitigate the risk of CSRF and information leakage attacks by asserting that a particular cookie should only be sent with requests initiated from the same registrable domain.
 
 啟用這個功能有多簡單？超級無敵簡單。
 
