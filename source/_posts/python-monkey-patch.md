@@ -29,7 +29,7 @@ class MyClass:
         print 'f()'
 ```
 
-此時我們在另外一個 main.py 檔案引入 monkey module，並替換掉 f function 為 monkey_f，這樣定義的出來的 instance 呼叫方法 f() 印出的則為 `monkey_f()`
+此時我們在另外一個 main.py 檔案引入 monkey module，並替換掉 f function 為 monkey_f，這樣定義的出來的 instance 呼叫方法 f() 印出的則為 `monkey_f()`
 
 ```py
 # main.py

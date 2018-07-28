@@ -37,7 +37,8 @@ author: arvinh
 * Render props comopnent
 * Prop Collections and Getters
 * State Initializers
-* Controlled Components
+* State Reducer
+* Control Props
 * Provider
 * Higher-order component
 
