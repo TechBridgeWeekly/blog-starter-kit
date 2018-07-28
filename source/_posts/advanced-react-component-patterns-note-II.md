@@ -453,7 +453,7 @@ function withToggle(Component) {
 
 另一個要注意的點是 `forwardRef`，在 React 中，`ref` 與 `props` 的處理方式不相同，`ref` 並不會如同 props 一般往下傳遞，若你想要取得被 `HOC` 包裹過的 component 的 `ref`，那在你的 `HOC` 中，必須使用 `React.forwardRef` 將其 forward 下去，詳細介紹可以看[官網說明](https://reactjs.org/docs/forwarding-refs.html)。
 
-最後，假如你原先的 component 有一些 `static method`，透過 `HOC` 包裝後，你可能會發現那些 `static method` 都取不到了！
+最後，假如你原先的 component 有一些 `static method`，透過 `HOC` 包裝後，你可能會發現那些 `static method` 都取不到了！
 
 你必須要在 `HOC` 中自行複製一份到 `HOC` 上頭，像這樣（取自 [React 官網](https://reactjs.org/docs/higher-order-components.html#static-methods-must-be-copied-over))：
 
@@ -485,6 +485,8 @@ function enhance(WrappedComponent) {
 無論如何，經過這樣的學習與紀錄，至少讓自己平日開發時，能主動多思考一些優化的方向與可能性，總體是蠻有收穫的！
 
 最後提供大家 Kent C. Dodds 在 workshop 後自己寫的一篇文章，[Mixing Component Patterns](https://blog.kentcdodds.com/mixing-component-patterns-4328f1e26bb5)，裡頭他將這些 pattern 結合在一起使用，有興趣的讀者可以去看看到底這麼多 Pattern 要怎麼融合使用。
+
+謝謝真的有看到這邊的各位，這些筆記斷斷續續的紀錄，一不小心就篇幅很多...若發現中間有敘述不順或是錯誤的地方，歡迎大家告知！
 
 ## 資料來源
 
