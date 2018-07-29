@@ -29,7 +29,7 @@ author: arvinh
 
 有時候我們會希望能讓元件回復到初始狀態，或是能讓使用者自己定義初始狀態，這時就適合採用 State initializer 技巧。
 
-首先，我們利用自定義的 `inistialState` 來存放元件初始狀態，而在真正的 state 中去 reference 它：
+首先，我們利用自定義的 `initialState` 來存放元件初始狀態，而在真正的 state 中去 reference 它：
 
 ```js
 class Toggle extends React.Component {
