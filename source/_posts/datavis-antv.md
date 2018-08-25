@@ -381,3 +381,6 @@ const changeData = (status) => {
 5. [衛福部統計處-長期照顧統計](https://dep.mohw.gov.tw/DOS/lp-3550-113-xCat-T02.html)
 6. [長照機構裡的大象——10萬老人被照顧的真相](https://www.twreporter.org/topics/nursing-home-truth)
 7. Icon made by Freepik from www.flaticon.com
+
+關於作者：
+[@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
