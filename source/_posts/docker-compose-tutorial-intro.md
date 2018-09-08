@@ -1,5 +1,5 @@
 ---
-title: Docker Compose 建置 Web service 起步走
+title: Docker Compose 建置 Web service 起步走入門教學
 date: 2018-09-07 12:23:23
 author: kdchang
 tags: 
@@ -27,7 +27,7 @@ tags:
 
 我們先來看看，一個基本的 docker-compose.yml 檔案長這樣（YAML 檔案格式，使用空格來縮排，附檔名為 .yml）：
 
-```
+```yaml
 version: '3' # 目前使用的版本，可以參考官網：
 services: # services 關鍵字後面列出 web, redis 兩項專案中的服務
   web:
@@ -47,7 +47,7 @@ services: # services 關鍵字後面列出 web, redis 兩項專案中的服務
 
 所謂的 `Image`，就是生產 `Container` 的模版，你可以從 Docker Hub 官方下載或是根據官方的 Image 自己加工後打包成 Image 或是完全自己使用 Dockerfile 描述 Image 內容來製作 Image。而 Container 則是透過 Image 產生隔離的執行環境，稱之為 Container，也就是我們一般用來提供 microservice 的最小單位。
 
-```
+```dockerfile
 # 這是一個創建 ubuntu 並安裝 nginx 的 image
 FROM ubuntu:16.04 # 從 Docker hub 下載基礎的 image，可能是作業系統環境或是程式語言環境，這邊是 ubuntu 16.04
 MAINTAINER demo@gmail.com # 維護者
@@ -69,39 +69,40 @@ Lniux/MacOS 為主
 基本 Docker 和 Web 知識
 
 1. 創建專案資料夾
+```shell
 $ mkdir docker-compose-python-flask-redis-counter
 $ cd docker-compose-python-flask-redis-counter
+```
 
 2. 在資料夾下建立 app.py 當做 web app 進入點，裡面有 flask 和 redis 操作，當使用者瀏覽首頁時，redis 會記錄次數，若有 exception 則有 retry 機制
-```
-import time
-import redis
-from flask import Flask
+    ```py
+    import time
+    import redis
+    from flask import Flask
 
-app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
+    app = Flask(__name__)
+    cache = redis.Redis(host='redis', port=6379)
 
-def get_hit_count():
-    retries = 5
-    while True:
-        try:
-            return cache.incr('hits')
-        except redis.exceptions.ConnectionError as exc:
-            if retries == 0:
-                raise exc
-            retries -= 1
-            time.sleep(0.5)
+    def get_hit_count():
+        retries = 5
+        while True:
+            try:
+                return cache.incr('hits')
+            except redis.exceptions.ConnectionError as exc:
+                if retries == 0:
+                    raise exc
+                retries -= 1
+                time.sleep(0.5)
 
 
-@app.route('/')
-def get_index():
-    count = get_hit_count()
-    return 'Yo! 你是第 {} 次瀏覽\n'.format(count)
+    @app.route('/')
+    def get_index():
+        count = get_hit_count()
+        return 'Yo! 你是第 {} 次瀏覽\n'.format(count)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
-```
-
+    if __name__ == "__main__":
+        app.run(host="0.0.0.0", debug=True)
+    ```
 
 3. 建立套件 requirements.txt 安裝資訊讓 Dockerfile 可以下指令安裝套件
 
@@ -112,7 +113,7 @@ if __name__ == "__main__":
 
 4. 建立 Web App 的 Dockerfile
 
-    ```
+    ```dockerfile
     FROM python:3.4-alpine # 從 python3.4 基礎上加工
     ADD . /code # 將本地端程式碼複製到 container 裡面 ./code 資料夾
     WORKDIR /code # container 裡面的工作目錄
@@ -122,7 +123,7 @@ if __name__ == "__main__":
 
 5. 用 Docker Compose file 描述 services 運作狀況，我們的專案共有 web 和 redis 兩個 service
 
-    ```
+    ```yaml
     version: '3'
     services:
     web:
@@ -137,7 +138,7 @@ if __name__ == "__main__":
 
 6. 用 Docker Compose 執行你的 Web app（-d detached 是在背景執行，可以使用 $ docker ps -a 觀看目前所有 docker container 狀況，使用 `$ docker-compose ps` 觀看 docker-compose process 狀況）
 
-    ```
+    ```shell
     $ docker-compose up -d
     ```
 
