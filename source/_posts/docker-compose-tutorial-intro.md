@@ -158,3 +158,6 @@ $ cd docker-compose-python-flask-redis-counter
 4. [Docker Compose 初步閱讀與學習記錄](http://blog.maxkit.com.tw/2017/03/docker-compose.html)
 
 （image via [cuelogic](https://medium.com/skillshare-team/from-docker-compose-to-minikube-d94cbe97acda)、[Zabbix](https://share.zabbix.com/virtualization/docker/docker-compose-yml-v2-format-for-zabbix-3-0)）
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:)
