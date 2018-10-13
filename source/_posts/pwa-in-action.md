@@ -202,9 +202,9 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 ```
 
-為什麼要存起來呢？因為使用者可能不想一打開網站就看到這個彈窗，或者他可能正在結賬結果你跳這個東西來干擾他，所以先把它存起來，等適當的時機再呼叫`installPromptEvent.prompt()`來跳出 Dialog。
+為什麼要存起來呢？因為使用者可能不想一打開網站就看到這個彈窗，或者他可能正在結帳結果你跳這個東西來干擾他，所以先把它存起來，等適當的時機再呼叫`installPromptEvent.prompt()`來跳出 Dialog。
 
-但要注意的事情是你直接呼叫`installPromptEvent.prompt()`是沒用的，你必須要`within a user gesture`，意思就是你要放在按鈕的 click 事件裡之類的才有效，直接呼叫是沒有用的，而且會看到 console 跳出錯誤訊息。
+但要注意的事情是你直接呼叫`installPromptEvent.prompt()`是沒用的，你必須要`within a user gesture`，意思就是你要放在按鈕的 click 事件（或其他由使用者觸發的事件）裡才有效，直接呼叫是沒有用的，而且會看到 console 跳出錯誤訊息。
 
 我之前一度很好奇它是怎麼做判斷的，後來發現原來有`event.isTrusted`可以用，可以判斷一個事件是不是被使用者主動觸發的，參考資料：[MDN - Event.isTrusted](https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted)。
 
@@ -376,6 +376,16 @@ function addToHomeScreen(e) {
 再者，PWA 的使用者體驗是很不錯的，有可以接受的速度以及 Web 的彈性，重點是不用去 Google Play 特地下載就少了一道轉換的門檻（雖然還是有安裝 PWA 的門檻就是了，但我覺得比較容易一些），而 Chrome 也提供了許多機制給 PWA，希望使用者能安裝 PWA 在手機上。
 
 總之呢，這篇主要是跟大家分享我在做 PWA 時候的一些小小心得，如果你也有什麼心得歡迎在底下留言跟我分享，感謝。
+
+延伸閱讀與參考資料：
+
+1. [Changes to Add to Home Screen Behavior](https://developers.google.com/web/updates/2018/06/a2hs-updates)
+2. [Progressive Web App Splash Screens](https://medium.com/@applification/progressive-web-app-splash-screens-80340b45d210)
+3. [Few Tips That Will Make Your PWA on iOS Feel Like Native](https://www.netguru.co/codestories/few-tips-that-will-make-your-pwa-on-ios-feel-like-native)
+4. [PWAs are coming to iOS 11.3: Cupertino, we have a problem](https://medium.com/@firt/pwas-are-coming-to-ios-11-3-cupertino-we-have-a-problem-2ff49fd7d6ea)
+5. [Progressive Web App 會是未來趨勢嗎？](https://blog.techbridge.cc/2016/07/23/progressive-web-app/)
+6. [PWA case studies](https://developers.google.com/web/showcase/)
+7. [A Pinterest Progressive Web App Performance Case Study](https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154)
 
 關於作者： 
 [@huli](http://huli.logdown.com/) 野生工程師，相信分享與交流能讓世界變得更美好
