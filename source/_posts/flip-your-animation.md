@@ -137,8 +137,9 @@ elem.addEventListener('transitionend', function() {
 另外這邊要注意兩件事，第一個是 F、L、I 的時間需要掌控在 **100ms** 之內，根據 [Paul Lewis 的 FLIP 介紹文章](https://aerotwist.com/blog/flip-your-animations/)，使用者在做了互動後，到感知動畫的發生，這中間可以有 `100ms` 的空隙，我們只要能在這 100ms 中將初始與結尾位置計算完，並翻回初始點，使用者就不會感受到任何差異。
 
 ![user perception](/img/arvinh/flip-user-perception.jpg)
+[圖片來源](https://aerotwist.com/blog/flip-your-animations/)
 
-最後就是，在這個例子中，我需要利用 `transitionend` 這個事件，在動畫的最後把 `transition` 拿掉，否則下一次要計算動畫終點位置時 `elem.classList.add('expanded');`，就會產生 `transition` 效果，那不是我們要的。
+最後，在這個例子中，我需要利用 `transitionend` 這個事件，在動畫的最後把 `transition` 拿掉，否則下一次要計算動畫終點位置時 `elem.classList.add('expanded');`，就會產生 `transition` 效果，那不是我們要的。
 
 ## 結論
 
