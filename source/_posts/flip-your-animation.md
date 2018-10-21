@@ -117,7 +117,6 @@ elem.addEventListener('transitionend', function() {
 });
 ```
 
-
 經由 FLIP 技巧調整過後的動畫：
 
 <p data-height="713" data-theme-id="dark" data-slug-hash="EdRwmr" data-default-tab="result" data-user="arvin0731" data-pen-title="FLIP - good" class="codepen">See the Pen <a href="https://codepen.io/arvin0731/pen/EdRwmr/">FLIP - good</a> by Arvin (<a href="https://codepen.io/arvin0731">@arvin0731</a>) on <a href="https://codepen.io">CodePen</a>.</p>
