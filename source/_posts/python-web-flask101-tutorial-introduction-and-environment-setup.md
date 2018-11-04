@@ -1,7 +1,7 @@
 ---
 title: Python Web Flask 實戰開發教學 - 簡介與環境建置
 date: 2017-06-03 12:00:00
-author: HappyCoder 自學程式好好玩
+author: kdchang
 tags: Python, Django, MVC, Web, MTV, Web Backend, Web Framework, 教學, Flask, 框架, 網站開發, Anaconda
 ---
 
