@@ -26,8 +26,8 @@ var a = 10
 2. 你知道 hoisting 只會提升宣告而非賦值
 3. 你知道 function 宣告、function 的參數以及一般變數宣告同時出現時的提升優先順序
 4. 你知道 let 跟 const 沒有 hoisting
-5. 你知道第五點是錯的，其實有但只是表現形式不一樣
-6. 你知道有關第六點，有個概念叫做 TDZ（Temporal Dead Zone）
+5. 你知道第四點是錯的，其實有但只是表現形式不一樣
+6. 你知道有關第五點，有個概念叫做 TDZ（Temporal Dead Zone）
 7. 你看過 ES3 的規格書，知道裡面是怎麼描述的
 8. 你看過 ES6 的規格書，知道裡面是怎麼描述的
 9. 你知道 hoisting 背後的原理是什麼
