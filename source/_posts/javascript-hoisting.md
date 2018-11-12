@@ -602,7 +602,7 @@ JS 引擎：global scope，我這裡有個對 c 的 RHS 引用，你有看過它
 JS 引擎：bar scope，我這裡有個對 d 的 RHS 引用，你有看過它嗎？  
 執行結果：bar scope 說沒有，所以去問上一層的 global scope  
 JS 引擎：global scope，我這裡有個對 d 的 RHS 引用，你有看過它嗎？  
-執行結果：global scope 說沒有，所以返回錯誤 `ReferenceError: c is not defined`
+執行結果：global scope 說沒有，所以返回錯誤 `ReferenceError: d is not defined`
 
 以上就是 JS 引擎的運作流程，想更詳細了解的話可參考：[You Don't Know JS: Scope & Closures](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md#enginescope-conversation)、[Chapter 4: Hoisting](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md#the-compiler-strikes-again)、[Hoisting in JavaScript](https://john-dugan.com/hoisting-in-javascript/)。
 
@@ -831,7 +831,7 @@ Return
 
 JavaScript 常考的幾個點大家都耳熟能詳：this、prototype、clousre 跟 hoisting，而這幾個看似不相關的東西，其實只要你能理解 JavaScript 背後的運作模型，都能夠多少串得起來，成為一個完整的理論。
 
-我在文中也有提到，上面講述執行環境的那段過程，其實補充得更完整以後就可以拿來解釋 clousre，就會發現很多東西其實都能融會貫通。日後有機會的話我會把個變成一系列，一一擊破 JavaScript 裡面那些你以為很難但其實沒有的概念。
+我在文中也有提到，上面講述執行環境的那段過程，其實補充得更完整以後就可以拿來解釋 clousre，就會發現很多東西其實都能融會貫通。日後有機會會想把這整套變成一系列，一一擊破 JavaScript 裡面那些你以為很難但其實沒有的概念。
 
 寫這篇以前我大概醞釀了一個月，不斷找資料以後消化並且轉化為自己的理解，也很感謝上面那篇 JS 作用域的作者以及 YDKJS 的作者耐心解惑。
 
