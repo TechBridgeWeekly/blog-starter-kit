@@ -1,7 +1,7 @@
 ---
 title: 軟體開發的未來，是大斗內時代？
 tags: 商業模式
-date: 2018-11-11 22:43:52
+date: 2018-11-14 18:16:00
 author: 林宏信 lancatlin
 ---
 
@@ -66,10 +66,10 @@ author: 林宏信 lancatlin
 對此，我感到十分期待。
 
 # 延伸閱讀
-這次的文章，我很大的啟發是來自於囧星人 <盜版的未來> 這支影片；而 INSIDE 文章 <從付費到免費再到補貼 —— 商業模式變遷的底層邏輯> 讓我對於商業模式變遷的實際原因有了更深入的了解，兩者都有非常精闢的內容，強力推薦。
-[盜版的未來｜資訊分享，鎖得住？—冏星人](https://www.youtube.com/watch?v=f-xhJVy5aMc&list=PLLpuTxD1V1hx3hpQq4S0B-e3QDpogJYcZ&index=2&t=0s)
-[從付費到免費再到補貼 —— 商業模式變遷的底層邏輯 ](https://www.inside.com.tw/2018/10/26/payment-to-freemium-to-subsidies)
+這次的文章，我很大的啟發是來自於囧星人 <盜版的未來> 這支影片；而 INSIDE 文章 <從付費到免費再到補貼 —— 商業模式變遷的底層邏輯> 讓我對於商業模式變遷的實際原因有了更深入的了解，兩者都有非常精闢的內容，強力推薦。  
+[盜版的未來｜資訊分享，鎖得住？—冏星人](https://www.youtube.com/watch?v=f-xhJVy5aMc&list=PLLpuTxD1V1hx3hpQq4S0B-e3QDpogJYcZ&index=2&t=0s)  
+[從付費到免費再到補貼 —— 商業模式變遷的底層邏輯 ](https://www.inside.com.tw/2018/10/26/payment-to-freemium-to-subsidies)  
 
 # 關於作者
-林宏信 lancatlin，國中生、業餘軟體工程師，經營部落格 [WANcatServer 網貓伺服器](https://wancatserver.tk)
+林宏信 lancatlin，國中生、業餘軟體工程師，經營部落格 [WANcatServer 網貓伺服器](https://wancatserver.tk)   
 
