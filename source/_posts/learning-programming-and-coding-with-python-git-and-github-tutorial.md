@@ -395,3 +395,6 @@ Git 可以分為 Local（本地）和 Remote（遠端）兩個環境，由於 Gi
 7. [Git 教學](https://www.gitbook.com/book/zlargon/git-tutorial/details)
 
 （image via [git-scm](https://git-scm.com/images/logos/downloads/Git-Logo-1788C.png)、[qbox](https://dn-sdkcnssl.qbox.me/article/fyuBUISCkmddVNC0t2Iu.png)、[quoracdn](https://qph.ec.quoracdn.net/main-qimg-3aa29f29ede6a8245b6964f663c60339)、[ytimg](https://i.ytimg.com/vi/DPIPC25xzUM/maxresdefault.jpg)、[linux](https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2014/linux.jpg)、[imgur](https://i.stack.imgur.com/RUIIq.png)、[martinfitzpatrick](https://martinfitzpatrick.name/images/method/1472/GitBranchName_1.png)）
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
