@@ -1,7 +1,13 @@
 ---
 title: 用 Google Calendar 與 nivo 製作自己的年終檢討報告
 date: 2018-12-15 15:15:09
-tags: data, visualization, d3, nivo, google calendar, yearend
+tags:
+  - data
+  - visualization
+  - d3
+  - nivo
+  - google calendar
+  - yearend
 ---
 
 # 前言
