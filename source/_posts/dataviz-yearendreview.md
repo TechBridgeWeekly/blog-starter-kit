@@ -192,7 +192,7 @@ export default Calendar;
 
 其他的實作細節基本上就是 React 而已，真的有興趣~~（想看看 code 有多鳥）~~可以到 [github](https://github.com/ArvinH/YearEndReview-2018/) 瞧瞧。
 
-## 分享一下我的年終檢討
+## 最後分享一下我的年終檢討
 
 我記錄在 Google Calendar 上的 task，基本上分為六類：
 
@@ -228,7 +228,7 @@ Waffle 圖的數據是我將每個月的分類 task 加總後做平均所算出�
 ## 資料來源
 
 1. [nivo](https://nivo.rocks)
-2. [一起用 Google Calendar 與 D3.js 進行年終回顧吧！](https://blog.techbridge.cc/2017/12/12/d3v4-calendar-yearendreview/)）
+2. [一起用 Google Calendar 與 D3.js 進行年終回顧吧！](https://blog.techbridge.cc/2017/12/12/d3v4-calendar-yearendreview/)
 
 關於作者：
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
