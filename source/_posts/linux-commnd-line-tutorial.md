@@ -511,6 +511,9 @@ $ ./example.sh
 # 總結
 以上介紹了 Linux/Ubuntu 常用指令和基礎操作的入門教學介紹上，實際上讀者不用刻意去背誦，而是在實際上操作中練習，多累積撰寫程式並使用指令碼去加快程式開發的速度自然而然就會把指令碼記憶起來了，若是真的忘記再去網路上查找就好，加油！
 
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
+
 # 參考文件
 1. [初窥Linux 之 我最常用的20条命令](http://blog.csdn.net/ljianhui/article/details/11100625)
 2. [【Ｌ】Linux 常用指令集](http://blog.xuite.net/chingwei/blog/16285667-%E3%80%90%EF%BC%AC%E3%80%91Linux+%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E9%9B%86)

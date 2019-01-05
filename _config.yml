@@ -137,9 +137,13 @@ search:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# deploy: 
+#   type: git
+#   repo: https://github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
+#   branch: master
 deploy: 
   type: git
-  repo: https://github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
+  repo: https://gh_token@github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
 
 # hexo-math
