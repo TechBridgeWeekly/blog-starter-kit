@@ -133,6 +133,6 @@ tags:
 # 參考文件
 1. [燃尽图 （Burn up and Burn down Chart）—介绍](https://zhuanlan.zhihu.com/p/28314519)
 2. [Clear Acceptance Criteria and Why They’re Important](https://rubygarage.org/blog/clear-acceptance-criteria-and-why-its-important)
-3. [當一個 Scrum Master 是一個怎樣的體驗？]()
+3. [當一個 Scrum Master 是一個怎樣的體驗？](https://blog.kdchang.cc/2019/01/04/what-is-the-experience-of-be-a-scrum-master/)
 
 （image via [eohcoastal](https://www.eohcoastal.co.za/uncategorized/tell-effective-scrum-master/)）
