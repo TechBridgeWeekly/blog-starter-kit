@@ -69,7 +69,6 @@ plugins:
   hexo-generator-cname
   hexo-generator-robotstxt
   hexo-renderer-mathjax
-  hexo-math
 
 # hexo sitemap
 sitemap:
@@ -135,25 +134,14 @@ search:
   path: search.xml
   field: post
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-# deploy: 
-#   type: git
-#   repo: https://github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
-#   branch: master
+## Deployment
 deploy: 
   type: git
   repo: https://gh_token@github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
 
-# # hexo-math
+## hexo-renderer-mathjax
 math:
-  engine: 'mathjax'
+  engine: mathjax
   mathjax:
     src: https://cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
-
-# # MathJax Support
-# mathjax:
-#   enable: true
-#   per_page: false
-#   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML

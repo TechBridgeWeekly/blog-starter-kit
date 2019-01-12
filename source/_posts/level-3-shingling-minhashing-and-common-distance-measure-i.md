@@ -1,7 +1,11 @@
 ---
 title: Shingling, MinHashing and Common distance measure I
 date: 2017-10-01 00:11:34
-tags: 大數據, 演算法, mining massive dataset
+mathjax: true
+tags: 
+  - 大數據
+  - 演算法
+  - mining massive dataset
 ---
 
 
