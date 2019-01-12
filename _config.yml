@@ -140,7 +140,7 @@ deploy:
   repo: https://gh_token@github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
 
-## hexo-renderer-mathjax
+## hexo-renderer-mathjax ref: https://github.com/phoenixcw/hexo-renderer-mathjax
 math:
   engine: mathjax
   mathjax:

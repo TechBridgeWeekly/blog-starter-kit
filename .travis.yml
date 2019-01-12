@@ -3,9 +3,9 @@ sudo: required
 node_js:
   - 7.9.0
 
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
 
 branches:
   only:
@@ -16,6 +16,7 @@ before_install:
 
 # Start: Build Lifecycle
 install:
+  - rm -rf ./node_modules
   - npm install
   - npm install hexo-deployer-git --save
 
