@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.techbridge.cc
+url: https://blog.techbridge.cc
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -146,8 +146,14 @@ deploy:
   repo: https://gh_token@github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
 
-# hexo-math
-math:
-  engine: 'mathjax'
-  mathjax:
-    src: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+# # hexo-math
+# math:
+#   engine: 'mathjax'
+#   mathjax:
+#     src: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+# MathJax Support
+
+mathjax:
+  enable: true
+  per_page: false
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
