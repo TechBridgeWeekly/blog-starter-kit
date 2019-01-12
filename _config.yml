@@ -100,7 +100,6 @@ robotstxt:
   disallow:
     - /js/
     - /css/
-    - /fonts/
     - /vendors/
     - /fancybox/
   allow:
