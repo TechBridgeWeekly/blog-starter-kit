@@ -7,7 +7,7 @@ TechBridge 技術共筆部落格是由 TechBridge Weekly 技術週刊團隊維�
 - 技術共筆部落格：[http://blog.techbridge.cc/](http://blog.techbridge.cc/)
 - 技術日報：[http://www.techbridge.cc/](http://www.techbridge.cc/)
 - 技術週刊：[http://weekly.techbridge.cc/](http://weekly.techbridge.cc/)
-- 粉絲專頁：[https://www.facebook.com/TechBridge.Fans/](https://www.facebook.com/TechBridge.Fans/)
+- 粉絲專頁：[https://www.facebook.com/TechBridgeTW/](https://www.facebook.com/TechBridgeTW/)
 
 ## Contribute 
 0. TechBridge 技術共筆部落格使用 Github 和 Hexo 平台，若您對於 Hexo 並不熟悉，請先閱讀[官方文件](https://hexo.io/)
