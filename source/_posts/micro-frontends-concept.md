@@ -251,7 +251,7 @@ Micro Frontends 的好處就在於，各個模組間是非常獨立的，彼此�
 
 # 那有誰採用 Micro Frontends？
 
-很多公司可能都有自己的類似解決方案，像 FB 的 bigpie，或是 yahoo 自己也有處理類似問題的做法，
+很多公司可能都有自己的類似解決方案，就像 FB 的 bigpie，或是 Yahoo 也有類似的作法。
 
 在我查到的資料當中，比較有提到 Micro Frontends 的大公司有 Spotify 與 IKEA，就給大家自行去欣賞他們的分享了：
 
