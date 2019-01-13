@@ -253,7 +253,7 @@ Micro Frontends 的好處就在於，各個模組間是非常獨立的，彼此�
 
 # 那有誰採用 Micro Frontends？
 
-很多公司可能都有自己的類似解決方案，就像 FB 的 bigpie，或是 Yahoo 也有類似的作法｀。
+很多公司可能都有自己的類似解決方案，就像 FB 的 bigpie，或是 Yahoo 也有類似的作法。
 
 在我查到的資料當中，比較有提到 Micro Frontends 的大公司有 Spotify 與 IKEA，細節就給大家自行去欣賞他們的分享了：
 
@@ -268,6 +268,14 @@ Spotify 是從 UI 來區分團隊負責的 function，原先採用 iframe 與 po
 [MICROSERVICE WEBSITES - Gustaf N. Kotte](https://www.youtube.com/watch?v=4KVOuQDIfmw)
 
 ![MICROSERVICE WEBSITES - Gustaf N. Kotte](/img/arvinh/ikea-microfe.png)
+
+# 小結論
+
+其實會需要用到 Micro Frontends 結構的應該不多，尤其在 React/Vue/Angular 主宰的這幾年，需求相對更少。越大型的 web app 與團隊才比較值得去嘗試。
+
+現行的實作方式其實都很複雜，上面描述的方法與網路看到的 prototype 都過於簡化了。
+
+但這種高階層架構的思考與設計其實多多益善，從中發現的困難更能推動技術發展，而且也很有趣！
 
 ## 資料來源
 
