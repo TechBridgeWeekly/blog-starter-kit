@@ -238,6 +238,8 @@ singleSpa.start();
 
 這樣會是一個折衷的方案，不用煩惱 common dependences 的問題，但相對的在升級版本時，可能就得一次將所有元件庫內的元件都升級才可以使用。
 
+有點偏離 Micro Frontends 的核心就是了。
+
 ## Micro Frontends 帶來的好處與壞處
 
 Micro Frontends 的好處就在於，各個模組間是非常獨立的，彼此間的部署不需要互相等待，tech stack 也不一定要用相同的，也就是說，在汰換 legacy code 的過程可以順暢一些，也更容易嘗試新技術，可以漸進式的把 SPA 上的模組替換成更好或更新的框架，讓新舊 code 能夠並存無衝突。團隊在開發上可以更敏捷。
@@ -251,13 +253,17 @@ Micro Frontends 的好處就在於，各個模組間是非常獨立的，彼此�
 
 # 那有誰採用 Micro Frontends？
 
-很多公司可能都有自己的類似解決方案，就像 FB 的 bigpie，或是 Yahoo 也有類似的作法。
+很多公司可能都有自己的類似解決方案，就像 FB 的 bigpie，或是 Yahoo 也有類似的作法｀。
 
-在我查到的資料當中，比較有提到 Micro Frontends 的大公司有 Spotify 與 IKEA，就給大家自行去欣賞他們的分享了：
+在我查到的資料當中，比較有提到 Micro Frontends 的大公司有 Spotify 與 IKEA，細節就給大家自行去欣賞他們的分享了：
 
 [Spotify - How Spotify Builds Products (Organization. Architecture, Autonomy, Accountability)](https://www.slideshare.net/kevingoldsmith/how-spotify-builds-products-organization-architecture-autonomy-accountability):
 
 ![Spotify sharing](/img/arvinh/spotify-microfe.jpg)
+
+Spotify 是從 UI 來區分團隊負責的 function，原先採用 iframe 與 postMessage 的方式來處理 Micro Frontends，團隊間 technology independence，但他們已經捨棄這個架構很久了，後來改採一律 react/redux 的架構。可以看這份 [twitter](https://twitter.com/derberq/status/910056617881817089) 討論。
+
+另外，它們是有一個團隊在負責檢驗各 team 產出的模組 UI style 是否維持產品的一致性。
 
 [MICROSERVICE WEBSITES - Gustaf N. Kotte](https://www.youtube.com/watch?v=4KVOuQDIfmw)
 
