@@ -8,7 +8,7 @@ TechBridge Weekly 技術週刊團隊是一群對用技術改變世界懷抱熱�
 - 技術日報：[http://www.techbridge.cc/](http://www.techbridge.cc/)
 - 技術週刊：[http://weekly.techbridge.cc/](http://weekly.techbridge.cc/)
 - 技術共筆部落格：[http://blog.techbridge.cc/](http://blog.techbridge.cc/)
-- 粉絲專頁：[https://www.facebook.com/TechBridgeTW/](https://www.facebook.com/TechBridgeTW/)
+- 粉絲專頁：[https://www.facebook.com/techbridge.cc/](https://www.facebook.com/techbridge.cc/)
 - 電子郵件：[techbridge.cc@gmail.com](mailto:techbridge.cc@gmail.com)
 
 ## 目前負責的 Curator
