@@ -1,5 +1,5 @@
 ---
-title: 前端也能玩 Deepleaning - 以 p5-deeplearn-js 為例
+title: 前端也能玩 Deep learning - 以 p5-deeplearn-js 為例
 date: 2018-01-13 16:30:21
 tags: deeplearning,deeplearnjs,p5ML,chrome extension
 ---
