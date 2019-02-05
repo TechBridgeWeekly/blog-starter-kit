@@ -49,8 +49,10 @@ XXXXX
 1. [使用GitHub和Hexo搭建免费静态Blog](http://wsgzao.github.io/post/hexo-guide/)
 2. [Hexo常见问题解决方案](https://xuanwo.org/2014/08/14/hexo-usual-problem/)
 3. [Hexo 安裝教學、心得筆記](https://wwssllabcd.github.io/blog/2014/12/22/how-to-install-hexo/)
+4. [LaTeX 在 Hexo 中的使用](https://fsh0524.github.io/2016/03/03/LaTeX-in-Hexo/)
+5. [Hexo 顯示數學公式](https://mousyball.github.io/2017/01/01/mathjax-support/)
 
-## 目前負責的 Curator（歡迎有興趣朋友跳坑加入策展人團隊:P）
+## 目前負責的 Curator
 1. [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校
 2. [@arvinh](http://blog.arvinh.info/about) 前端攻城獅，熱愛數據分析和資訊視覺化
 3. [@huli](http://huli.logdown.com) 野生工程師，相信分享與交流能讓世界變得更美好
