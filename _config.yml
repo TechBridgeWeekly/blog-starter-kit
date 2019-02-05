@@ -69,7 +69,8 @@ theme: casper
 Plugins:
   - hexo-generator-cname
   - hexo-generator-robotstxt
-  - hexo-renderer-mathjax
+  # - hexo-renderer-sass
+  # - hexo-renderer-mathjax
 
 # hexo sitemap
 sitemap:
@@ -139,3 +140,10 @@ deploy:
   type: git
   repo: https://gh_token@github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
+
+# math:
+#   engine: mathjax # or 'katex'
+#   mathjax:
+#     # src: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#     config:
+#       # MathJax config

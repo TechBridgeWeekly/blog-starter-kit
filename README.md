@@ -51,6 +51,7 @@ XXXXX
 3. [Hexo 安裝教學、心得筆記](https://wwssllabcd.github.io/blog/2014/12/22/how-to-install-hexo/)
 4. [LaTeX 在 Hexo 中的使用](https://fsh0524.github.io/2016/03/03/LaTeX-in-Hexo/)
 5. [Hexo 顯示數學公式](https://mousyball.github.io/2017/01/01/mathjax-support/)
+6. [在Hexo顯示數學公式](https://dtes8617.github.io/2018/01/24/%E5%9C%A8Hexo%E9%A1%AF%E7%A4%BA%E6%95%B8%E5%AD%B8%E5%85%AC%E5%BC%8F/)
 
 ## 目前負責的 Curator
 1. [@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校
