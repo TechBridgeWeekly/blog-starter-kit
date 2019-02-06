@@ -70,7 +70,7 @@ Plugins:
   - hexo-generator-cname
   - hexo-generator-robotstxt
   - hexo-renderer-sass
-  - hexo-renderer-mathjax
+  - hexo-renderer-mathjax2
   - hexo-math
 
 # hexo sitemap
