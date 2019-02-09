@@ -313,7 +313,7 @@ export default diffAttrs;
 2. `oldVChildren.length > newVChildren.length`，跟 case 1 其實一樣，因為新子樹比較少，就代表有 Node 被刪除，在我們原本的 diff 函式中有處理了。
 3. `oldVChildren.length < newVChildren.length`，新子樹比較長，那就先把舊子樹的所有點先 update 好，再把剩餘的新子樹 patch 上去。
 
-從上述三個 cases 來看，我們橫豎都需要 loop oldVChildren 一次，最後若有多餘的 newVChildren 再想辦法 update 上去。另外，這邊一樣需要暫存多個 patch 函數，實作細節我註解在 code 裡比較清楚，最後回傳的 patch 還數比較特別：
+從上述三個 cases 來看，我們橫豎都需要 loop oldVChildren 一次，最後若有多餘的 newVChildren 再想辦法 update 上去。另外，這邊一樣需要暫存多個 patch 函數，實作細節我註解在 code 裡比較清楚，最後回傳的 patch 函數比較特別：
 
 ```js diffChildren.js
 const diffChildren = (oldVChildren, newVChildren) => {
