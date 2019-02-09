@@ -65,10 +65,13 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: casper
 
-plugins:
-  hexo-generator-cname
-  hexo-generator-robotstxt
-  hexo-math
+## hexo-renderer-mathjax ref: https://github.com/phoenixcw/hexo-renderer-mathjax
+Plugins:
+  - hexo-generator-cname
+  - hexo-generator-robotstxt
+  - hexo-renderer-sass
+  - hexo-renderer-mathjax2
+  - hexo-math
 
 # hexo sitemap
 sitemap:
@@ -139,8 +142,9 @@ deploy:
   repo: https://gh_token@github.com/TechBridgeWeekly/techbridgeweekly.github.io.git
   branch: master
 
-## hexo-renderer-mathjax ref: https://github.com/phoenixcw/hexo-renderer-mathjax
 math:
-  engine: mathjax
+  engine: mathjax # or 'katex'
   mathjax:
-    src: https://cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+    # src: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    config:
+      # MathJax config

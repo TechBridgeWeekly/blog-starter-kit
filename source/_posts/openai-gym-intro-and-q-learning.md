@@ -112,7 +112,7 @@ for i_episode in range(5): #how many episodes you want to run
 
 ![Q learning algorithm](https://i.stack.imgur.com/JvJqR.png)
 
-裡面只有一處比較不直覺，就是在更新 Q table 時，計算 reward 不只包含採取 action $a$ 獲得的 reward $r$，還包含 $$\gamma max_{a'}Q(s', a')$$。這個概念是，agent 不僅僅看當下採取的行動帶來的好處，他也會估計到達下一個 state $s'$ 後，最多可以有多少好處（因為在 $s'$ 也可以採取各種 action）。換句話說，這個 agent 不是一個目光如豆的 agent，他會考慮未來。因為加上了 $\gamma max_{a'}Q(s', a')$ (當然，$\gamma$ 不能是 0)，讓我們的 agent 從 [會立刻吃掉棉花糖的小朋友，進化成可以晚一點再吃多一點棉花糖的小朋友](http://smartold.businessweekly.com.tw/webarticle.php?id=48582)，是不是很有趣呢！
+裡面只有一處比較不直覺，就是在更新 Q table 時，計算 reward 不只包含採取 action $a$ 獲得的 reward $r$，還包含 $\gamma max\_{a'}Q(s', a')$。這個概念是，agent 不僅僅看當下採取的行動帶來的好處，他也會估計到達下一個 state $s'$ 後，最多可以有多少好處（因為在 $s'$ 也可以採取各種 action）。換句話說，這個 agent 不是一個目光如豆的 agent，他會考慮未來。因為加上了 $\gamma max\_{a'}Q(s', a')$ (當然，$\gamma$ 不能是 0)，讓我們的 agent 從 [會立刻吃掉棉花糖的小朋友，進化成可以晚一點再吃多一點棉花糖的小朋友](http://smartold.businessweekly.com.tw/webarticle.php?id=48582)，是不是很有趣呢！
 
 經過以上的說明，大家應該可以了解 Q learning 演算法的核心概念了。這時大家可能會有點疑惑，之前好像有聽過 Deep Q learning，那跟 Q learning 差在哪邊呢？其實就只是有沒有使用到 Deep neural network 而已，如果你理解這個演算法，應該不難發現他的能力滿有限的，很難拿來學習完成複雜的 task，所以才有人引入 DNN 來讓其學習能力變得更強。
 
