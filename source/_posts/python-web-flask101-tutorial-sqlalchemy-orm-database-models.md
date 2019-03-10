@@ -314,3 +314,6 @@ $ python manage.py db --help
 2. [Python Web 程式設計入門實戰線上課程](http://pics.ee/c34g)
 
 （image via [basicsofwebdevelopment](https://basicsofwebdevelopment.files.wordpress.com/2015/01/mvc_role_diagram.png)）
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
