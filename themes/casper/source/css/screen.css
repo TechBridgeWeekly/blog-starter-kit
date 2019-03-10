@@ -418,7 +418,10 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .navbar-block span a {
-    color: #FFFFFF;
+    color: #AAAAAA;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
 }
 
 .navbar-block span a:hover {
