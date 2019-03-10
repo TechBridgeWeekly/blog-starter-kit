@@ -842,23 +842,19 @@ pre .chunk {
     text-align: center;
 }
 
-.pagination a {
-    color: #9EABB3;
-}
-
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
     display: flex;
     font-size: 20px;
     align-items: center;
-    height: 60px;
+    height: auto;
     padding: 15px;
-    border: #EBF2F6 2px solid;
+    border: #444444 2px solid;
     text-decoration: none;
     border-radius: 30px;
     transition: border ease 0.3s;
-    color: #222223;
+    color: #000000;
 }
 
 .older-posts {
@@ -876,7 +872,7 @@ pre .chunk {
 
 .older-posts:hover,
 .newer-posts:hover {
-    border-color: #9EABB3;
+    border-color: #000000;
 }
 
 
