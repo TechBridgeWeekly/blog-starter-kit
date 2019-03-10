@@ -30,7 +30,7 @@
 </script>
 <% } %>
 <% if (theme.fancybox){ %>
-<link rel="preload" rel="stylesheet" href="<%- config.root %>modules/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<link rel="stylesheet preload" href="<%- config.root %>modules/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="<%- config.root %>modules/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
     (function($){
@@ -51,7 +51,7 @@
 <% } %>
 <% if (!config.highlight.enable) { %>
 <!-- Highlight.js -->
-<link rel="preload" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css">
+<link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <% } %>
