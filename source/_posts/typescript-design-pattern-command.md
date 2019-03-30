@@ -244,7 +244,7 @@ export class Customer extends React.Component<CustomerProps, CustomerState> {
 
 Typescript 現在非常熱門，Design Pattern 則是萬年不敗，兩者搭配起來一起學習可說是天作之合！尤其是平常工作沒有機會碰觸到的話，透過這種方式學習不僅兩者皆能吸收，還能累積點小玩具。
 
-但說起來，Typescript 的爭議也不少，最近參加了新同事主辦的幾場 Meetup，再次染起我對 Elm 的興趣，可惜剛到新環境，瑣事太多，還來不及有個成果分享，不過也算是有心得，希望之後能夠分享一下。
+但說起來，Typescript 的爭議也不少，最近參加了優秀新同事們主辦的幾場 Meetup，再次染起我對 Elm 的興趣，可惜剛到新環境，瑣事太多，還來不及有個成果分享，不過也算是有點心得，希望之後能夠分享一下。
 
 ## 資料來源
 
