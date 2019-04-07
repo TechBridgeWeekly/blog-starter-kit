@@ -1,10 +1,12 @@
 ---
 title: 如何使用 Python 實現 LRU 快取置換機制
-date: 2019-04-10 20:23:23
+date: 2019-04-06 20:23:23
 author: kdchang
 tags: 
     - Python
     - LRU
+    - LRU（Least Recently Used
+    - cache
 ---
 
 ![如何使用 Python 實現 LRU 快取](/img/kdchang/cs101/algorithm/cache.jpeg)
