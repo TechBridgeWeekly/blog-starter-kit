@@ -5,7 +5,7 @@ author: kdchang
 tags: 
     - Python
     - LRU
-    - LRU（Least Recently Used
+    - Least Recently Used
     - cache
 ---
 
