@@ -1,18 +1,18 @@
 ---
-title: 用 Typescript 輕鬆學 Design pattern - Command Pattern
+title: 用 TypeScript 輕鬆學 Design pattern - Command Pattern
 date: 2019-03-31 02:38:00
 tags:
   - Design pattern
   - Command
   - react
-  - typescript
+  - TypeScript
 ---
 
 # 前言
 
-雖然直到最近才實際在工作上使用 Typescript 進行開發，但是早在去年就有斷斷續續在自己的 side project 上玩玩 Typescript，剛好後來公司讀書會在研讀[經典的 Design Pattern 書籍](https://en.wikipedia.org/wiki/Design_Patterns)，就索性使用 Typescript 來製作範例，意外發現 Typescript 在講解一些 Design Pattern 的時候非常適合，不僅能夠有類別、物件等清楚的表示，也能夠直接在網頁上做出會動的範例。
+雖然直到最近才實際在工作上使用 TypeScript 進行開發，但是早在去年就有斷斷續續在自己的 side project 上玩玩 TypeScript，剛好後來公司讀書會在研讀[經典的 Design Pattern 書籍](https://en.wikipedia.org/wiki/Design_Patterns)，就索性使用 TypeScript 來製作範例，意外發現 TypeScript 在講解一些 Design Pattern 的時候非常適合，不僅能夠有類別、物件等清楚的表示，也能夠直接在網頁上做出會動的範例。
 
-雖然這是蠻久之前製作的，但最近想想還是可以分享一下！所以今天就以 Typescript 來製作範例，為大家講解 **Command Pattern**！
+雖然這是蠻久之前製作的，但最近想想還是可以分享一下！所以今天就以 TypeScript 來製作範例，為大家講解 **Command Pattern**！
 
 ## Command Pattern
 
@@ -54,7 +54,7 @@ By <a href="//commons.wikimedia.org/wiki/User:Sae1962" title="User:Sae1962">Sae1
 
 接著我們先來看看實際的範例。
 
-## Typescript 實作範例
+## TypeScript 實作範例
 
 <iframe src="https://codesandbox.io/embed/5k2nyp66q4?fontsize=14" title="Tyscript-CommandPattern-II" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
@@ -77,8 +77,23 @@ export class Command {
 }
 ```
 
-如同先前 UML 圖所描述，我們只定義抽象的 `execute()` method，在 Typescript 中要模擬抽象方法的最簡單做法就是讓他 `throw` Error。
+如同先前 UML 圖所描述，我們只定義抽象的 `execute()` method，在 TypeScript 中要模擬抽象方法的最簡單做法就是讓他 `throw` Error。
 另外我們同時也定義一個 `unexecute()`，作為回復的操作。
+
+<hr>
+
+**[2019/04/22 - Update]**
+
+感謝 @pilagod 的補充，TypeScript 有提供 `Abstract` 類別，可以強迫繼承者去實作其抽象函數，所以我們的 Command class 可以寫成：
+
+```js
+export abstract class Command {
+  abstract execute(): void;
+  abstract unexecute(): void;
+}
+```
+<hr>
+
 
 ```js
 import * as React from "react";
@@ -106,7 +121,7 @@ export class ConcreteOrderCommand extends Command {
 
 再來實作 `ConcreteCommand`，我們 `extend` 抽象的 `Command` 類別，指定兩個私有變數：`receiver` 與 `position`。
 
-`receiver` 可以從其宣告的類別看出，就是 `Waiter`，這就是 Typescript 適合說明 Design Pattern 的優點之一，可以很明確看到關聯性，我們待會會看到 `Waiter` 的實作。而 `position` 則是範例中我們用在 `execute()` 中，告訴 `receiver` 該如何 `action` 的工具，在範例中就是改變 Waiter 的位置。
+`receiver` 可以從其宣告的類別看出，就是 `Waiter`，這就是 TypeScript 適合說明 Design Pattern 的優點之一，可以很明確看到關聯性，我們待會會看到 `Waiter` 的實作。而 `position` 則是範例中我們用在 `execute()` 中，告訴 `receiver` 該如何 `action` 的工具，在範例中就是改變 Waiter 的位置。
 
 在 `ConcreteCommand` 的 `execute()` 實作中，我們定義出 "這個 Command" 要讓 "其受指定的 receiver" 進行怎樣的 "action"，也就是這行：
 
@@ -167,7 +182,7 @@ export class Waiter extends React.Component<WaiterProps, WaiterState> {
 }
 ```
 
-Receiver 也很簡單，重點在於實作 `action`。以範例來說，我們會從 `ConcreteCommand` 接收到新的 position state，所以我們要執行的動作就是 `this.setState({ position })`，將自身的狀態改變。透過 Typescript，可以清楚定義 state 與 props 的型別。
+Receiver 也很簡單，重點在於實作 `action`。以範例來說，我們會從 `ConcreteCommand` 接收到新的 position state，所以我們要執行的動作就是 `this.setState({ position })`，將自身的狀態改變。透過 TypeScript，可以清楚定義 state 與 props 的型別。
 
 `Waiter` 需要接收一個 `ref: React.RefObject<Waiter>;` 的 Props，則是與 React 實作相關，因為我是利用 `const WaiterRef = React.createRef<Waiter>();` 將 Waiter 的 ref 傳遞給 ConcreteCommand。（可參考 Codesandbox 內的完整程式碼）
 
@@ -225,7 +240,7 @@ export class Customer extends React.Component<CustomerProps, CustomerState> {
 
 接著我們只要在不同功能的 button 上綁定 `command` 即可，分別呼叫 `this.state.orderCommand.execute();` 與 `this.state.orderCommand.unexecute();`。
 
-如此一來，我們就成功用 Typescript 實作一個完整的 Command Pattern 範例啦！（完整的程式碼請看上方 CodeSandbox 連結）
+如此一來，我們就成功用 TypeScript 實作一個完整的 Command Pattern 範例啦！（完整的程式碼請看上方 CodeSandbox 連結）
 
 ## Command Pattern 的 Consequences
 
@@ -242,15 +257,15 @@ export class Customer extends React.Component<CustomerProps, CustomerState> {
 
 ## 結論
 
-Typescript 現在非常熱門，Design Pattern 則是萬年不敗，兩者搭配起來一起學習可說是天作之合！尤其是平常工作沒有機會碰觸到的話，透過這種方式學習不僅兩者皆能吸收，還能累積點小玩具。
+TypeScript 現在非常熱門，Design Pattern 則是萬年不敗，兩者搭配起來一起學習可說是天作之合！尤其是平常工作沒有機會碰觸到的話，透過這種方式學習不僅兩者皆能吸收，還能累積點小玩具。
 
-但說起來，Typescript 的[爭議](https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b)也不少，最近參加了優秀新同事們主辦的幾場 Meetup，再次燃起我對 Elm 的興趣，可惜剛到新環境，瑣事太多，還來不及有個成果分享，不過也算是有點心得，希望之後能夠分享一下。
+但說起來，TypeScript 的[爭議](https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b)也不少，最近參加了優秀新同事們主辦的幾場 Meetup，再次燃起我對 Elm 的興趣，可惜剛到新環境，瑣事太多，還來不及有個成果分享，不過也算是有點心得，希望之後能夠分享一下。
 
 ## 資料來源
 
 1. [Wiki - Design_Patterns](https://en.wikipedia.org/wiki/Design_Patterns)
-2. [Typescript](https://github.com/Microsoft/TypeScript)
-3. [Tyepscript Design Pattern](https://github.com/torokmark/design_patterns_in_typescript)
+2. [TypeScript](https://github.com/Microsoft/TypeScript)
+3. [TypeScript Design Pattern](https://github.com/torokmark/design_patterns_in_typescript)
 
 關於作者：
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
