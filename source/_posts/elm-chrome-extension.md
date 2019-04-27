@@ -479,7 +479,7 @@ port.onMessage.addListener(state => {
 
 在 `port.onMessage` 的 listener 中，我們會監聽到由 Background.js 傳遞來的初始 State，然後才 init Content 這邊的 Elm application，並將 Background.js 傳來的 state 一起傳入，若後續有更新 state，則透過 `port` 的 `onState` 來更新。
 
-完整程式碼與其他細節請看 [source code](https://github.com/ArvinH/Elm-ChromeExt)
+基本上這樣一來，整個 Extension 的工作就完成了，但省略了不少細節，完整程式碼與其他細節只好請大家直接看原始碼會更清楚一點： [source code](https://github.com/ArvinH/Elm-ChromeExt)
 
 ### 如何 Debug
 
