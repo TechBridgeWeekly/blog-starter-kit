@@ -494,7 +494,8 @@ Elm 的確是蠻優雅的語言，但不是能在短時間內完美駕馭的...�
 1. [elm-lang](https://elm-lang.org)
 2. [Beginning Elm](https://elmprogramming.com)
 3. [elm github](https://github.com/elm)
-4. [Elm 作者 2012 年的演講影片](https://www.infoq.com/presentations/Elm)
+4. [Elm 作者 ｀2012 年的演講影片](https://www.infoq.com/presentations/Elm)
+5. [Elm——函数式前端框架介绍](https://shenlvmeng.github.io/blog/2017/06/19/elm-introduction/)
 
 關於作者：
 [@arvinh](http://blog.arvinh.info/about/) 前端攻城獅，熱愛數據分析和資訊視覺化
