@@ -139,3 +139,7 @@ $ jupyter notebook
 1. [openpyxl - A Python library to read/write Excel 2010 xlsx/xlsm files](https://openpyxl.readthedocs.io/en/stable/index.html#module-openpyxl)
 
 （image via [matplotlib](https://www.google.com.tw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjNwbGM4OHdAhXGvrwKHQ7DBKsQjxx6BAgBEAI&url=https%3A%2F%2Fproducts.office.com%2Fzh-hk%2Fexcel&psig=AOvVaw3QGOaPdJF8pWlME7Vtbe1r&ust=1538363320894206)
+
+
+關於作者：
+[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
