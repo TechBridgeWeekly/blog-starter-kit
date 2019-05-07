@@ -186,6 +186,11 @@ t.substitute(error=err)
 
 # 參考文件
 1. [python string — Common string operations](https://docs.python.org/3/library/string.html)
+2. [(那些過時的) Python 字串格式化以及 f-string 字串格式化](https://blog.louie.lu/2017/08/08/outdate-python-string-format-and-fstring/)
+3. [字串格式化](https://openhome.cc/Gossip/Python/StringFormat.html)
+4. [Python String Formatting Best Practices](https://realpython.com/python-string-formatting/)
+5. [Python 字串格式化教學與範例](https://officeguide.cc/python-string-formatters-tutorial/)
+6. [A Quick Guide to Format String in Python](https://www.techbeamers.com/python-format-string-list-dict/)
 
 （image via [unsplash](https://unsplash.com/photos/HvYy5SEefC8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
