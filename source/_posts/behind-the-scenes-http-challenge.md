@@ -386,7 +386,7 @@ router.get('/start', (req, res) => {
 感謝早期幫我測試的朋友們，也感謝跟我一起享受遊戲的大家。底下是一些相關的闖關心得，有興趣的話也可以看看：
 
 1. [一日圖書館管理員：HTTP Challenge](https://github.com/jijigo/notes/issues/24)
-2. [HTTP_Game攻略(一)](https://pvt5r486.github.io/2019/05/13/HTTP-Game%E6%94%BB%E7%95%A5(%E4%B8%80)/)
+2. [HTTP_Game攻略(一)](https://pvt5r486.github.io/note/20190513/2430981100/)
 3. [Lidemy HTTP 圖書館小弟加班(V2)](http://enter3017sky.tw/article.php?id=124)
 4. [小挑戰 http game 解題思路心得想法](https://medium.com/@hugh_Program_learning_diary_Js/%E5%B0%8F%E6%8C%91%E6%88%B0-http-game-%E8%A7%A3%E9%A1%8C%E6%80%9D%E8%B7%AF%E5%BF%83%E5%BE%97%E6%83%B3%E6%B3%95-8007cb7d2e81)
 
