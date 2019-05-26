@@ -64,8 +64,7 @@ input[id*='-8-o']:checked ~ #board #tile-8 div::before {
 
 `input[id*='-8-x']`，代表的是 **選取所有 id attribute 中『包含』字串 '-8-x' 的 input 元素 **。接著加上 `:check` 就能 filter 出被使用者選取的 `input` 元素。
 
-而後面的 `~ #board #tile-8 div::before` 則是表示，在符合上面條件的 `input` 元素**下**的**所有符合** `#board #tile-8 div` 的 div 內，我們加上一個 `::before` 僞元素，
-並且設定其 css 為 `content: "X"`。
+而後面的 `~ #board #tile-8 div::before` 則是表示，在符合上面條件的 `input` 元素**下**的**所有符合** `#board #tile-8 div` 的 div 內，我們加上一個 `::before` 僞元素，並且設定其 css 為 `content: "X"`。
 
 這樣的一段 CSS selector 被觸發後，就可以達到**點擊後留下 X 標記**的效果了：
 
@@ -100,6 +99,13 @@ input[id*='-8-o']:checked ~ #board #tile-8 div::before {
 ```
 
 如此一來，我們可以把 `input` 按鈕藏到畫面看不到的地方，然後輕易套用任何 style 到 `label` 上頭，做出井字空格。
+
+```css
+input[type="radio"] {
+  position: absolute;
+  top: -9999em; /* 藏到畫面外 */
+}
+```
 
 ## Hover 出後出現額外元素很常見，但怎麼讓他交替出現不同元素？
 
