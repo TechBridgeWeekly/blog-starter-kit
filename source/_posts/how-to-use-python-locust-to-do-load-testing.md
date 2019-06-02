@@ -145,7 +145,7 @@ Percentage of the requests completed within given times
 ```
 
 
-# 使用分散式模式
+# 使用分散式模式（Distributed）
 有時候我們本機的資源不夠會導致在進行 load testing 時希望支援的使用者和 RPS 的數量會不如預期，此時就可以嘗試使用分散式 mode，可以先在一個 termianl 去定義 master 的設定並啟動，然後在 terminal 新開 tab 去把 slave 加入，當 master 監聽 slave 數量達到宣告（--expect-slaves）的時候就會開始執行任務（若沒有則會一直等待）。
 
 宣告 master 指令：
