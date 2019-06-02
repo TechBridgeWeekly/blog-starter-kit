@@ -1,5 +1,5 @@
 ---
-title: 如何使用 Python 和 Locust 進行 Load testing
+title: 如何使用 Python 和 Locust 進行 Load testing 入門教學
 date: 2019-05-29 20:23:23
 author: kdchang
 tags: 
