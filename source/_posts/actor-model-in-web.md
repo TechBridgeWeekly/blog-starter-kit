@@ -187,6 +187,7 @@ async function bootstrap() {
 
   const worker = new Worker("worker.js");
   // This is necessary in Safari to keep the worker alive.
+  // 相關討論可以看 repo 內的 issue https://github.com/PolymerLabs/actor-boilerplate/issues/13
   setInterval(() => {
     worker.postMessage("");
   }, 3000);
