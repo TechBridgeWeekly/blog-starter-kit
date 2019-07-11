@@ -8,9 +8,13 @@ author: yiyu0x
 
 ## 前言
 
-在 Javescript 中很多比較的情況非常不符合邏輯，但是卻是合法行為。了解比較的依據，可以讓我們更加掌握 Javascipt 的運作方式，揭穿他的神秘面紗。
+在 Javescript 中很多行爲用其他程式語言的角度或是直觀角度來看都非常不合理。有些人知道這些行為，但不了解內部運作方式。而我自己在學習時，會嘗試了解內部的行為。了解過後，之後遇到同樣行為時，很自然的就知道某行為應該回傳什麼樣的值，而不再認為這是一顆地雷。
+
+這篇文章要探討的是 Javescript 在兩個物件中互相比較所用的依據為何。網路上大部分的文章都只有討論 `==`, `!=`, `===` 以及 `!==`。這篇文章要探討的是 ***在兩個物件之間使用大於小於去比較*** Javescript 如何處理這一件事情。
 
 ## 先看幾種常見的情況
+
+先複習一下幾種不同型態之間的比較依據
 
 ```javascript
 > 100 > 10
@@ -39,7 +43,7 @@ false
 -   symbol
 -   object
 
-所以 Javascript 的型態都在這七種之內。然而，除了 object 以外，都屬於基本型態([primitive data type](https://developer.mozilla.org/zh-TW/docs/Glossary/Primitive))。
+所有 Javascript 的型態都在這七種之內。然而，除了 object 以外，都屬於基本型態([primitive data type](https://developer.mozilla.org/zh-TW/docs/Glossary/Primitive))。
 
 ### 比較的依據
 
@@ -142,7 +146,7 @@ if (obj > 100) console.log("great!");
 //    ......
 ```
 
-## 物件預設的 valueOf, toString
+## 空物件預設的 valueOf, toString 為何
 
 ```javascript
 let obj = {};
@@ -160,4 +164,22 @@ if (obj == "[object Object]") console.log("great!");
 
 ## 結論
 
-希望這篇物件比較的規則有幫助大家更了解 Javascript ， 此篇文章也同時刊登於我的個人 [blog](https://blog.yiyu0x.tk/)
+透過以上的實驗，除了知道物件依據何者來比較大小。相信也對 `valueOf` 以及 `toString` 有更深一層的了解。如此一來對物件這個屬性的行為也能加以掌握。
+
+Javascript 的型態簡單來說就如同前面所說，一類為 primitive data type 另外一類就是物件(object)。很多新手常常搞混的行為其實也就只是這兩種屬性不太了解罷了。
+
+像是:
+
+```
+let str = 'hi'
+let str2 = String('hi')
+```
+
+這兩個字串的內容到底一樣不一樣？他們都是 primitive data type，所以當然一樣。如果用 `new String('hi')` 才會不一樣！
+
+理解這些平常不會仔細思考的問題更有助於掌握這門語言，日後我也會時常將我的學習歷程寫成文章，發佈於我的部落格與此，謝謝大家仔細看完這篇文章。
+
+## 關於我
+
+大家好，我是 yiyu 在網路上都用 [yiyu0x]((https://github.com/yiyu0x) 作為我的 id。目前是資訊工程學系大三的學生，平常喜歡寫程式，用程式解決日常生活中的問題。
+Javescript 是一門近期我非常熱愛的語言，相較於其他語言，豐富的套件以及異步的特性是我熱愛它的原因。此篇文章也同時刊登於我的個人 [blog](https://blog.yiyu0x.tk/)。
