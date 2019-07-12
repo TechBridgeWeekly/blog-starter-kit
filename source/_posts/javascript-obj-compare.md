@@ -181,5 +181,5 @@ let str2 = String('hi')
 
 ## 關於作者
 
-大家好，我是 yiyu 在網路上都用 [yiyu0x]((https://github.com/yiyu0x) 作為我的 id。目前是資訊工程學系大三的學生，平常喜歡寫程式，用程式解決日常生活中的問題。
+大家好，我是 yiyu 在網路上都用 [yiyu0x](https://github.com/yiyu0x) 作為我的 id。目前是資訊工程學系大三的學生，平常喜歡寫程式，用程式解決日常生活中的問題。
 Javescript 是一門近期我非常熱愛的語言，相較於其他語言，豐富的套件以及異步的特性是我熱愛它的原因。此篇文章也同時刊登於我的個人 [blog](https://blog.yiyu0x.tk/)。
