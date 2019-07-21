@@ -46,17 +46,17 @@ tags:
 
 如果你是使用 AR.js 的話，基本上現行有支援 WebGL 的手機瀏覽器就都能夠運行，不需要額外的 Polyfill 等等。
 
-但如果你想要使用非 Marker-based 效果的 AR 應用，你就得研究 [`WebXRDevice API`](https://immersive-web.github.io/webxr/)，其前身為 [WebAR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API)。
+但如果你想要使用非 Marker-based 效果的 AR 應用，你就得研究 [`WebXR Device API`](https://immersive-web.github.io/webxr/)，其前身為 [WebAR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API)。
 
-## WebXRDevice API
+## WebXR Device API
 
-WebXRDevice API 現在還在不斷更新中，不是個穩定的 API。
+WebXR Device API 現在還在不斷更新中，不是個穩定的 API。
 
-運用到 WebXRDevice API 的有 Google 使用的 [three.ar.js](https://github.com/google-ar/three.ar.js) 與整合 A-Frame 的 [aframe-ar.js](https://github.com/chenzlabs/aframe-ar)，以及 Mozilla 主導的 [three.xr.js](https://github.com/mozilla/aframe-xr) 和 [aframe-xr.js](https://github.com/mozilla/three.xr.js/)。
+運用到 WebXR Device API 的有 Google 使用的 [three.ar.js](https://github.com/google-ar/three.ar.js) 與整合 A-Frame 的 [aframe-ar.js](https://github.com/chenzlabs/aframe-ar)，以及 Mozilla 主導的 [three.xr.js](https://github.com/mozilla/aframe-xr) 和 [aframe-xr.js](https://github.com/mozilla/three.xr.js/)。
 
-Google 提供了 [WebARonARCore](https://github.com/google-ar/WebARonARCore) 和 [WebARonARKit](https://github.com/google-ar/WebARonARKit) 兩種分別在 Android 與 iOS 平台上運行的特殊 browsers，讓你能在上面跑 WebXRDevice 相關的 API：而 Mozilla 在 iOS 上也推出 [Mozilla WebXR Viewer](https://labs.mozilla.org/projects/webxr-viewer/) 來對應，三者皆是用到手機平台原生的 ARKit。
+Google 提供了 [WebARonARCore](https://github.com/google-ar/WebARonARCore) 和 [WebARonARKit](https://github.com/google-ar/WebARonARKit) 兩種分別在 Android 與 iOS 平台上運行的特殊 browsers，讓你能在上面跑 WebXR Device 相關的 API：而 Mozilla 在 iOS 上也推出 [Mozilla WebXR Viewer](https://labs.mozilla.org/projects/webxr-viewer/) 來對應，三者皆是用到手機平台原生的 ARKit。
 
-如同剛剛所說，WebXRDevice API 還很不穩定，而且 Google 與 Mozilla 各自在 Android 與 iOS 上有不同的實作，[Google code lab 上的範例](https://codelabs.developers.google.com/codelabs/ar-with-webxr/#0)只能運行在 version 為 70 - 72 的 Chrome canary 上，而 Mozilla 雖然有推出 [Mozilla WebXR Viewer](https://labs.mozilla.org/projects/webxr-viewer/)，但上面的[範例實作](https://github.com/MozillaReality/webxr-ios-js/tree/master/examples)也**只能**運行在 [Mozilla WebXR Viewer](https://labs.mozilla.org/projects/webxr-viewer/) 上頭...
+如同剛剛所說，WebXR Device API 還很不穩定，而且 Google 與 Mozilla 各自在 Android 與 iOS 上有不同的實作，[Google code lab 上的範例](https://codelabs.developers.google.com/codelabs/ar-with-webxr/#0)只能運行在 version 為 70 - 72 的 Chrome canary 上，而 Mozilla 雖然有推出 [Mozilla WebXR Viewer](https://labs.mozilla.org/projects/webxr-viewer/)，但上面的[範例實作](https://github.com/MozillaReality/webxr-ios-js/tree/master/examples)也**只能**運行在 [Mozilla WebXR Viewer](https://labs.mozilla.org/projects/webxr-viewer/) 上頭...
 
 不過去看一下雙方的範例程式碼後，會發現其實用法蠻雷同的，大多都有下面這些流程（以 Google 的程式碼來當範例）：
 
@@ -141,11 +141,11 @@ async onSessionStarted(session) {
 
 省略了很多細節，但大致的步驟就是這樣，[詳細程式碼在此下載](https://github.com/googlecodelabs/ar-with-webxr/archive/master.zip)
 
-對 WebXRDevice API 比較有興趣的讀者除了 [Google code lab 上的範例程式](https://codelabs.developers.google.com/codelabs/ar-with-webxr/#0)與 Mozilla 的 [webxr-ios-js 範例](https://github.com/MozillaReality/webxr-ios-js/tree/master/examples) 外，也可以到 [immersive-web/webxr](https://github.com/immersive-web/webxr/blob/master/explainer.md) 看看該 WebXRDevice API 的 Specs detail 與解釋，他們也有提供 [Sample Page](https://immersive-web.github.io/webxr-samples/) 可作參考。
+對 WebXR Device API 比較有興趣的讀者除了 [Google code lab 上的範例程式](https://codelabs.developers.google.com/codelabs/ar-with-webxr/#0)與 Mozilla 的 [webxr-ios-js 範例](https://github.com/MozillaReality/webxr-ios-js/tree/master/examples) 外，也可以到 [immersive-web/webxr](https://github.com/immersive-web/webxr/blob/master/explainer.md) 看看該 WebXR Device API 的 Specs detail 與解釋，他們也有提供 [Sample Page](https://immersive-web.github.io/webxr-samples/) 可作參考。
 
 ## AR.js
 
-今天就先來看看 AR.js 有多簡單。
+由於手邊沒有適合的 Android 手機，不能嘗試利用 WebXR Device API，所以今天就先來看看 AR.js 有多簡單。
 
 你需要的就只有：
 
