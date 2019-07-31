@@ -103,7 +103,7 @@ robotstxt:
   disallow:
     - ''
   sitemap: 
-    - /sitemap.xml
+    - https://blog.techbridge.cc/sitemap.xml
   baidusitemap: 
     - /baidusitemap.xml
 
