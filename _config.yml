@@ -101,13 +101,7 @@ addthis:
 robotstxt:
   useragent: "*"
   disallow:
-    - /js/
-    - /css/
-    - /vendors/
-    - /fancybox/
-  allow:
-    - /
-    - /archives/
+    - ''
   sitemap: 
     - /sitemap.xml
   baidusitemap: 
