@@ -1,7 +1,10 @@
 ---
 title: 一起用 Google Calendar 與 D3.js 進行年終回顧吧！
 date: 2017-12-12 21:10:27
-tags: google,google calendar api,d3
+tags:
+  - google
+  - google calendar api
+  - d3
 ---
 
 # 前言

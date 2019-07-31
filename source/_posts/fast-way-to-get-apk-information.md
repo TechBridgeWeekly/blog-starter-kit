@@ -1,7 +1,11 @@
 ---
 title: 快速取得 apk 相關資訊
 date: 2016-05-20 00:20:08
-tags: Android, aapt, keytool, hashkey
+tags:
+   - Android
+   - aapt
+   - keytool
+   - hashkey
 author: huli
 ---
 

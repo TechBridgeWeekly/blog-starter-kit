@@ -1,7 +1,9 @@
 ---
 title: Ceres 函式庫簡介
 date: 2017-12-31 00:33:35
-tags: Ceres, non-linear optimization
+tags:
+  - Ceres
+  - non-linear optimization
 author: pojenlai
 ---
 

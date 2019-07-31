@@ -1,7 +1,10 @@
 ---
 title: Nengo AI 入門
 date: 2019-05-10 16:51:34
-tags: Nengo AI, Neural Network, Deep Learning
+tags:
+  - Nengo AI
+  - Neural Network
+  - Deep Learning
 author: pojenlai
 ---
 

@@ -1,7 +1,11 @@
 ---
 title: 直播協定 hls 筆記
 date: 2016-12-03 01:22:49
-tags: hls, streaming, videojs, hlsjs
+tags:
+   - hls
+   - streaming
+   - videojs
+   - hlsjs
 author: huli
 ---
 

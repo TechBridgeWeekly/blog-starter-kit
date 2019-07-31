@@ -1,7 +1,9 @@
 ---
 title: 該來理解 JavaScript 的原型鍊了
 date: 2017-04-22 11:53:31
-tags: JavaScript, prototype
+tags:
+  - JavaScript
+  - prototype
 author: huli
 ---
 

@@ -1,7 +1,10 @@
 ---
 title: 一起來讀 CRAM - A Cognitive Robot Abstract Machine for Everyday Manipulation in Human Environments
 date: 2018-06-09 21:54:21
-tags: ROS, CRAM, robotics
+tags:
+    - ROS
+    - CRAM
+    - robotics
 author: pojenlai
 ---
 

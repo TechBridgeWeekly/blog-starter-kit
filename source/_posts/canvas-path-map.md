@@ -1,7 +1,12 @@
 ---
 title: D3v4 & Canvas 工作坊 - D3 + Canvas 繪製動態路線圖
 date: 2017-08-26 00:04:21
-tags: d3, canvas, map, animation
+tags:
+  - d3
+  - canvas
+  - map
+  - animation
+  - d3.js
 ---
 
 ## 前言

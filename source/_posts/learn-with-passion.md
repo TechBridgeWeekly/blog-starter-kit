@@ -1,7 +1,10 @@
 ---
 title: 如何充滿熱情地學習 - 以資料結構為例
 date: 2018-09-02 00:11:34
-tags: Data Structure, learning, passion
+tags:
+    - Data Structure
+    - learning
+    - passion
 author: pojenlai
 ---
 

@@ -1,7 +1,19 @@
 ---
 title: 用 JavaScript 學習資料結構和演算法：字典（Dictionary）和雜湊表（Hash Table）篇
 date: 2017-03-10 22:00:00
-tags: JavaScript, ECMAScript2015, ES6, Data Structure, Algorithm, Dictionary, Hash Table, 資料結構, 演算法, 陣列, 雜湊表, 字典 
+tags:
+	- JavaScript
+	- ECMAScript2015
+	- ES6
+	- Data Structure
+	- Algorithm
+	- Dictionary
+	- Hash Table
+	- 資料結構
+	- 演算法
+	- 陣列
+	- 雜湊表
+	- 字典 
 author: kdchang
 ---
 

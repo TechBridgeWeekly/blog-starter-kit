@@ -1,7 +1,9 @@
 ---
 title: 如何用 Markov Decision Process 描述 Human-Robot Interaction 問題
 date: 2018-11-24 14:31:45
-tags: Human-Robot Interaction, Markov Decision Process
+tags:
+    - Human-Robot Interaction
+    - Markov Decision Process
 author: pojenlai
 ---
 

@@ -1,7 +1,9 @@
 ---
 title: 清晰說明針孔相機的內部參數與外部參數矩陣
 date: 2018-04-22 01:32:21
-tags: Pinhole camera model, Intrinsic matrix
+tags:
+    - Pinhole camera model
+    - Intrinsic matrix
 author: pojenlai
 ---
 

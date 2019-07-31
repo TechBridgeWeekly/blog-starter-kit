@@ -1,7 +1,10 @@
 ---
 title: Hacktoberfest：一起踏入 open source 的世界吧！
 date: 2016-10-14 19:51:15
-tags: hacktoberfest, github, open_source
+tags:
+    - hacktoberfest
+    - github
+    - open_source
 author: huli
 ---
 

@@ -2,7 +2,25 @@
 title: Go Web 程式設計入門教學：基礎介紹與環境建置
 date: 2017-09-09 00:23:23
 author: kdchang
-tags: GO, GO lang, golang, web, go web, 自學程式, 自學程式設計, 程式設計, 線上自學, coding, coder, programming, computer, computer science, code, 電腦科學, 學寫程式, 學程式
+tags:
+    - GO
+    - GO lang
+    - golang
+    - web
+    - go web
+    - 自學程式
+    - 自學程式設計
+    - 程式設計
+    - 線上自學
+    - coding
+    - coder
+    - programming
+    - computer
+    - computer science
+    - code
+    - 電腦科學
+    - 學寫程式
+    - 學程式
 ---
 
 ![Go Web 程式設計入門教學](/img/kdchang/logo.png)

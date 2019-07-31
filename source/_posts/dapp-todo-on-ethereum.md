@@ -1,7 +1,10 @@
 ---
 title: 在 Ethereum 上開發簡單的 Todo App
 date: 2018-04-01 10:00:13
-tags: ethereum, smart contract, dapp
+tags:
+  - ethereum
+  - smart contract
+  - dapp
 ---
 ## 前言
 

@@ -1,7 +1,9 @@
 ---
 title: 我知道你懂 hoisting，可是你了解到多深？
 date: 2018-11-10 18:05:13
-tags: javascript,hoisting
+tags:
+  - javascript
+  - hoisting
 author: huli
 ---
 

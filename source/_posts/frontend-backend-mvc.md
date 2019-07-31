@@ -1,7 +1,11 @@
 ---
 title: 前後端分離與 SPA
 date: 2017-09-16 10:13:35
-tags: frontend, backend, mvc, SPA
+tags:
+  - frontend
+  - backend
+  - mvc
+  - SPA
 authot: huli
 ---
 

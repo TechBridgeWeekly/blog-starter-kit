@@ -1,7 +1,10 @@
 ---
 title: 淺談二分搜尋法
 date: 2016-09-24 01:07:13
-tags: search, binary_search, algorithm
+tags:
+  - search
+  - binary_search
+  - algorithm
 author: huli
 ---
 

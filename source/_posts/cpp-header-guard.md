@@ -1,7 +1,10 @@
 ---
 title: C++ Header Guard 簡介
 date: 2017-09-30 22:03:25
-tags: C++, header file, header guard
+tags:
+    - C++
+    - header file
+    - header guard
 author: pojenlai
 ---
 

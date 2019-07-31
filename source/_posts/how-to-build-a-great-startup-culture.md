@@ -1,7 +1,16 @@
 ---
 title: 如何打造更好的科技新創 (Startup) 工作環境和組織文化？
 date: 2016-03-19 09:54:49
-tags: 創新創業, 創業, 新創公司, Code wins arguments, Hack Day, Linux, Mac, Open Source, Startup, User Experience
+tags:
+    - 創新創業
+    - 創業
+    - 新創公司
+    - Code wins arguments
+    - Hack Day
+    - Linux, Mac
+    - Open Source
+    - Startup
+    - User Experience
 author: kdchang
 ---
 
@@ -11,7 +20,7 @@ author: kdchang
 
 參考文件：[Airbnb創辦人Brian Chesky談企業文化](http://36kr.com/p/216739.html)
 
-1. 開放式辦公室，直接溝通，少開會。代碼勝於雄辯 (Code wins arguments.)
+1. 開放式辦公室（但保有私人需要安靜專注的空間），直接溝通，少開會。代碼勝於雄辯 (Code wins arguments.)
 2. 免費食物，提供工作餐點，也可以說故意延長工作時間 :P
 3. 使用蘋果電腦 (Mac) 或 Linux， 以及使用 Linux 的雲端伺服器 (Cloud Server)
 4. 擁抱開源軟體 (Open Source)，利用各種可用工具，注意力集中在核心產品

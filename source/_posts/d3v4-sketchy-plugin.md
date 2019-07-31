@@ -1,7 +1,10 @@
 ---
 title: D3v4 工作坊 - 製作 D3 plugin 來繪製草圖風格長條圖
 date: 2017-10-21 18:16:38
-tags: d3, plugin, rollup
+tags:
+  - d3
+  - plugin
+  - rollup
 ---
 
 ## 前言

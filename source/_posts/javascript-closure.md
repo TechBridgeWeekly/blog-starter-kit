@@ -1,7 +1,9 @@
 ---
 title: 所有的函式都是閉包：談 JS 中的作用域與 Closure
 date: 2018-12-08 08:37:35
-tags: javascript,closure
+tags:
+  - javascript
+  - closure
 author: huli
 ---
 

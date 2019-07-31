@@ -1,7 +1,9 @@
 ---
 title: 原來 CORS 沒有我想像中的簡單
 date: 2018-08-18 08:00:49
-tags: cors,pwa
+tags: 
+    - cors
+    - pwa
 author: huli
 ---
 

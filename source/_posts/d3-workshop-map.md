@@ -1,7 +1,11 @@
 ---
 title: D3v4 工作坊 - React + D3 繪製 svg 動態路線地圖
 date: 2017-07-21 00:25:01
-tags: d3, svg, map, animation
+tags:
+  - d3
+  - svg
+  - map
+  - animation
 ---
 
 ## 前言

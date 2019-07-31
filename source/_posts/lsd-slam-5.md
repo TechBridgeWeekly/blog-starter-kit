@@ -1,7 +1,11 @@
 ---
 title: 深入學習 lsd-slam - 5
 date: 2017-08-05 21:39:40
-tags: ROS, Robotics, SLAM, LSD SLAM
+tags:
+    - ROS
+    - Robotics
+    - SLAM
+    - LSD SLAM
 author: pojenlai
 ---
 

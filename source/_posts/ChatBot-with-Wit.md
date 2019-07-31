@@ -1,7 +1,10 @@
 ---
 title: 利用 Wit.ai 讓你的 Messenger Bot 更聰明！
 date: 2016-07-02 19:32:59
-tags: Messenger, Wit.ai, Bot
+tags:
+  - Messenger
+  - Wit.ai
+  - Bot
 author: ArvinH
 ---
 

@@ -2,9 +2,10 @@
 title: Nginx + Flask 動態與靜態頁面分離入門教學
 date: 2018-08-11 09:54:49
 author: kdchang
-tags: Python
-      Flask
-      Nginx
+tags:
+   - Python
+   - Flask
+   - Nginx
 ---
 
 ![ Nginx + Flask 動態與靜態頁面分離入門教學](/img/kdchang/nginx/nginx-logo.png)

@@ -1,7 +1,10 @@
 ---
 title: 淺談 CSS 方法論與 Atomic CSS
 date: 2017-04-29 19:05:31
-tags: css, atomic css, methodology
+tags:
+  - css
+  - atomic css
+  - methodology
 ---
 <p data-height="300" data-theme-id="29194" data-slug-hash="bWqOeK" data-default-tab="result" data-user="arvin0731" data-embed-version="2" data-pen-title="css-is-awesome" class="codepen">See the Pen <a href="https://codepen.io/arvin0731/pen/bWqOeK/">css-is-awesome</a> by Arvin (<a href="http://codepen.io/arvin0731">@arvin0731</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

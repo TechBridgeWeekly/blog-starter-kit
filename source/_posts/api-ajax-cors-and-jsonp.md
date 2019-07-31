@@ -1,7 +1,11 @@
 ---
 title: 輕鬆理解 Ajax 與跨來源請求
 date: 2017-05-20 15:31:12
-tags: xhr, ajax, cors, jsonp
+tags: 
+  - xhr
+  - ajax
+  - cors
+  - jsonp
 author: huli
 ---
 

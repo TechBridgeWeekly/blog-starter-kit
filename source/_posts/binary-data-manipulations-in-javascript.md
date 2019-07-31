@@ -1,7 +1,11 @@
 ---
 title: 使用 JavaScript 處理二進位資料
 date: 2017-09-24 10:46:57
-tags: JavaScript, Endianness, Binary Data, Memory Alignment
+tags:
+  - JavaScript
+  - Endianness
+  - Binary Data
+  - Memory Alignment
 author: weihanglo
 ---
 

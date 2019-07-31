@@ -2,6 +2,12 @@
 title: Browser Rendering Optimization
 date: 2016-04-02 00:13:00
 tags:
+	- Browser Rendering Optimization
+	- frontend
+	- web
+	- web performance
+	- 網頁效能
+	- 網站效能 
 ---
 > "My name is Barry Allen, and I'm the fastest man alive ..."
 > "Wait..reverse flash is faster then you, zoom is faster than you.."

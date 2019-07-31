@@ -1,7 +1,12 @@
 ---
 title: JavaScript 101 快速入門教學
 date: 2017-01-14 22:00:00
-tags: JavaScript, ECMAScript2015, ES6, Front End, Front End Development Environment
+tags:
+	- JavaScript
+	- ECMAScript2015
+	- ES6
+	- Front End
+	- Front End Development Environment
 author: kdchang
 ---
 

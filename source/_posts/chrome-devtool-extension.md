@@ -1,7 +1,10 @@
 ---
 title: Chrome devtools extension 實作介紹
 date: 2018-02-10 11:04:27
-tags: Chrome, devtools, extension
+tags:
+  - Chrome
+  - devtools
+  - extension
 ---
 # 前言
 

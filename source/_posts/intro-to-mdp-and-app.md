@@ -1,7 +1,9 @@
 ---
 title: 簡介 Markov Decision Process 與其應用
 date: 2018-10-27 22:37:56
-tags: Markov Decision Process, Reinforcement Learning
+tags:
+    - Markov Decision Process
+    - Reinforcement Learning
 author: pojenlai
 ---
 

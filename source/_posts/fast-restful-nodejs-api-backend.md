@@ -1,7 +1,12 @@
 ---
 title: 用 Node.js 快速打造 RESTful API
 date: 2016-04-23 09:58:08
-tags: Nodejs, RESTful, epilogue, Sequelize, Express
+tags:
+  - Nodejs
+  - RESTful
+  - epilogue
+  - Sequelize
+  - Express
 author: huli
 ---
 

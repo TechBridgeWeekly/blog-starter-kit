@@ -1,7 +1,17 @@
 ---
 title: 用 JavaScript 學習資料結構和演算法：陣列（Array）篇
 date: 2016-10-08 22:00:00
-tags: JavaScript, ECMAScript2015, ES6, Data Structure, Algorithm, Queue, 資料結構, 演算法, 陣列, Array 
+tags:
+	- JavaScript
+	- ECMAScript2015
+	- ES6
+	- Data Structure
+	- Algorithm
+	- Queue
+	- 資料結構
+	- 演算法
+	- 陣列
+	- Array 
 author: kdchang
 ---
 

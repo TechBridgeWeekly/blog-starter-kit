@@ -1,7 +1,9 @@
 ---
 title: 循序漸進理解 HTTP Cache 機制
 date: 2017-06-17 10:56:00
-tags: cache, http header
+tags:
+  - cache
+  - http header
 author: huli
 ---
 

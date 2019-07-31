@@ -1,7 +1,14 @@
 ---
 title: Object Recognition Kitchen 透明物體辨識(演算法概念)
 date: 2016-12-24 20:10:08
-tags: 機器人, ROS, OpenCV, 物體辨識, Object Recognition Kitchen, 演算法, algorithm
+tags:
+    - 機器人
+    - ROS
+    - OpenCV
+    - 物體辨識
+    - Object Recognition Kitchen
+    - 演算法
+    - algorithm
 author: pojenlai
 ---
 

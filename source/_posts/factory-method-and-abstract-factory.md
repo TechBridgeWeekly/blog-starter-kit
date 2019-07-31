@@ -1,7 +1,8 @@
 ---
 title: 設計模式 - 工廠方法及抽象工廠
 date: 2017-05-22 07:12:25
-tags: design pattern
+tags:
+	- design pattern
 author: jyt0532
 ---
 

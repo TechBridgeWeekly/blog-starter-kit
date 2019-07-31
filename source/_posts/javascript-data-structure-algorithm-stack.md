@@ -1,7 +1,26 @@
 ---
 title: 用 JavaScript 學習資料結構和演算法：堆疊（Stack）篇
 date: 2016-06-24 22:00:00
-tags: JavaScript, ECMAScript2015, Data Structure, Algorithm, Stack, 資料結構, 演算法, 堆疊 
+tags:
+	- JavaScript
+	- ECMAScript2015
+	- ES6
+	- Data Structure
+	- Algorithm
+	- Dictionary
+	- Hash Table
+	- 資料結構
+	- 演算法
+	- 陣列
+	- 雜湊表
+	- 字典
+	- 佇列
+	- Queue
+	- set
+	- 集合
+	- 堆疊
+	- stack
+	- 棧
 author: kdchang
 ---
 

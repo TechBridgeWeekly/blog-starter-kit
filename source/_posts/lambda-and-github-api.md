@@ -1,7 +1,9 @@
 ---
 title: AWS Lambda + GitHub API + Google Sheet = 自動化簽到系統
 date: 2018-09-14 20:10:30
-tags: lambda
+tags:
+  - lambda
+  - aws
 author: huli
 ---
 

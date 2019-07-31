@@ -1,7 +1,10 @@
 ---
 title: 與 CSS Grid 的第一次接觸
 date: 2017-02-03 23:44:37
-tags: CSS, WEB, CSS-GRID
+tags:
+  - CSS
+  - WEB
+  - CSS-GRID
 ---
 
 ## 前言

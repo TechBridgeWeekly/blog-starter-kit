@@ -1,7 +1,9 @@
 ---
 title: 淺談 JavaScript 頭號難題 this：絕對不完整，但保證好懂
 date: 2019-02-23 10:39:15
-tags: javascript,this
+tags:
+  - javascript
+  - this
 author: huli
 ---
 

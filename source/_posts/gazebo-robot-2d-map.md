@@ -1,7 +1,11 @@
 ---
 title: 使用 Gazebo 模擬器控制機器人建立 2D 地圖
 date: 2016-08-06 22:18:57
-tags: 機器人, Robot, ROS, Gazebo
+tags:
+  - 機器人
+  - Robot
+  - ROS
+  - Gazebo
 author: pojenlai
 ---
 

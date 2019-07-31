@@ -1,7 +1,10 @@
 ---
 title: 讓 JavaSript 難以閱讀：jsfuck 與 aaencode
 date: 2016-07-16 10:44:42
-tags: JavaScript, jsfuck, aaencode
+tags:
+    - JavaScript
+    - jsfuck
+    - aaencode
 author: huli
 ---
 

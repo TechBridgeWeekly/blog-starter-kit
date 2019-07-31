@@ -1,7 +1,10 @@
 ---
 title: 當 React web app 遇上 Progressive web app
 date: 2016-09-17 12:37:22
-tags: react, pwa
+tags:
+  - react
+  - pwa
+  - Progressive web app
 ---
 
 先前介紹過 Progressive Web App，我們利用 vanilla js 與 css 刻出一個支援 PWA 的天氣 web app，

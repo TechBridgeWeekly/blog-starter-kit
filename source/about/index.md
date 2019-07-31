@@ -3,7 +3,7 @@ title: about
 date: 2016-03-19 22:18:20
 ---
 
-TechBridge Weekly 技術週刊團隊是一群對用技術改變世界懷抱熱情的團隊。本技術共筆部落格初期專注於Web前後端、行動網路、機器人/物聯網、數據分析與產品設計等正體中文技術原創文章或國外好文翻譯分享。This is TechBridge Weekly Team Tech Blog, which focus on web, mobile, robot, IoT, data analytics technology sharing.
+TechBridge Weekly 技術週刊團隊是一群對用技術改變世界懷抱熱情的團隊。本技術共筆部落格初期專注於Web前後端、行動網路、機器人/物聯網、數據分析與產品設計等正體中文技術原創文章或國外好文翻譯分享。This is TechBridge Weekly Team Tech Blog, which focus on web, mobile, robotics, IoT, data analytics technology sharing.
 
 - 技術日報：[http://www.techbridge.cc/](http://www.techbridge.cc/)
 - 技術週刊：[http://weekly.techbridge.cc/](http://weekly.techbridge.cc/)

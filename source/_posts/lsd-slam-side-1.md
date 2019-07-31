@@ -1,7 +1,12 @@
 ---
 title: 深入學習 LSD-SLAM 番外篇 - RDS X RTAB-Map
 date: 2017-06-10 21:49:02
-tags: ROS, Robotics, SLAM, RTAB MAP
+tags:
+    - ROS
+    - Robotics
+    - SLAM
+    - LSD SLAM
+    - RTAB-Map
 author: pojenlai
 ---
 

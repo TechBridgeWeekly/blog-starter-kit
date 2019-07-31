@@ -1,7 +1,11 @@
 ---
 title: 如何做出一個好的 NodeJS 模組？
 date: 2018-02-14 13:55:57
-tags: nodejs, npm, module, tutorial
+tags:
+    - nodejs
+    - npm
+    - module
+    - tutorial
 author: tigercosmos
 ---
 

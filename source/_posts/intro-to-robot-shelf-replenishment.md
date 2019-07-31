@@ -1,7 +1,11 @@
 ---
 title: 一起讀 Knowledge-Enabled Robotic Agents for Shelf Replenishment in Cluttered Retail Environments
 date: 2018-05-19 22:44:03
-tags: CRAM, KnowRob, RoboSherlock, Cognitive Robot
+tags:
+    - CRAM
+    - KnowRob
+    - RoboSherlock
+    - Cognitive Robot
 author: pojenlai
 ---
 

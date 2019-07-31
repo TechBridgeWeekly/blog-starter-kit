@@ -3,12 +3,12 @@ title: Docker Compose 建置 Web service 起步走入門教學
 date: 2018-09-07 12:23:23
 author: kdchang
 tags: 
-    docker
-    容器
-    docker machine
-    docker compose
-    docker swarm
-    vm
+    - docker
+    - 容器
+    - docker machine
+    - docker compose
+    - docker swarm
+    - vm
 ---
 
 ![Docker101](/img/kdchang/docker101/docker-compose-logo.png)

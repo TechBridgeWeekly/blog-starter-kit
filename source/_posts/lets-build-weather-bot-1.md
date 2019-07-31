@@ -1,7 +1,11 @@
 ---
 title: 來寫個氣象機器人吧！(Part 1)
 date: 2018-05-10 18:00:00
-tags: line-bot, messenger-bot, weather, bot
+tags:
+  - line-bot
+  - messenger-bot
+  - weather
+  - bot
 author: tigercosmos
 ---
 # Let's build a weather bot!

@@ -1,7 +1,8 @@
 ---
 title: 邪魔歪道還是苦口良藥？Functional CSS 經驗分享
 date: 2019-01-26 08:49:34
-tags: functional CSS
+tags:
+  - functional CSS
 author: huli
 ---
 

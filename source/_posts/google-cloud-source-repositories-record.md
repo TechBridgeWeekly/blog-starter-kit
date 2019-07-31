@@ -1,7 +1,8 @@
 ---
 title: Google Cloud Source Repositories 使用紀錄
 date: 2018-10-12 14:23:21
-tags: google cloud
+tags:
+    - google cloud
 ---
 
 # 前言

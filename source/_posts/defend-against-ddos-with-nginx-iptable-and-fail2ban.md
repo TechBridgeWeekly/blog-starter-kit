@@ -1,7 +1,11 @@
 ---
 title: 與 DDoS 奮戰：nginx, iptables 與 fail2ban
 date: 2016-08-12 23:20:38
-tags: DDoS, nginx, iptable, fail2ban
+tags:
+  - DDoS
+  - nginx
+  - iptable
+  - fail2ban
 author: huli
 ---
 

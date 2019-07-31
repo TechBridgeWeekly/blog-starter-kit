@@ -1,7 +1,11 @@
 ---
 title: 一起來讀論文 - Robot Learning via Human Adversarial Games
 date: 2019-04-12 16:51:34
-tags: Human-Robot Interaction, Deep Learning, Computer Vision, Grasping
+tags:
+    - Human-Robot Interaction
+    - Deep Learning
+    - Computer Vision
+    - Grasping
 author: pojenlai
 ---
 

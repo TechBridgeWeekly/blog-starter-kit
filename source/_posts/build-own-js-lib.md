@@ -1,7 +1,8 @@
 ---
 title: "[筆記] JavaScript: Understanding the Weird Parts --- Build your own lib/framework"
 date: 2018-05-05 18:44:38
-tags: javascript
+tags:
+    - javascript
 ---
 
 之前趁著 Udemy 特價，買了上面很有名的課程 - JavaScript: Understanding the Weird Parts，當初會想買是因為他最後面有個章節是介紹如何建構自己的 JS Framework，

@@ -1,7 +1,16 @@
 ---
 title: 人人都會的 Android Apk 反編譯
 date: 2016-03-24 23:30:00
-tags: Android, Decompile, Apktool, Smali, Dex2jar, Mobile, 行動網路, 反編譯, APK
+tags: 
+    - Android
+    - Decompile
+    - Apktool
+    - Smali
+    - Dex2jar
+    - Mobile
+    - 行動網路
+    - 反編譯
+    - APK
 author: huli
 ---
 

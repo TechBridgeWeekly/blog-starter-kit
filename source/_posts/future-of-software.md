@@ -1,6 +1,7 @@
 ---
 title: 軟體開發的未來，是大斗內時代？
-tags: 商業模式
+tags:
+    - 商業模式
 date: 2018-11-14 18:16:00
 author: 林宏信 lancatlin
 ---

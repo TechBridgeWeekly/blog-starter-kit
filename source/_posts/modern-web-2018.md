@@ -1,7 +1,9 @@
 ---
 title: Modern Web 2018 簡短心得
 date: 2018-07-20 13:08:45
-tags: modern web, conference
+tags:
+  - modern web
+  - conference
 author: huli
 ---
 

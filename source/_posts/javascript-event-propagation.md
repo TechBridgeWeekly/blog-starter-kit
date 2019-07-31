@@ -1,7 +1,12 @@
 ---
 title: DOM 的事件傳遞機制：捕獲與冒泡
 date: 2017-07-15 13:08:56
-tags: DOM, event, bubble, capture, propagation
+tags:
+  - DOM
+  - event
+  - bubble
+  - capture
+  - propagation
 author: huli
 ---
 

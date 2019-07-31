@@ -1,7 +1,9 @@
 ---
 title: 一起來看 Joshua B. Tenenbaum 教授有趣的認知科學研究 - Building Machines that Learn and Think Like People
 date: 2018-09-29 23:38:19
-tags: artificial intelligence, cognitive science
+tags:
+    - artificial intelligence
+    - cognitive science
 author: pojenlai
 ---
 

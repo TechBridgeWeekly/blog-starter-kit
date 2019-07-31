@@ -1,7 +1,11 @@
 ---
 title: 記一次軟體工程師面試心得
 date: 2017-01-27 17:06:06
-tags: interview, frontend, job, resume
+tags:
+    - interview
+    - frontend
+    - job
+    - resume
 author: huli
 ---
 

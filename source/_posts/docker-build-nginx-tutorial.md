@@ -2,7 +2,13 @@
 title: 使用 Docker 建立 nginx 伺服器入門教學
 date: 2018-03-17 11:23:23
 author: kdchang
-tags: docker, nginx, server, container, apache, iamge
+tags:
+    - docker
+    - nginx
+    - server
+    - container
+    - apache
+    - iamge
 ---
 
 ![使用 Docker 建立 nginx 伺服器入門教學](/img/kdchang/docker101/docker-logo.png)

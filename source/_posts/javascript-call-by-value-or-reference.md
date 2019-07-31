@@ -1,7 +1,8 @@
 ---
 title: 深入探討 JavaScript 中的參數傳遞：call by value 還是 reference？
 date: 2018-06-23 09:20:33
-tags: javascript
+tags:
+  - javascript
 autohr: huli
 ---
 

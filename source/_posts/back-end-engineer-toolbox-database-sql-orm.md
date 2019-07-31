@@ -1,7 +1,16 @@
 ---
 title: 後端軟體工程工具箱：資料庫/SQL/ORM篇
 date: 2017-05-06 23:00:00
-tags: Pytho, PHP, Back End, Back End Development, Back End Engineer, Web, TCP, HTTP, UDP
+tags: 
+	- Python
+	- PHP
+	- Back End
+	- Back End Development
+	- Back End Engineer
+	- Web
+	- TCP
+	- HTTP
+	- UDP
 author: kdchang
 ---
 # 前言

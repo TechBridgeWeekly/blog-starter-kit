@@ -1,7 +1,11 @@
 ---
 title: 利用 Github Classroom 加 Travis CI 打造改作業系統
 date: 2018-02-03 09:47:55
-tags: github,github classroom,travis,ci
+tags:
+  - github
+  - github classroom
+  - travis
+  - ci
 author: huli
 ---
 

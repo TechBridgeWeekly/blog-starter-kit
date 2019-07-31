@@ -1,7 +1,11 @@
 ---
 title: 用 Javascript 進行簡單線性迴歸分析
 date: 2018-03-10 15:09:02
-tags: deeplearnjs, machine learning, linear-regression, javascript
+tags:
+  - deeplearnjs
+  - machine learning
+  - linear-regression
+  - javascript
 ---
 
 # 前言

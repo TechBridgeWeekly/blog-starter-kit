@@ -1,7 +1,9 @@
 ---
 title: Markov Decision Process 的程式範例
 date: 2018-12-22 23:01:50
-tags: Human-Robot Interaction, Markov Decision Process
+tags:
+    - Human-Robot Interaction
+    - Markov Decision Process
 author: pojenlai
 ---
 
