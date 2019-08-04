@@ -307,3 +307,6 @@ int main() {
 2. [[面試經驗] DeepScale 自動駕駛公司 OA ](https://www.1point3acres.com/bbs/thread-297228-1-1.html)
 3. [Top Self Driving Car Startups](https://angel.co/newsletters/top-self-driving-car-startups-022318)
 4. [Zoox Can Cruise San Francisco Without Drivers. Now It Needs Money](https://www.bloomberg.com/news/articles/2019-03-18/zoox-can-cruise-san-francisco-without-drivers-now-it-needs-money)
+
+關於作者：
+[@pojenlai](https://pojenlai.wordpress.com/) 演算法工程師，對機器人、電腦視覺和人工智慧有少許研究，正在學習[用心體會事物的本質](https://buzzorange.com/techorange/2017/07/10/elon-musk-first-principle/)跟[不斷進入學生心態改進](https://www.ted.com/talks/eduardo_briceno_how_to_get_better_at_the_things_you_care_about)。
