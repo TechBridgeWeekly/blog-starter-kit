@@ -5,6 +5,7 @@ tags:
 - Algorithm
 - Leetcode
 - Software Engineer
+- 軟體工程師面試
 author: pojenlai
 ---
 
@@ -187,3 +188,6 @@ private:
 
 1. [刷题需要hard一起刷嗎](https://www.1point3acres.com/bbs/thread-537289-1-1.html)
 2. [讓刷題幸福感提高的一百個心得](https://www.1point3acres.com/bbs/thread-521357-1-1.html)
+
+關於作者：
+[@pojenlai](https://pojenlai.wordpress.com/) 演算法工程師，對機器人、電腦視覺和人工智慧有少許研究，正在學習[用心體會事物的本質](https://buzzorange.com/techorange/2017/07/10/elon-musk-first-principle/)跟[不斷進入學生心態改進](https://www.ted.com/talks/eduardo_briceno_how_to_get_better_at_the_things_you_care_about)。
