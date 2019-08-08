@@ -311,9 +311,63 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 > 
 > Instead of storing session information directly in a cookie (where it might be exposed to or replayed by an attacker), servers commonly store a nonce (or "session identifier") in a cookie.  When the server receives an HTTP request with a nonce, the server can look up state information associated with the cookie using the nonce as a key.
 > 
+> 比起把 session 資訊直接存在 cookie 裡面，server 通常只在 cookie 裡面存一個 sessionID，當 server 收到這個 sessionID 的時候就能夠找到相對應的資料。
+> 
 > Using session identifier cookies limits the damage an attacker can cause if the attacker learns the contents of a cookie because the nonce is useful only for interacting with the server (unlike non- nonce cookie content, which might itself be sensitive).  Furthermore, using a single nonce prevents an attacker from "splicing" together cookie content from two interactions with the server, which could cause the server to behave unexpectedly.
 > 
+> 跟直接把敏感資訊存在 cookie 比起來，只存 sessionID 能夠侷限攻擊者所能造成的傷害，因為就算攻擊者知道裡面存了 sessionID 也沒什麼用。（splicing 那段看得不是很懂）
+> 
 > Using session identifiers is not without risk.  For example, the server SHOULD take care to avoid "session fixation" vulnerabilities. A session fixation attack proceeds in three steps.  First, the attacker transplants a session identifier from his or her user agent to the victim's user agent.  Second, the victim uses that session identifier to interact with the server, possibly imbuing the session identifier with the user's credentials or confidential information. Third, the attacker uses the session identifier to interact with server directly, possibly obtaining the user's authority or confidential information.
+> 
+> 使用 sessionID 也不是完全沒有風險。舉例來說，server 應該要避免 session fixation 這種攻擊方法。這種攻擊方法有三個步驟，第一個步驟是先產生一個 sessionID，並且把這 ID 傳給受害者；第二步是受害者用這個 sessionID 來登入；在受害者登入以後，攻擊者就能夠使用同樣的 sessionID 取得受害者的資料。
+
+原文對固定 Session（Session fixation）的說明沒有很清楚，有興趣的朋友可以參考 [HTTP Session 攻擊與防護
+](https://devco.re/blog/2014/06/03/http-session-protection/)，這篇講得比較清楚一點。
+
+簡單來說就是讓受害者用你指定的 sessionID 登入，所以在 Server 端這個 sessionID 就會跟受害者的帳號綁在一起，你再用同樣的 sessionID，就可以用受害者的身份登入並且使用網站。
+
+接著我們再來看另外一個安全性問題：
+
+> 8.6. Weak Integrity
+> 
+> Cookies do not provide integrity guarantees for sibling domains (and their subdomains).  For example, consider foo.example.com and bar.example.com.  The foo.example.com server can set a cookie with a Domain attribute of "example.com" (possibly overwriting an existing "example.com" cookie set by bar.example.com), and the user agent will include that cookie in HTTP requests to bar.example.com.  In the worst case, bar.example.com will be unable to distinguish this cookie from a cookie it set itself.  The foo.example.com server might be able to leverage this ability to mount an attack against bar.example.com.
+> 
+> Cookies 對 subdomain 並不具有完整性。舉例來說，foo.example.com 可以對 example.com 設置 cookie，而這個有可能把 bar.example.com 對 example.com 設置的 cookie 給蓋掉。最糟的情況下，當 bar.example.com 收到這個 cookie 時，區分不出是自己設置的還是別人設置的。foo.example.com 就可以利用這個特性來攻擊 bar.example.com。
+> 
+> An active network attacker can also inject cookies into the Cookie header sent to https://example.com/ by impersonating a response from http://example.com/ and injecting a Set-Cookie header.  The HTTPS server at example.com will be unable to distinguish these cookies from cookies that it set itself in an HTTPS response.  An active network attacker might be able to leverage this ability to mount an attack against example.com even if example.com uses HTTPS exclusively.
+> 
+> 攻擊還可以利用 http://example.com/ 來把 https://example.com/（前者是 http，後者 https）的 cookie 蓋掉，server 就無法分別這個 cookie 是 http 還是 https 設置的。攻擊者一樣可以利用這個特性來進行攻擊。
+
+上面這一段在 4.1.2.5 The Secure Attribute 其實也有提到：
+
+> Although seemingly useful for protecting cookies from active network attackers, the Secure attribute protects only the cookie's confidentiality. An active network attacker can overwrite Secure cookies from an insecure channel, disrupting their integrity
+
+大意就是說 Secure 屬性沒辦法保障 cookie 的完整性。攻擊者可以從 HTTP 覆蓋掉 HTTPS 的 cookie。
+
+看到這邊的時候我心頭一驚，這個不就是在講我之前寫過的：[我遇過的最難的 Cookie 問題](https://github.com/aszx87410/blog/issues/17)嗎？現在我也終於知道為什麼 Safari 跟 Firefox 都沒有擋這種行為，因為在規格裡面也沒有要求你要擋。
+
+至於 Chrome 的話，它的實作參考了幾個不同的 RFC，在負責管理 Cookie 的 [CookieMonster](https://www.chromium.org/developers/design-documents/network-stack/cookiemonster) 裡面有寫到：
+
+> CookieMonster requirements are, in theory, specified by various RFCs. RFC 6265 is currently controlling, and supersedes RFC 2965.
+> 
+>  However, most browsers do not actually follow those RFCs, and Chromium has compatibility with existing browsers as a higher priority than RFC compliance.
+> 
+> An RFC that more closely describes how browsers normally handles cookies is being considered by the RFC; it is available at http://tools.ietf.org/html/draft-ietf-httpstate-cookie.  The various RFCs should be examined to understand basic cookie behavior; this document will only describe variations from the RFCs.
+
+在 [CookieMonster.cc](https://chromium.googlesource.com/chromium/src.git/+/refs/tags/76.0.3809.108/net/cookies/cookie_monster.cc#1072) 裡面也有寫到：
+
+> If the cookie is being set from an insecure scheme, then if a cookie already exists with the same name and it is Secure, then the cookie should *not* be updated if they domain-match and ignoring the path attribute.
+> 
+> See: https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone
+
+文中所提到的文件還在草稿階段，標題是：「Deprecate modification of 'secure' cookies from non-secure origins」，是由 Google 的員工所發起的草稿。在 Introduction 的地方寫的很明確了：
+
+> Section 8.5 and Section 8.6 of [RFC6265] spell out some of the drawbacks of cookies' implementation: due to historical accident, non-secure origins can set cookies which will be delivered to secure origins in a manner indistinguishable from cookies set by that origin itself.  This enables a number of attacks, which have been recently spelled out in some detail in [COOKIE-INTEGRITY].
+
+> We can mitigate the risk of these attacks by making it more difficult for non-secure origins to influence the state of secure origins. Accordingly, this document recommends the deprecation and removal of non-secure origins' ability to write cookies with a 'secure' flag, and their ability to overwrite cookies whose 'secure' flag is set.
+
+大意就是說跟我們剛剛在 RFC 6265 的 Section 8.5 與 8.6 看到的一樣，由於一些歷史因素，secure 的 cookie 可以被 non-secure 的來源蓋掉。而這份文件就是要阻止這種行為。
+
 
 
 
