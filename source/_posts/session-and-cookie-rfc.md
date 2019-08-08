@@ -21,7 +21,7 @@ author: huli
 
 > Session 是什麼？就是一種讓 Request 變成 stateful 的機制。以小明的例子來說，Session 就是一種讓客人之間能互相關聯起來的機制。在故事裡面我們用了紙條跟手機裡的資訊來比喻，有多種方式可以達成 Session。
 
-其實在寫這系列的時候，「Session 最明確的定義是什麼」困擾了我一陣子，而且我到現在都還不能完全肯定自己到底是不是對的。在我心中有兩個解釋都滿合理的，第一個解釋就是上一篇跟大家講的，Session 是一種讓 Request 變成 stateful 的「機制」，而 Session 的第二種解釋（也是比較貼近英文原文的解釋），就像是「具有狀態的一段期間」，或者是「上下文」，在 Session 裡面的東西可以放在一起看。
+其實在寫這系列的時候，「Session 最明確的定義是什麼」困擾了我一陣子，而且我到現在還不能完全肯定到底怎樣對的。在我心中有兩個解釋都滿合理的，第一個解釋就是上一篇跟大家講的，Session 是一種讓 Request 變成 stateful 的「機制」，而 Session 的第二種解釋（也是比較貼近英文原文的解釋），就是「具有狀態的一段期間」，或者是「上下文」，所以在 Session 裡面的東西可以放在一起看。
 
 有一種說法認為 Session 的原意的確是第二種，但是在 Web 領域中 Session 轉變成了一種「機制」，所以兩個意思都通。但我自己其實是比較傾向第二種才是唯一正確的解釋方法，從頭到尾第二種都是對的，第一種則是誤解。
 
@@ -35,7 +35,7 @@ author: huli
 
 那為什麼儘管我比較偏向這個定義，卻在上一篇裡面隻字不提，還把 Session 定義成我眼中的「誤解」？
 
-第一個原因是搞不好兩種解釋都說得通，所以有可能兩個都是對的。第二個原因是我所認為的 Session 精確定義非常不好解釋，因為概念太抽象了，而且我認為若是提了這個解釋，只會把你對 Session 的理解越搞越亂，因此上一篇才沒有提到這個。第三個原因是我認為解釋成機制也可以，而且比較好理解，就算它真的是錯誤的，造成的影響也沒那麼大。
+第一個原因是搞不好兩種解釋都說得通，所以有可能兩個都是對的。第二個原因是我所認為的 Session 精確定義非常不好解釋，因為概念太抽象了。我認為若是提了這個解釋，只會把你對 Session 的理解越搞越亂，因此上一篇才沒有提到這個。第三個原因是我認為解釋成機制也可以，而且比較好理解，就算它真的是錯誤的，造成的影響也沒那麼大。
 
 總之呢，我認為對完全沒有基礎的人來說，把 Session 理解成一種機制就可以了。但是對於像我這種想要追根究底的人來說，我想知道的是最正確的理解，而且必須是有憑有據的。
 
@@ -49,9 +49,9 @@ author: huli
 
 為什麼要讀三份呢？因為這三份都是跟 Cookie 相關的文件，2109 是最早的一份，後來出現一些問題所以被新的 2965 取代，過了十年後有了 6265，是目前最新的標準。
 
-我認為讀東西這樣讀能夠事半功倍，因為最早期的時候東西應該會最少，理解上也比較容易，找資料也好找。例如說要讀 React 原始碼我會推薦從最早的 0.xx 版本開始讀，讀 ECMAScript 也可以從 ES3 開始，也可以順便知道演進的過程。
+我認為讀東西從最早期的時候開始讀能夠事半功倍，因為東西應該會最少，理解上也比較容易，找資料也好找。例如說要讀 React 原始碼我會推薦從最早的 0.xx 版本開始讀，讀 ECMAScript 也可以從 ES3 開始，還可以順便知道演進的過程。
 
-前情提要大概就到這邊了，本文的目標就是來讀 RFC，看看裡面是怎麼說 Cookie 與 Session 的。裡面我會對原文做一些翻譯，但畢竟翻譯是項專業，我翻的很差而且一定有錯誤，所以推薦還是要看原文，翻譯只能當作輔助。如果有哪邊錯的很離譜歡迎指出，我會十分感謝。
+前情提要大概就到這邊了，本文的目標就是來讀 RFC，看看裡面是怎麼說 Cookie 與 Session 的。裡面我會對原文做一些翻譯，但畢竟翻譯是項專業，我翻的很差而且一定有錯誤，拜託大家還是要看原文，翻譯只能當作輔助。如果有哪邊錯的很離譜歡迎指出，我會十分感謝。
 
 ## RFC 2109
 
@@ -67,13 +67,13 @@ author: huli
 
 （每次翻譯翻一翻就會不想翻了...因為總覺得自己翻譯得不夠精確，翻譯真滴難）
 
-摘要寫得很明確了，簡單來說就是引入 Cookie 與 Set-Cookie 兩個 Header 來建立 Session。會特別提到 Netscape 是因為 Cookie 這東西最早出現是 Netscape 自己實作的，只可惜我能找到的連結都死掉了，無緣看到 Netscape 的 Cookie 長什麼樣子。
+摘要寫得很明確了，簡單來說就是引入 Cookie 與 Set-Cookie 兩個 Header 來建立 Session。會特別提到 Netscape 是因為 Cookie 這東西最早是 Netscape 自己實作的，只可惜我能找到的連結都死掉了，無緣看到 Netscape 的 Cookie 規範長什麼樣子。
 
 再來第二個部分 TERMINOLOGY 就是規定一些專有名詞的用法，可以稍微掃過去就好，重點在第三個部分 STATE AND SESSIONS：
 
 > This document describes a way to create stateful sessions with HTTP requests and responses.  Currently, HTTP servers respond to each client request without relating that request to previous or subsequent requests; the technique allows clients and servers that wish to exchange state information to place HTTP requests and responses within a larger context, which we term a "session".  
 > 
-> 這份文件規定了一種利用 HTTP request 與 response 建立有狀態的 session 的方法。目前 HTTP 伺服器獨立回應每一個 Request，不把它與其他 Request 關聯，而個方法允許想要交換狀態資訊的 Server 與 Client 把 HTTP Request 與 Response 放在一個更大的 context 底下，我們稱之為一個 session。（這段我覺得超級難翻...而且一定翻得不好）
+> 這份文件規定了一種利用 HTTP request 與 response 建立有狀態的 session 的方法。目前 HTTP 伺服器獨立回應每一個 Request，不把它與其他 Request 關聯，而這個方法允許想要交換狀態資訊的 Server 與 Client 把 HTTP Request 與 Response 放在一個更大的 context 底下，我們稱之為一個 session。（這段我覺得超級難翻...而且一定翻得不好）
 
 > This context might be used to create, for example, a "shopping cart", in which user selections can be aggregated before purchase, or a magazine browsing system, in which a user's previous reading affects which offerings are presented.
 > 
@@ -95,7 +95,7 @@ author: huli
 > 3. 瀏覽器或伺服器任何一方都可以終止這個 session
 > 4. Session 蘊含了交換狀態資訊的概念在裡面
 
-這邊就是稍微介紹了一下 Session 的特性而已。若是我們把 Session 理解為是一種「機制」，那該如何解釋上面的段落？「每個 Session 機制都是相對短暫的？」，聽起來有點怪怪的，所以這也是為什麼我會說 Session 當作機制來解有一點奇怪。
+這邊就是稍微介紹了一下 Session 的特性而已。若是我們把 Session 理解為是一種「機制」，那該如何解釋上面的段落？「每個 Session 機制都是相對短暫的」？，聽起來有點怪怪的，所以這也是為什麼我會說 Session 當作機制來解有一點奇怪。
 
 接下來第四個章節很多部分都是在講那些 Header 的規格，這邊我們跳過不看，只節選幾個我認為比較重要的段落出來：
 
@@ -208,23 +208,23 @@ HTTP/1.1 200 OK
 > 1. 把狀態放在 server
 > 2. 如何以及何時把沒有用的狀態資訊清掉
 
-其實這種方式就是我們在上一篇所提到的兩個不同的方法：Cookie-based session 以及 SessionID，前者就是存太多東西會變得笨重，後者就是需要把狀態放在 Server。
+其實這種方式就是我們在上一篇所提到的兩個不同的方法：Cookie-based session 以及 SessionID，前者的缺點就是存太多東西會變得笨重，後者則是需要把狀態放在 Server。
 
-兩種方式其實各有優劣，但比較常使用的其實還是 SessionID 那種方式，也就是原文提到的：「session information to be a key to a server-side resource」。
+兩種方式其實各有優劣，但比較常使用的還是 SessionID 那種方式，也就是原文提到的：「session information to be a key to a server-side resource」。
 
 好，其他都是有關安全性或是跟隱私有關的部分，跟我們這篇要談的議題有點差異，因此我就不特別提了。
 
 讓我們先來整理一下上面所看到的東西。
 
-首先，Cookie 的發明就是為了要建立 Session 而生的，因為在這之前要建立 Session 只能透過我上一篇提到的那些方式，例如說用網址列帶資訊，或者是在 form 裡面放一個 hidden 的欄位。為了簡化這些行為才有了 Cookie 的誕生。
+首先，Cookie 就是為了要建立 Session 而生的，因為在這之前要建立 Session 只能透過我上一篇提到的那些方式，例如說用網址列帶資訊，或者是在 form 裡面放一個 hidden 的欄位。為了簡化這些行為才有了 Cookie。
 
 而實際方式就是 Server 回傳 Set-Cookie 的 header，User agent 把這些資訊儲存起來之後，在後續的 Request 都加上一個 Cookie header，這就是我們上一篇中所提到的「紙條」，每次都會帶著這個紙條，就讓 Request 之間有了狀態。
 
-至於要在 Cookie 裡放什麼狀態都行，但如果放太多的東西可以考慮把這些狀態移到 Server 去，只在 Cookie 裡放一個可以對應的 ID。這就是我們之前所說的 Session ID 與 Session Data。
+至於要在 Cookie 裡放什麼狀態都行，但如果放的東西太多可以考慮把這些狀態移到 Server 去，只在 Cookie 裡放一個可以對應的 ID。這就是我們之前所說的 Session ID 與 Session Data。
 
 ## RFC 2965
 
-[RFC 2965](https://tools.ietf.org/html/rfc2965) 誕生於 2000 年，不過他的內容跟 RFC 2109 其實相去不遠，大概有八成的內容都是一樣的。
+[RFC 2965](https://tools.ietf.org/html/rfc2965) 誕生於 2000 年，不過它的內容跟 RFC 2109 其實相去不遠，大概有八成的內容都是一樣的。
 
 為什麼呢？
 
@@ -237,7 +237,7 @@ Version=1; Max-Age=15552000; Path=/;
 Expires=Sun, 27 Apr 1997 01:16:23 GMT
 ```
 
-在 IE 裡面會把 Cookie 設置成這樣：`Cookie: Max-Age=15552000`，在 Netscape Navigator 裡面則是我們預期的：`Cookie: xx="1=2\&3-4".`，於是他們就要想辦法來修正這個行為。
+在 IE 裡面會把 Cookie 設置成這樣：`Cookie: Max-Age=15552000`，在 Netscape Navigator 裡面則是我們預期的：`Cookie: xx="1=2\&3-4".`，同一段 Header 卻產生了不同的結果，於是他們就要想辦法來修正這個行為。
 
 最後就有了 RFC 2965 的出現，解決方式是引入了兩個新的 Header：Cookie2 跟 Set-Cookie2，其餘部分都與 RFC 2109 差不多。
 
@@ -263,7 +263,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 > 
 > 伺服器可以利用 Set-Cookie header 設置一個簡短的字串，而瀏覽器會在後續的 Request 把這個字串傳上來。舉例來說，伺服器可以傳送一個「session identifier」稱之為 SID，內容是 31d4d96e407aad42，而瀏覽器就會在之後的 Request 把這個 sessionID 傳上來。
 
-底下還有提供更完整的範例，但有點長我就不翻了。其實我很推薦大家自己把這整份文件都看完，因為這整份文件定義的就是現在我們在使用的 Cookie 規格，你可以從規格裡面知道最正確的資訊。
+底下還有提供更完整的範例，但有點長我就不翻了。其實我很推薦大家自己把這整份文件都看完，因為這整份文件定義的就是現在我們在使用的 Cookie 規格（基本上是啦，雖然還是有一點出入），你可以從規格裡面知道最正確的資訊。
 
 例如說：
 
@@ -295,7 +295,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 > 
 > Some user agents restrict how third-party cookies behave.  For example, some of these user agents refuse to send the Cookie header in third-party requests.  Others refuse to process the Set-Cookie header in responses to third-party requests.  User agents vary widely in their third-party cookie policies.  This document grants user agents wide latitude to experiment with third-party cookie policies that balance the privacy and compatibility needs of their users. However, this document does not endorse any particular third-party cookie policy.
 > 
-> 有些瀏覽器會限制第三方 Cookie。舉例來說，有些不發送 Cookie header 給第三方，有些則是不處理第三方的 Set-Cookie header。每一個瀏覽器對於第三方 cookie 的處理方式都不太一樣，而這份文件給了瀏覽器很大的空間去實驗什麼是對使用者最好的策略，試圖在隱私與兼容性之間取得一個平衡。不過這份文件不會認可任何一個特定的第三方 cookie 處理方式。
+> 有些瀏覽器會限制第三方 Cookie。舉例來說，有些不發送 Cookie header 給第三方，有些則是不處理第三方的 Set-Cookie header。每一個瀏覽器對於第三方 cookie 的處理方式都不太一樣，而這份文件給了瀏覽器很大的空間去實驗什麼是對使用者最好的策略，試圖在隱私與兼容性之間取得一個平衡。然而，這份文件不會認可任何一個特定的第三方 cookie 處理方式。
 > 
 > Third-party cookie blocking policies are often ineffective at achieving their privacy goals if servers attempt to work around their restrictions to track users.  In particular, two collaborating servers can often track users without using cookies at all by injecting identifying information into dynamic URLs.
 > 
@@ -324,7 +324,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 原文對固定 Session（Session fixation）的說明沒有很清楚，有興趣的朋友可以參考 [HTTP Session 攻擊與防護
 ](https://devco.re/blog/2014/06/03/http-session-protection/)，這篇講得比較清楚一點。
 
-簡單來說就是讓受害者用你指定的 sessionID 登入，所以在 Server 端這個 sessionID 就會跟受害者的帳號綁在一起，你再用同樣的 sessionID，就可以用受害者的身份登入並且使用網站。
+簡單來說就是讓受害者用你指定的 sessionID 登入，所以在 Server 端這個 sessionID 就會跟受害者的帳號綁在一起。接著你再用同樣的 sessionID，就可以用受害者的身份登入並且使用網站。
 
 接著我們再來看另外一個安全性問題：
 
@@ -336,7 +336,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 > 
 > An active network attacker can also inject cookies into the Cookie header sent to https://example.com/ by impersonating a response from http://example.com/ and injecting a Set-Cookie header.  The HTTPS server at example.com will be unable to distinguish these cookies from cookies that it set itself in an HTTPS response.  An active network attacker might be able to leverage this ability to mount an attack against example.com even if example.com uses HTTPS exclusively.
 > 
-> 攻擊還可以利用 http://example.com/ 來把 https://example.com/（前者是 http，後者 https）的 cookie 蓋掉，server 就無法分別這個 cookie 是 http 還是 https 設置的。攻擊者一樣可以利用這個特性來進行攻擊。
+> 攻擊還可以利用 http://example.com/ 來把 https://example.com/（前者是 http，後者 https）的 cookie 蓋掉，server 就無法分辨這個 cookie 是 http 還是 https 設置的。攻擊者一樣可以利用這個特性來進行攻擊。
 
 上面這一段在 4.1.2.5 The Secure Attribute 其實也有提到：
 
@@ -344,7 +344,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 
 大意就是說 Secure 屬性沒辦法保障 cookie 的完整性。攻擊者可以從 HTTP 覆蓋掉 HTTPS 的 cookie。
 
-看到這邊的時候我心頭一驚，這個不就是在講我之前寫過的：[我遇過的最難的 Cookie 問題](https://github.com/aszx87410/blog/issues/17)嗎？現在我也終於知道為什麼 Safari 跟 Firefox 都沒有擋這種行為，因為在規格裡面也沒有要求你要擋。
+看到這邊的時候我心頭一驚，這個不就是在講我之前寫過的：[我遇過的最難的 Cookie 問題](https://github.com/aszx87410/blog/issues/17)嗎？現在我也終於知道為什麼 Safari 跟 Firefox 都沒有擋這種行為，因為在規格裡面並沒有要求你一定要擋。
 
 至於 Chrome 的話，它的實作參考了幾個不同的 RFC，在負責管理 Cookie 的 [CookieMonster](https://www.chromium.org/developers/design-documents/network-stack/cookiemonster) 裡面有寫到：
 
@@ -366,9 +366,30 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 
 > We can mitigate the risk of these attacks by making it more difficult for non-secure origins to influence the state of secure origins. Accordingly, this document recommends the deprecation and removal of non-secure origins' ability to write cookies with a 'secure' flag, and their ability to overwrite cookies whose 'secure' flag is set.
 
-大意就是說跟我們剛剛在 RFC 6265 的 Section 8.5 與 8.6 看到的一樣，由於一些歷史因素，secure 的 cookie 可以被 non-secure 的來源蓋掉。而這份文件就是要阻止這種行為。
+大意就是說跟我們剛剛在 RFC 6265 的 Section 8.5 與 8.6 看到的一樣，由於一些歷史因素，secure 的 cookie 可以被 non-secure 的來源蓋掉。而這份文件就是要試著阻止這種行為。
 
+看到這邊，與 Session 跟 Cookie 相關的文件差不多都讀完了，讓我們做個簡單的總結。
 
+## 總結
+
+回到最開始的問題：到底 Session 是什麼？
+
+從 RFC 裡面提到的各種 Session 相關的字眼，我會認為 Session 就是它英文的原意之一，代表著：「具有狀態的一段期間」或者是「上下文」，所以你想要開啟或是建立一個 Session，必要條件就是必須先有一個機制來建立及保留狀態。
+
+這也是為什麼 Cookie 的 RFC 標題為：HTTP State Management Mechanism，狀態管理機制。在 Cookie 還沒出現以前，一樣可以建立 Session，可以把狀態資訊放在網址列上面或是藏在 form 表單中。但 Cookie 出現以後建立 Session 變成一件更容易的事，只要使用 Set-Cookie 與 Cookie 這兩個 header 就好了。
+
+建立 Session 之後，所儲存的狀態就叫做 Session information，可以翻作 Session 資訊。若是選擇把這些資訊存在 Cookie 裡面，就叫做 Cookie-based session；還另一種方法則是在在 Cookie 裡面只存一個 SessionID，其他的 Session 資訊都存在 Server 端，靠著這個 ID 把兩者關聯起來。
+
+除了 Session 以外，我們也在 RFC 裡面看見一些有趣的東西，例如說第三方 Cookie 的隱私疑慮以及與 Cookie 相關的安全性問題。這些也能加深你對於 Cookie 的理解。
+
+在結束以前，我誠心推薦一篇文章：[HTTP Cookies: Standards, Privacy, and Politics](https://arxiv.org/abs/cs/0105018)，網頁右邊可以下載 PDF 來看。這篇文章的作者就是 RFC 2109 與 2965 的作者。文章裡面把 Cookie 出現的歷史以及當初發生的事講的一清二楚，強烈建議大家都可以花點時間來看這篇文章，可以深入地理解 Cookie 與 Session 早期的歷史。
+
+最後，別忘了這是系列文的第二篇，三篇的完整連結如下：
+
+1. [白話 Session 與 Cookie：從經營雜貨店開始](https://medium.com/@hulitw/session-and-cookie-15e47ed838bc)
+2. [淺談 Session 與 Cookie：一起來讀 RFC](https://github.com/aszx87410/blog/issues/45)
+3. [深入 Session 與 Cookie：Node.js、PHP 與 Rails 的實作
+](https://github.com/aszx87410/blog/issues/46)
 
 
 關於作者： 
