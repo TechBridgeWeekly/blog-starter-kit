@@ -14,7 +14,7 @@ author: huli
 
 1. [白話 Session 與 Cookie：從經營雜貨店開始](https://medium.com/@hulitw/session-and-cookie-15e47ed838bc)
 2. [淺談 Session 與 Cookie：一起來讀 RFC](https://github.com/aszx87410/blog/issues/45)
-3. [深入 Session 與 Cookie：Node.js、PHP 與 Rails 的實作
+3. [深入 Session 與 Cookie：Express、PHP 與 Rails 的實作
 ](https://github.com/aszx87410/blog/issues/46)
 
 在上一篇裡面，我們提到了 Session 的意思：
@@ -388,7 +388,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 
 1. [白話 Session 與 Cookie：從經營雜貨店開始](https://medium.com/@hulitw/session-and-cookie-15e47ed838bc)
 2. [淺談 Session 與 Cookie：一起來讀 RFC](https://github.com/aszx87410/blog/issues/45)
-3. [深入 Session 與 Cookie：Node.js、PHP 與 Rails 的實作
+3. [深入 Session 與 Cookie：Express、PHP 與 Rails 的實作
 ](https://github.com/aszx87410/blog/issues/46)
 
 
