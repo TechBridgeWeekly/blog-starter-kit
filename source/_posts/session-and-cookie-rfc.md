@@ -14,14 +14,13 @@ author: huli
 
 1. [白話 Session 與 Cookie：從經營雜貨店開始](https://medium.com/@hulitw/session-and-cookie-15e47ed838bc)
 2. [淺談 Session 與 Cookie：一起來讀 RFC](https://github.com/aszx87410/blog/issues/45)
-3. [深入 Session 與 Cookie：Express、PHP 與 Rails 的實作
-](https://github.com/aszx87410/blog/issues/46)
+3. [深入 Session 與 Cookie：Express、PHP 與 Rails 的實作](https://github.com/aszx87410/blog/issues/46)
 
 在上一篇裡面，我們提到了 Session 的意思：
 
 > Session 是什麼？就是一種讓 Request 變成 stateful 的機制。以小明的例子來說，Session 就是一種讓客人之間能互相關聯起來的機制。在故事裡面我們用了紙條跟手機裡的資訊來比喻，有多種方式可以達成 Session。
 
-其實在寫這系列的時候，「Session 最明確的定義是什麼」困擾了我一陣子，而且我到現在還不能完全肯定到底怎樣對的。在我心中有兩個解釋都滿合理的，第一個解釋就是上一篇跟大家講的，Session 是一種讓 Request 變成 stateful 的「機制」，而 Session 的第二種解釋（也是比較貼近英文原文的解釋），就是「具有狀態的一段期間」，或者是「上下文」，所以在 Session 裡面的東西可以放在一起看。
+其實在寫這系列的時候，「Session 最明確的定義是什麼」困擾了我一陣子，而且我到現在還不能完全肯定到底怎樣才是對的。在我心中有兩個解釋都滿合理的，第一個解釋就是上一篇跟大家講的，Session 是一種讓 Request 變成 stateful 的「機制」，而 Session 的第二種解釋（也是比較貼近英文原文的解釋），就是「具有狀態的一段期間」，或者是「上下文」，所以在 Session 裡面的東西可以放在一起看。
 
 有一種說法認為 Session 的原意的確是第二種，但是在 Web 領域中 Session 轉變成了一種「機制」，所以兩個意思都通。但我自己其實是比較傾向第二種才是唯一正確的解釋方法，從頭到尾第二種都是對的，第一種則是誤解。
 
@@ -79,7 +78,7 @@ author: huli
 > 
 > 舉例來說，這個 context 可以用來建立購物車的功能，在購買前可以知道使用者選了哪些物品，或者是雜誌瀏覽系統，從以前讀過的東西推薦可能喜歡的內容。
 
-這邊對於 Session 的定義就如同我前面所講的那樣，Session 是「具有狀態的一段期間」，或者是「上下文」，就是上面所提到的 context，在這個 context 裡面的Request 與 Response 可以放在一起看，於是他們之間就有了狀態。
+這邊對於 Session 的定義就如同我前面所講的那樣，Session 是「具有狀態的一段期間」，或者是「上下文」，就是上面所提到的 context，在這個 context 裡面的 Request 與 Response 可以放在一起看，於是他們之間就有了狀態。
 
 > There are, of course, many different potential contexts and thus many different potential types of session.  The designers' paradigm for sessions created by the exchange of cookies has these key attributes:
 > 
@@ -228,7 +227,7 @@ HTTP/1.1 200 OK
 
 為什麼呢？
 
-在 RFC 2109 出來之後不久他們發現了 IE3 與 Netscape3 對於這份「新的」Cookie 標準（舊的指的是 Netscape 原本自己的那套規範）實作不同，例如說以下這一段：
+在 RFC 2109 出來之後不久他們發現了 IE3 與 Netscape Navigator3 對於這份「新的」Cookie 標準（舊的指的是 Netscape 原本自己的那套規範）實作不同，例如說底下這一段：
 
 ```
 Set-cookie: xx="1=2\&3-4";
@@ -321,8 +320,7 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 > 
 > 使用 sessionID 也不是完全沒有風險。舉例來說，server 應該要避免 session fixation 這種攻擊方法。這種攻擊方法有三個步驟，第一個步驟是先產生一個 sessionID，並且把這 ID 傳給受害者；第二步是受害者用這個 sessionID 來登入；在受害者登入以後，攻擊者就能夠使用同樣的 sessionID 取得受害者的資料。
 
-原文對固定 Session（Session fixation）的說明沒有很清楚，有興趣的朋友可以參考 [HTTP Session 攻擊與防護
-](https://devco.re/blog/2014/06/03/http-session-protection/)，這篇講得比較清楚一點。
+原文對固定 Session（Session fixation）的說明沒有很清楚，有興趣的朋友可以參考 [HTTP Session 攻擊與防護](https://devco.re/blog/2014/06/03/http-session-protection/)，這篇講得比較清楚一點。
 
 簡單來說就是讓受害者用你指定的 sessionID 登入，所以在 Server 端這個 sessionID 就會跟受害者的帳號綁在一起。接著你再用同樣的 sessionID，就可以用受害者的身份登入並且使用網站。
 
@@ -374,22 +372,23 @@ Expires=Sun, 27 Apr 1997 01:16:23 GMT
 
 回到最開始的問題：到底 Session 是什麼？
 
-從 RFC 裡面提到的各種 Session 相關的字眼，我會認為 Session 就是它英文的原意之一，代表著：「具有狀態的一段期間」或者是「上下文」，所以你想要開啟或是建立一個 Session，必要條件就是必須先有一個機制來建立及保留狀態。
+從 RFC 裡面提到的各種 Session 相關的字眼，我會認為 Session 就是它英文的原意之一，代表著：「具有狀態的一段期間」或者是「上下文」，所以你想要開啟或是建立一個 Session，必要條件就是先有一個機制來建立及保留狀態。
 
 這也是為什麼 Cookie 的 RFC 標題為：HTTP State Management Mechanism，狀態管理機制。在 Cookie 還沒出現以前，一樣可以建立 Session，可以把狀態資訊放在網址列上面或是藏在 form 表單中。但 Cookie 出現以後建立 Session 變成一件更容易的事，只要使用 Set-Cookie 與 Cookie 這兩個 header 就好了。
 
-建立 Session 之後，所儲存的狀態就叫做 Session information，可以翻作 Session 資訊。若是選擇把這些資訊存在 Cookie 裡面，就叫做 Cookie-based session；還另一種方法則是在在 Cookie 裡面只存一個 SessionID，其他的 Session 資訊都存在 Server 端，靠著這個 ID 把兩者關聯起來。
+建立 Session 之後，所儲存的狀態就叫做 Session information，可以翻作 Session 資訊。若是選擇把這些資訊存在 Cookie 裡面，就叫做 Cookie-based session；還有另一種方法則是在 Cookie 裡面只存一個 SessionID，其他的 Session 資訊都存在 Server 端，靠著這個 ID 把兩者關聯起來。
 
-除了 Session 以外，我們也在 RFC 裡面看見一些有趣的東西，例如說第三方 Cookie 的隱私疑慮以及與 Cookie 相關的安全性問題。這些也能加深你對於 Cookie 的理解。
+除了 Session 以外，我們也在 RFC 裡面看見一些有趣的東西，例如說第三方 Cookie 的隱私疑慮以及與 Cookie 相關的安全性問題，這些都能加深你對於 Cookie 的理解。
 
 在結束以前，我誠心推薦一篇文章：[HTTP Cookies: Standards, Privacy, and Politics](https://arxiv.org/abs/cs/0105018)，網頁右邊可以下載 PDF 來看。這篇文章的作者就是 RFC 2109 與 2965 的作者。文章裡面把 Cookie 出現的歷史以及當初發生的事講的一清二楚，強烈建議大家都可以花點時間來看這篇文章，可以深入地理解 Cookie 與 Session 早期的歷史。
 
-最後，別忘了這是系列文的第二篇，三篇的完整連結如下：
+最後，別忘了這是系列文的第二篇，下一篇我們會來看一些主流框架如何處理 Session。
+
+三篇的完整連結如下：
 
 1. [白話 Session 與 Cookie：從經營雜貨店開始](https://medium.com/@hulitw/session-and-cookie-15e47ed838bc)
 2. [淺談 Session 與 Cookie：一起來讀 RFC](https://github.com/aszx87410/blog/issues/45)
-3. [深入 Session 與 Cookie：Express、PHP 與 Rails 的實作
-](https://github.com/aszx87410/blog/issues/46)
+3. [深入 Session 與 Cookie：Express、PHP 與 Rails 的實作](https://github.com/aszx87410/blog/issues/46)
 
 
 關於作者： 
