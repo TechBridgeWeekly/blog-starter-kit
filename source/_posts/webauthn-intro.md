@@ -256,9 +256,9 @@ const publicKeyObject = CBOR.decode(publicKeyBytes.buffer);
 
 Authenticated 的過程中，使用者會用其持有的 private key 簽上一個 signature 到 assertion 上頭，並傳給 server，server 則利用 public key 來驗證該 signature。
 
-`navigator.credentials.create()`
+`navigator.credentials.get()`
 
-Authentication 的過程在於使用者要證明他們擁有註冊時所提交的 key pair 中的 private key。證明方法為利用 `navigator.credentials.create()` 取得註冊時的 credential，並附上 signature。
+Authentication 的過程在於使用者要證明他們擁有註冊時所提交的 key pair 中的 private key。證明方法為利用 `navigator.credentials.get()` 取得註冊時的 credential，並附上 signature。
 
 ```js
 const credential = await navigator.credentials.get({
