@@ -33,9 +33,6 @@ tags:
 # Prometheus 介紹
 
 ![使用 Prometheus 和 Grafana 打造 Flask Web App 監控預警系統](/img/kdchang/cloud-native/prometheus-cover.png)
-關於作者：
-[@kdchang](http://blog.kdchang.cc) 文藝型開發者，夢想是做出人們想用的產品和辦一所心目中理想的學校。A Starter & Maker. JavaScript, Python & Arduino/Android lover.:) 
-
 
 簡單來說 Prometheus 是一個監控預警框架和 TSDB（Time Series Database）時間序列資料庫，可以很容易建立不同維度（dimension）的 metrics 和整合不同的 alert tool 以及資訊視覺化的監控工具。透過 Prometheus 我們可以建立一站式的監控預警系統。Prometheus 可能在儲存擴展上比不上其他 Time Series Database，但在整合各種第三方的 data source 上十分方便（算是一個懶人包），且在支援雲端服務和 container 容器相關工具都十分友好。然而在圖表顯現上就稍嫌單薄，所以通常會搭配精美的儀表板工具 Grafana 等來進行資訊視覺化和圖表呈現。
 
