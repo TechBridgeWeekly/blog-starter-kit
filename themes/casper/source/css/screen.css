@@ -1162,8 +1162,8 @@ input[type=text], select, textarea{
         width:auto;
         margin-left: 16px;
         margin-right: 16px;
-        font-size: 0.8em;
-        line-height: 1.6em;
+        font-size: 1.1em;
+        line-height: 1.8em;
     }
 
     .site-head {
