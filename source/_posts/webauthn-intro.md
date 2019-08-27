@@ -306,7 +306,7 @@ PublicKeyCredential {
 }
 ```
 
-基本結構都差不多，多出來的 `signature` 是由 private key 與此 credential 所產生，在 server 端可以用 public key 來驗證此 signature。
+基本結構都差不多，多出來的 `signature` 是由 private key 與此 credential 所產生，在 server 端可以用 public key 來驗證此 signature。
 
 `userHandle` 則是 authenticator 提供的使用者 id，也是註冊時使用的那組。在 Server 端可以用來關聯使用者。
 
