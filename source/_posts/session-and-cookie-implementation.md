@@ -352,9 +352,9 @@ PHP 內建就有 session 機制，不必使用任何的 framework，而使用的
 session_start();
   
 if (empty($_SESSION['views'])) {
-	$_SESSION['views'] = 1;
+    $_SESSION['views'] = 1;
 } else {
-	$_SESSION['views']++;
+    $_SESSION['views']++;
 }
   
 echo $_SESSION['views'];
@@ -435,33 +435,33 @@ views|i:5;
  */
 PS_CREATE_SID_FUNC(files)
 {
-	zend_string *sid;
-	int maxfail = 3;
-	PS_FILES_DATA;
+    zend_string *sid;
+    int maxfail = 3;
+    PS_FILES_DATA;
   
-	do {
-		sid = php_session_create_id((void**)&data);
-		if (!sid) {
-			if (--maxfail < 0) {
-				return NULL;
-			} else {
-				continue;
-			}
-		}
-		/* Check collision */
-		/* FIXME: mod_data(data) should not be NULL (User handler could be NULL) */
-		if (data && ps_files_key_exists(data, ZSTR_VAL(sid)) == SUCCESS) {
-			if (sid) {
-				zend_string_release(sid);
-				sid = NULL;
-			}
-			if (--maxfail < 0) {
-				return NULL;
-			}
-		}
-	} while(!sid);
+    do {
+        sid = php_session_create_id((void**)&data);
+        if (!sid) {
+            if (--maxfail < 0) {
+                return NULL;
+            } else {
+                continue;
+            }
+        }
+        /* Check collision */
+        /* FIXME: mod_data(data) should not be NULL (User handler could be NULL) */
+        if (data && ps_files_key_exists(data, ZSTR_VAL(sid)) == SUCCESS) {
+            if (sid) {
+                zend_string_release(sid);
+                sid = NULL;
+            }
+            if (--maxfail < 0) {
+                return NULL;
+            }
+        }
+    } while(!sid);
   
-	return sid;
+    return sid;
 }
 ```
 
@@ -472,18 +472,18 @@ PS_CREATE_SID_FUNC(files)
   
 PHPAPI zend_string *php_session_create_id(PS_CREATE_SID_ARGS) /* {{{ */
 {
-	unsigned char rbuf[PS_MAX_SID_LENGTH + PS_EXTRA_RAND_BYTES];
-	zend_string *outid;
+    unsigned char rbuf[PS_MAX_SID_LENGTH + PS_EXTRA_RAND_BYTES];
+    zend_string *outid;
   
-	/* Read additional PS_EXTRA_RAND_BYTES just in case CSPRNG is not safe enough */
-	if (php_random_bytes_throw(rbuf, PS(sid_length) + PS_EXTRA_RAND_BYTES) == FAILURE) {
-		return NULL;
-	}
+    /* Read additional PS_EXTRA_RAND_BYTES just in case CSPRNG is not safe enough */
+    if (php_random_bytes_throw(rbuf, PS(sid_length) + PS_EXTRA_RAND_BYTES) == FAILURE) {
+        return NULL;
+    }
   
-	outid = zend_string_alloc(PS(sid_length), 0);
-	ZSTR_LEN(outid) = bin_to_readable(rbuf, PS(sid_length), ZSTR_VAL(outid), (char)PS(sid_bits_per_character));
+    outid = zend_string_alloc(PS(sid_length), 0);
+    ZSTR_LEN(outid) = bin_to_readable(rbuf, PS(sid_length), ZSTR_VAL(outid), (char)PS(sid_bits_per_character));
   
-	return outid;
+    return outid;
 }
 ```
 
@@ -504,18 +504,18 @@ PHPAPI zend_string *php_session_create_id(PS_CREATE_SID_ARGS) /* {{{ */
    Serializes the current setup and returns the serialized representation */
 static PHP_FUNCTION(session_encode)
 {
-	zend_string *enc;
+    zend_string *enc;
   
-	if (zend_parse_parameters_none() == FAILURE) {
-		return;
-	}
+    if (zend_parse_parameters_none() == FAILURE) {
+        return;
+    }
   
-	enc = php_session_encode();
-	if (enc == NULL) {
-		RETURN_FALSE;
-	}
+    enc = php_session_encode();
+    if (enc == NULL) {
+        RETURN_FALSE;
+    }
   
-	RETURN_STR(enc);
+    RETURN_STR(enc);
 }
 ```
 
@@ -524,16 +524,16 @@ static PHP_FUNCTION(session_encode)
 ``` c
 static zend_string *php_session_encode(void) /* {{{ */
 {
-	IF_SESSION_VARS() {
-		if (!PS(serializer)) {
-			php_error_docref(NULL, E_WARNING, "Unknown session.serialize_handler. Failed to encode session object");
-			return NULL;
-		}
-		return PS(serializer)->encode();
-	} else {
-		php_error_docref(NULL, E_WARNING, "Cannot encode non-existent session");
-	}
-	return NULL;
+    IF_SESSION_VARS() {
+        if (!PS(serializer)) {
+            php_error_docref(NULL, E_WARNING, "Unknown session.serialize_handler. Failed to encode session object");
+            return NULL;
+        }
+        return PS(serializer)->encode();
+    } else {
+        php_error_docref(NULL, E_WARNING, "Cannot encode non-existent session");
+    }
+    return NULL;
 }
 /* }}} */
 ```
@@ -545,27 +545,27 @@ static zend_string *php_session_encode(void) /* {{{ */
   
 PS_SERIALIZER_ENCODE_FUNC(php) /* {{{ */
 {
-	smart_str buf = {0};
-	php_serialize_data_t var_hash;
-	PS_ENCODE_VARS;
+    smart_str buf = {0};
+    php_serialize_data_t var_hash;
+    PS_ENCODE_VARS;
   
-	PHP_VAR_SERIALIZE_INIT(var_hash);
+    PHP_VAR_SERIALIZE_INIT(var_hash);
   
-	PS_ENCODE_LOOP(
-		smart_str_appendl(&buf, ZSTR_VAL(key), ZSTR_LEN(key));
-		if (memchr(ZSTR_VAL(key), PS_DELIMITER, ZSTR_LEN(key))) {
-			PHP_VAR_SERIALIZE_DESTROY(var_hash);
-			smart_str_free(&buf);
-			return NULL;
-		}
-		smart_str_appendc(&buf, PS_DELIMITER);
-		php_var_serialize(&buf, struc, &var_hash);
-	);
+    PS_ENCODE_LOOP(
+        smart_str_appendl(&buf, ZSTR_VAL(key), ZSTR_LEN(key));
+        if (memchr(ZSTR_VAL(key), PS_DELIMITER, ZSTR_LEN(key))) {
+            PHP_VAR_SERIALIZE_DESTROY(var_hash);
+            smart_str_free(&buf);
+            return NULL;
+        }
+        smart_str_appendc(&buf, PS_DELIMITER);
+        php_var_serialize(&buf, struc, &var_hash);
+    );
   
-	smart_str_0(&buf);
+    smart_str_0(&buf);
   
-	PHP_VAR_SERIALIZE_DESTROY(var_hash);
-	return buf.s;
+    PHP_VAR_SERIALIZE_DESTROY(var_hash);
+    return buf.s;
 }
 /* }}} */
 ```
@@ -579,9 +579,9 @@ PS_SERIALIZER_ENCODE_FUNC(php) /* {{{ */
 ``` c
 static inline void php_var_serialize_long(smart_str *buf, zend_long val) /* {{{ */
 {
-	smart_str_appendl(buf, "i:", 2);
-	smart_str_append_long(buf, val);
-	smart_str_appendc(buf, ';');
+    smart_str_appendl(buf, "i:", 2);
+    smart_str_append_long(buf, val);
+    smart_str_appendc(buf, ';');
 }
 /* }}} */
 ```
