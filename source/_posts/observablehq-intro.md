@@ -132,7 +132,7 @@ function badgeCode(g, c, frameNumber) {
 
 這就是為什麼我們可以修改 `firstName`、`lastName` 以及自行填入 `badgeCode` 函數的原因了。
 
-`badgeCode` 內的程式碼基本上就是普通的 D3.js 程式，這邊就不再附上程式碼，有興趣想知道怎麼實作在地球呈現人口分布的，可以到我的 [notebook](https://observablehq.com/@arvinh/visfest-unconf-badge-builder-template) 去看，其中我也有用到前面提及的 `viewof` 運算子，來動態改變 radius 大小。
+`badgeCode` 內的程式碼基本上就是普通的 D3.js 程式，這邊就不再附上程式碼，有興趣想知道怎麼實作在地球呈現人口分布的，可以到我的 [notebook](https://observablehq.com/@arvinh/visfest-unconf-badge-builder-template) 去看，其中我也有用到前面提及的 `viewof` 運算子，讓我能手動調整地球的 scale 大小。
 
 都完成後就會看到由模板提供的 `preview` 函式所繪製出的十張圖：
 
