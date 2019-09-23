@@ -1,6 +1,6 @@
 ---
 title: 如何使用 Python Tkinter 製作 GUI 應用程式入門教學
-date: 2019-09-23 20:23:23
+date: 2019-09-21 20:23:23
 author: kdchang
 tags: 
     - Python
@@ -224,6 +224,7 @@ window.mainloop()
 
 # 參考文件
 1. [tkinter — Python interface to Tcl/Tk](https://docs.python.org/3/library/tkinter.html)
+2. [Python 快速入門教學](https://www.coderbridge.com/articles/25104775b6be486ba98b2d8ed775bd94)
 
 
 關於作者
