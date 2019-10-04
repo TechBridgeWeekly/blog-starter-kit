@@ -25,9 +25,9 @@ author: frankyang
 
 ## 演算法（Algorithm）
 
-演算法考題就是大家常說的 *[LeetCode](https://leetcode.com)*，我面試的公司中，有的每一關都有類似 LeetCode 的考題，有的則會把這類考題集中在第一關。關於 LeetCode 考題，會建議*別急著刷題，先把演算法的理論與應用理解後，在開始刷題，效率會更好！*
+演算法考題就是大家常說的 *[LeetCode](https://leetcode.com)*，我面試的公司中，有的每一關都有類似 LeetCode 的考題，有的則會把這類考題集中在第一關。關於 LeetCode 考題，會建議*別急著刷題，先把演算法的理論與應用理解後，再開始刷題，效率會更好！*
 
-針對理解演算法，會推薦*[極客時間 - 數據結構與算法之美](https://time.geekbang.org/column/intro/126)*，我覺得這是在「有限時間內」準備演算法的好教材！在介紹每個演算法之前，作者都會以一個實際應用的問題開頭，像是介紹 Stack 時，作者會先問「如何實現瀏覽器中上一頁、下一頁的功能？」，然後才介紹 Stack，最後在針對開頭的問題解答，這種學習方式能讓讀者對 Stack 能處理哪類型的問題更有感覺！很多時候面試中的問題並不是直接給 input 和 output，而是給一個應用情境，這時候帶著作者給的問題學習，效果會比較好！
+針對理解演算法，會推薦*[極客時間 - 數據結構與算法之美](https://time.geekbang.org/column/intro/126)*，我覺得這是在「有限時間內」準備演算法的好教材！在介紹每個演算法之前，作者都會以一個實際應用的問題開頭，像是介紹 Stack 時，作者會先問「如何實現瀏覽器中上一頁、下一頁的功能？」，然後才介紹 Stack，最後再針對開頭的問題解答，這種學習方式能讓讀者對 Stack 能處理哪類型的問題更有感覺！很多時候面試中的問題並不是直接給 input 和 output，而是給一個應用情境，這時候帶著作者給的問題學習，效果會比較好！
 
 針對刷題，我會推薦以下連結：
 
@@ -37,14 +37,14 @@ author: frankyang
 
 ## 程式語言（Programming Language）
 
-程式語言的部分，會建議先看過招聘說明，通常會提到希望面試者會哪些語言，這時候在針對那個語言搜尋「某某語言 面經」，像是 Python 面經、NodeJS 面經等。這部分通常會針對該語言的特性提問，例如 Python 的 Immutable v.s. Mutable 或是 NodeJS Event Loop 等，通常每個語言都會有個經典考題是垃圾回收機制（Garbage Collection），最後要時常關注語言的 Latest Released 有沒有加入哪些新特性，這些也很容易成為面試題目！
+程式語言的部分，會建議先看過招聘說明，通常會提到希望面試者會哪些語言，這時候再針對那個語言搜尋「某某語言 面經」，像是 Python 面經、NodeJS 面經等。這部分通常會針對該語言的特性提問，例如 Python 的 Immutable v.s. Mutable 或是 NodeJS Event Loop 等，通常每個語言都會有個經典考題是垃圾回收機制（Garbage Collection），最後要時常關注語言的 Latest Released 有沒有加入哪些新特性，這些也很容易成為面試題目！
 
 ## 作業系統（Operating System）
 
 作業系統的經典考題如下：
 
-- 進程（Process） v.s. 線程（Thread） v.s. 協程（Coroutine）
-- 進程間通訊、線程間通訊
+- Process v.s. Thread v.s. Coroutine
+- Inter-Process Communication
 - 調度策略（Scheduler）
 - 死鎖（Deadlock）條件，以及如何解死鎖
 
