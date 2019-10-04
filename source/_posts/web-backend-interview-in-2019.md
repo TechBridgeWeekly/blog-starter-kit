@@ -87,7 +87,7 @@ author: frankyang
 2. 評估 DAU（Daily Active User）、流量、QPS / TPS、硬碟儲存空間、記憶體空間等
 3. 設計 API
 4. 設計 Data Model
-5. High Level Desin，大致說明系統需要哪些 Component
+5. High Level Design，大致說明系統需要哪些 Component
 6. Detailed Design，針對每個 API 進行架構設計，像是微信發紅包跟搶紅包的架構就不太一樣，有時更細緻的設計像是如何為每條 Tweet 生成 ID，這兩個問題分別在我上面提到的兩個課程都有。
 
 最後要注意的是，系統設計是個演進的過程，不管在面試中還是實際設計時都一樣，所以在面試中要不斷的跟面試官來回討論，不要一直自顧自地想著要一步到位，有什麼想法就先拋出來跟面試官討論，面試官通常會回答這個方法可能有哪些問題，然後你再根據這些問題提出解決方案。
