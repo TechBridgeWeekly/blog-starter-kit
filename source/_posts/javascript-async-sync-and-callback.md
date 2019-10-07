@@ -919,7 +919,7 @@ while(!gotResponse) {
 
 這一段程式碼會不斷執行，成為一個無窮迴圈。所以 call stack 永遠都有東西，一直被佔用，callback queue 裡面的東西根本丟不進 call stack。
 
-因此小明原本的程式碼無論有沒有拿到 response，都只會一直印出 waiting，然後 stack overflow，程式就爆炸了。
+因此小明原本的程式碼無論有沒有拿到 response，都只會一直印出 waiting。
 
 ### 解答：3. 詭異的計時器
 
