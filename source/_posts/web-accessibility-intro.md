@@ -106,7 +106,7 @@ WCAG 有四大原則：
 
 Screen reader 在移動時，會依照 DOM 的順序進行，所以應當盡量將你想要呈現給使用者的內容順序，完整的對應到 DOM 的順序上頭。除此之外，還得注意 CSS 的影響，例如 `float`，就可能會造成視覺上的順序與 DOM 順序有所差異，導致 screen reader 朗讀的次序受到影響與畫面不符：
 
-```
+```html
 <button style="float: right">1</button>
 <button>2</button>
 <button>2</button>
@@ -164,6 +164,7 @@ WAI-ARIA，代表 Web Accessibility Initiative — Accessibility Rich Internet A
 而搭配 `role` 使用的 `aria-*` 則為元件定義了*屬性*與*狀態*，像是上面例子中的 `aria-checked="true"` 即為元素狀態的一種，告知 Accessibility Tree 這元件目前屬於 `checked` 狀態。
 
 也能透過 `aria-lable` 設定專門給輔助工具使用的 API：
+
 ```js
 <button aria-label="screen reader only label"></button>
 ```
