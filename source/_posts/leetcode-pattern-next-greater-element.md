@@ -14,7 +14,7 @@ author: pojenlai
 
 繼之前寫過的 [Two Pointer](https://blog.techbridge.cc/2019/08/30/leetcode-pattern-two-pointer/) 跟 [Sliding Window](https://blog.techbridge.cc/2019/09/28/leetcode-pattern-sliding-window/)，今天要來跟大家介紹另一種演算法的 pattern - Next Greater Element。
 
-## Sliding Window 的第一個範例 - Leetcode #496 - Next Greater Element I
+## Next Greater Element 的第一個範例 - Leetcode #496 - Next Greater Element I
 
 ### 題目
 
@@ -87,7 +87,7 @@ public:
 
 這題也算是 stack 的一個實用案例，讀者可以再稍稍體會一下如果沒有 stack 這種操作資料的模式，處理起來是不是會比較麻煩。
 
-## Sliding Window 的第二個範例 - Leetcode #503 - Next Greater Element II
+## Next Greater Element 的第二個範例 - Leetcode #503 - Next Greater Element II
 
 ### 題目
 
@@ -141,7 +141,7 @@ public:
 };
 ```
 
-## Sliding Window 的第三個範例 - Leetcode #739 - Daily Temperatures
+## Next Greater Element 的第三個範例 - Leetcode #739 - Daily Temperatures
 
 ### 題目
 
