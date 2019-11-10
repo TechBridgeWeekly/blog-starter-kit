@@ -183,6 +183,8 @@ const tl = new TimelineMax();
 
 ## 第五步，發揮創意，將整體動畫完成
 
+TimelineMax 所提供的 API 都是 chainable 的，你可以想像成是時間軸一般，動畫跟著 chain 一步一步照順序執行，而 `staggerFrom` 則可以同時讓多個 DOM 元件以些微時間差的順序啟動，另外也能設置一些 Flag 來指定要等到哪幾個動畫完成後，才接續其他動畫，這些細節當你在思考要如何“動畫”你的 SVG 時，再去 GSAP 的文件與論壇查詢，相信都能找到解答。
+
 最後，發揮自己的創意，把 svg 的各個部分都補上動畫，搭配 GSAP 提供的文件，組合各種 API，一個簡單的作品就完成了：
 
 <p class="codepen" data-height="403" data-theme-id="29194" data-default-tab="result" data-user="arvin0731" data-slug-hash="XWWYYWM" style="height: 403px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Scooter - final-steps">
