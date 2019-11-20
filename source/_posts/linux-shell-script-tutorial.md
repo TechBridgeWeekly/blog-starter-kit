@@ -24,7 +24,9 @@ tags:
 ![https://static.coderbridge.com/img/kdchang/cf4455798be44ffdaeccc2278de76594](https://static.coderbridge.com/img/kdchang/cf4455798be44ffdaeccc2278de76594)
 
 # 前言
-Shell 是一種讓使用者可以和作業系統 kernal（用來控制 CPU、記憶體、硬碟等硬體）互動溝通的橋樑。Shell Script 主要是使用在 Linux 和 MacOS 等 Unix-like 作業系統的自動化操作指令的程式語言。其透過 Unix shell 命令列直譯器來執行（我們這邊主要使用 bash shell，其他的 Unix shell 觀念大致類似），使用方式有點類似直譯式程式語言（不用編譯直接執行）。在 Windows 系列家族也有類似的使用方式：Batch file。
+Shell 是一種讓使用者可以和作業系統 Kernel（核心用來控制 CPU、記憶體、硬碟等硬體）互動溝通的橋樑。Shell Script 主要是使用在 Linux 和 MacOS 等 Unix-like 作業系統的自動化操作指令的程式語言。其透過 Unix shell 命令列直譯器來執行（我們這邊主要使用 bash shell，其他的 Unix shell 觀念大致類似），使用方式有點類似直譯式程式語言（不用編譯直接執行）。在 Windows 系列家族也有類似的使用方式：Batch file。
+
+![簡明 Linux Shell Script 入門教學](/img/kdchang/shell-script/kernel.png)
 
 一般情況 Shell Script 常用於系統管理、自動化操作檔案、自動化重複的指令碼、分析 log 等文件檔案、列印呈現我們想要的資料等，透過程式語言的使用來減少重複瑣碎的工作，所以若能妥善使用將提升不少開發者和軟體工程師的日常工作效率。接著我們將透過日常生活常用的使用情境，帶領讀者們進入入門 Shell Script（讀者需要具備基本 Linux 指令碼的基本觀念，若你需要複習常見 Linux 指令可以參考 [Linux Command 命令列指令與基本操作入門教學](https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/)）。
 
@@ -355,6 +357,8 @@ var1 var2
 
 # 參考文件
 1. [Wiki Shell 指令碼](https://zh.wikipedia.org/zh-tw/Shell%E8%84%9A%E6%9C%AC)
+2. [Wiki 核心 (電腦科學)](https://zh.wikipedia.org/zh-tw/%E5%86%85%E6%A0%B8)
+3. [鳥哥的 Linux 私房菜](http://linux.vbird.org/)
 
 （image via [stackoverflow](https://i.stack.imgur.com/jJgjc.png)）
 
