@@ -1,7 +1,8 @@
 ---
 title: 統一網頁支付介面：Payment Request API
 date: 2017-10-14 15:43:00
-tags: payment request
+tags:
+  - payment request
 author: huli
 ---
 

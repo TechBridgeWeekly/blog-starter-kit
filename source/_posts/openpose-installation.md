@@ -1,7 +1,11 @@
 ---
 title: 如何在 Windows 安裝 OpenPose 跟使用 Python API 來偵測人體姿態
 date: 2019-01-18 21:01:50
-tags: OpenPose, Robotics, Deep Learning, Computer Vision
+tags: 
+   - OpenPose
+   - Robotics
+   - Deep Learning
+   - Computer Vision
 author: pojenlai
 ---
 

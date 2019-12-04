@@ -2,7 +2,22 @@
 title: 用 Python 自學資料科學與機器學習入門實戰：Pandas 基礎入門
 date: 2017-10-28 09:54:49
 author: kdchang
-tags: Python, Machine Learning, 機器學習, AI, Artificial Intelligence, NLP, Data Mining, 人工智慧, 監督式學習, Supervised learning, Numpy, 資料科學, data science, data scientist, pandas
+tags:
+    - Python
+    - Machine Learning
+    - 機器學習
+    - AI
+    - Artificial Intelligence
+    - NLP
+    - Data Mining
+    - 人工智慧
+    - 監督式學習
+    - Supervised learning
+    - Numpy
+    - 資料科學
+    - data science
+    - data scientist
+    - pandas
 ---
 
 ![ 如何使用 Python 學習機器學習（Machine Learning）](/img/kdchang/data-science101/pandas/pandas.jpg)

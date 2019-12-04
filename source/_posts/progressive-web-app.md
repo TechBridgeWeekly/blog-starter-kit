@@ -1,7 +1,9 @@
 ---
 title: Progressive Web App 會是未來趨勢嗎？
 date: 2016-07-23 21:32:34
-tags: pwa, web app
+tags:
+  - pwa
+  - web app
 ---
 
 距離今年 Google I/O 2016 轉眼間也過了兩個多月，議程中提及的 Progressive Web App (PWA) 似乎討論不多，我當時隨便掃過 Google Developers 上的資料後的念頭是：“怎麼有點像當年 Firefox OS 上跑 web app的長相？”

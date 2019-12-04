@@ -2,6 +2,8 @@
 title: 歡樂學 Python 位元組碼(byte code) 
 date: 2017-12-01 00:43:21
 tags:
+  - Python
+  - byte code
 ---
 
 誰適合閱讀這篇文章：初階到中階 python 基礎的程式設計師，想深入淺出的了解 python 的位元組碼（bytecode）

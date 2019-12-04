@@ -1,7 +1,10 @@
 ---
 title: 一起來玩 OSRF 的 TensorFlow Object Detector
 date: 2018-02-24 21:56:33
-tags: ROS, TensorFlow, Object Recognition
+tags:
+    - ROS
+    - TensorFlow
+    - Object Recognition
 author: pojenlai
 ---
 

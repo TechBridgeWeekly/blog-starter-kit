@@ -21,7 +21,7 @@ tags:
     - shell script
 ---
 
-![https://static.coderbridge.com/img/kdchang/cf4455798be44ffdaeccc2278de76594](https://static.coderbridge.com/img/kdchang/cf4455798be44ffdaeccc2278de76594)
+![簡明 Linux Shell Script 入門教學](/img/kdchang/shell-script/shell-script.png)
 
 # 前言
 Shell 是一種讓使用者可以和作業系統 Kernel（核心用來控制 CPU、記憶體、硬碟等硬體）互動溝通的橋樑。Shell Script 主要是使用在 Linux 和 MacOS 等 Unix-like 作業系統的自動化操作指令的程式語言。其透過 Unix shell 命令列直譯器來執行（我們這邊主要使用 bash shell，其他的 Unix shell 觀念大致類似），使用方式有點類似直譯式程式語言（不用編譯直接執行）。在 Windows 系列家族也有類似的使用方式：Batch file。

@@ -10,7 +10,7 @@ tags:
 author: kdchang
 ---
 
-![https://static.coderbridge.com/img/kdchang/d7af0c89793d488bbb75d5b5e0cf225f](https://static.coderbridge.com/img/kdchang/d7af0c89793d488bbb75d5b5e0cf225f)
+![使用 Python 和 PyGame 遊戲製作入門教學](/img/kdchang/pygame101/pygame-logo.png)
 
 # 前言
 隨著天氣越來越冷，很多人卻納悶蚊子為何不減反增。身為一個工程師若沒辦法成功在現實社會和蚊子好好相處，只好做打蚊子遊戲調劑身心（咦）。本文將透過一個打蚊子遊戲，帶領讀者學習如何使用 Python 的 [PyGame](https://www.pygame.org/news) 模組製作一個簡單的打蚊子遊戲，在學習遊戲開發的基本觀念的同時，也讓我們在虛擬社會中可以彌補現實社會中的遺憾（喂）。好啦，就讓我們開始 PyGame 遊戲開發之旅吧！
@@ -73,11 +73,11 @@ while True:
 
 成果如下：
 
-![https://static.coderbridge.com/img/kdchang/db0b0b68513c44d6b5317a41b0107fea](https://static.coderbridge.com/img/kdchang/db0b0b68513c44d6b5317a41b0107fea)
+![使用 Python 和 PyGame 遊戲製作入門教學](/img/kdchang/pygame101/hello-world.png)
 
 # 開始製作打蚊子小遊戲
 在開始正式製作我們的遊戲前我們先來看個遊戲成果動畫：
-![https://static.coderbridge.com/img/kdchang/c358460a0323434db8d04842e7d9c658](https://static.coderbridge.com/img/kdchang/c358460a0323434db8d04842e7d9c658)
+![使用 Python 和 PyGame 遊戲製作入門教學](/img/kdchang/pygame101/mosquito-gif)
 
 通常我們在設計遊戲之前我們會定義一下遊戲規則，而我們的打蚊子遊戲規則十分簡單，就是`打蚊子`，打到一隻加五分，遊戲不會結束（喂）。以下定義一下會用到的核心設計：
 
@@ -85,7 +85,7 @@ while True:
 2. 中間畫面有一隻大蚊子每 3 秒會換位置
 3. 當打到蚊子時會加五分，顯示 `hit!!` 在左上
 
-![https://static.coderbridge.com/img/kdchang/f93eeecf24ef41c7bf1e8cab205d0a8c](https://static.coderbridge.com/img/kdchang/f93eeecf24ef41c7bf1e8cab205d0a8c)
+![使用 Python 和 PyGame 遊戲製作入門教學](/img/kdchang/pygame101/demo.png)
 
 建立 `Mosquito` 類別（繼承 `pygame.sprite.Sprite`），讓我們可以生產蚊子物件（由於我們需要判斷是否使用者的滑鼠有點擊到物件，所以需要透過 `rect` 來定位）：
 

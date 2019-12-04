@@ -1,7 +1,11 @@
 ---
 title: 一小時內製作自己的 Pebble 錶面
 date: 2016-11-19 22:02:14
-tags: pebble, wearable, rocky.js, pebblekit.js
+tags:
+  - pebble
+  - wearable
+  - rocky.js
+  - pebblekit.js
 author: arvinh
 ---
 

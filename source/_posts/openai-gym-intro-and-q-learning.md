@@ -1,7 +1,10 @@
 ---
 title: Open AI Gym 簡介與 Q learning 演算法實作
 date: 2017-11-04 22:49:39
-tags: OpenAI Gym, Reinforcement Learning, Q Learning
+tags: 
+	- OpenAI Gym
+	- Reinforcement Learning
+	- Q Learning
 author: pojenlai
 ---
 

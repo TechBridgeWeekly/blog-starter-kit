@@ -11,7 +11,7 @@ tags:
 ---
 
 
-![https://static.coderbridge.com/img/kdchang/b1af55fca44c4d288b2d05f3b23c374e](https://static.coderbridge.com/img/kdchang/b1af55fca44c4d288b2d05f3b23c374e)
+![如何使用 Python Tkinter 製作 GUI 應用程式入門教學](/img/kdchang/python-tkinter101/demo1.png)
 
 # 前言
 除了 Web 和 Mobile App 之外，桌面應用程式（Desktop Application）也是使用者常使用的應用程式圖形化使用者介面（GUI）。透過 GUI 可以讓一般使用者透過比較直覺的方式來和程式互動（畢竟要讓一般的使用者使用 Command Line 來操作程式是挺難的），也可以讓整個使用者行為更為簡便。許多程式語言都有提供 GUI 的函式庫，讓開發者可以透過常見的元件，例如：按鈕、文字方塊、下拉式選單等方式來設計整個應用程式。在這裡，我們將使用 Python 內建的 Tkinter 函式庫來建立一個簡單的 BMI 計算應用程式，讓讀者感受一下 Python Tkinter 設計桌面應用程式的流程。
@@ -64,11 +64,11 @@ window.mainloop()
 ```
 
 觀看成果：
-![https://static.coderbridge.com/img/kdchang/75cc6896898b4bcab306386195974c2f](https://static.coderbridge.com/img/kdchang/75cc6896898b4bcab306386195974c2f)
+![如何使用 Python Tkinter 製作 GUI 應用程式入門教學](/img/kdchang/python-tkinter101/demo2.png)
 
 # 建立 BMI App 主視窗
 在建立我們的應用程式前，我們先簡單使用繪製我們介面的 mockup 圖：
-![https://static.coderbridge.com/img/kdchang/f9fb5d8a7ea0449387ee9a9d8c248226](https://static.coderbridge.com/img/kdchang/f9fb5d8a7ea0449387ee9a9d8c248226)
+![如何使用 Python Tkinter 製作 GUI 應用程式入門教學](/img/kdchang/python-tkinter101/demo3.png)
 
 整個應用程式流程如下：
 1. 提供輸入框讓使用者可以輸入其身高（m）、體重（kg）
@@ -90,7 +90,7 @@ window.mainloop()
 
 成果如下：
 
-![https://static.coderbridge.com/img/kdchang/9014fc2a1c5148959c88828678fd85d6](https://static.coderbridge.com/img/kdchang/9014fc2a1c5148959c88828678fd85d6)
+![如何使用 Python Tkinter 製作 GUI 應用程式入門教學](/img/kdchang/python-tkinter101/demo4.png)
 
 # 建立 BMI App 元件
 建立完主視窗後，接下來我們來把元件一一加入到主視窗，我們元件主要分成三大部分：
@@ -136,7 +136,7 @@ window.mainloop()
 ```
 
 成果：
-![https://static.coderbridge.com/img/kdchang/15ad7a1cef7f4ecfae1dd97f7dd33477](https://static.coderbridge.com/img/kdchang/15ad7a1cef7f4ecfae1dd97f7dd33477)
+![](/img/kdchang/python-tkinter101/demo5.png)
 
 # 建立 BMI App 事件處理
 加入元件後我們可以建立
@@ -217,7 +217,7 @@ window.mainloop()
 ```
 
 最後成果：
-![https://static.coderbridge.com/img/kdchang/d97e4f4bec804c379d12dda6787b09ff](https://static.coderbridge.com/img/kdchang/d97e4f4bec804c379d12dda6787b09ff)
+![如何使用 Python Tkinter 製作 GUI 應用程式入門教學](/img/kdchang/python-tkinter101/demo6.png)
 
 # 總結
 以上透過 Python 內建的 Tkinter 函式庫來建立一個簡單的 BMI 計算應用程式，讓讀者感受一下 Python Tkinter 設計桌面應用程式的流程。事實上，Tkinter 支援物件導向撰寫方式，我們也可以將以上程式碼重構成物件導向撰寫方式。比起 CLI 來說 GUI 對於一般使用者在使用上確實是比較方便，若有興趣的讀者也可以自己嘗試製作小遊戲或是更多有趣的不同應用。

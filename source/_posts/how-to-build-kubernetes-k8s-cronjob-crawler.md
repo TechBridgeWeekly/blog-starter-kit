@@ -9,7 +9,8 @@ tags:
     - kubernetes
     - crontab
 ---
-![https://static.coderbridge.com/img/TechBridgeWeekly/4d6ba07d383b4d5a937a2abfd2cd9542](https://static.coderbridge.com/img/TechBridgeWeekly/4d6ba07d383b4d5a937a2abfd2cd9542)
+![如何使用 K8S 自動化定期 CronJob 抓網路公開資料](/img/kdchang/kubernetes101/cronjob.png)
+
 # 前言
 有使用 Linux 的讀者就知道，若是有定期需要執行的程式就可以 Crontab 把寫好的 script 透過定期的 scheduler 定期執行節省人力。一般常見的使用範疇就是定期更新檔案資料或是網路爬蟲等。今天我們則是要介紹，如何使用 Kubernetes（k8s） 的 CronJob 來自動化抓取網路公開資料（這邊我們使用[政府公開資料的雨量資料 JSON 檔案](https://data.gov.tw/dataset/9177)），我們想要的定期執行程式的效果。好的，那就讓我們開始吧！
 

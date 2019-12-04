@@ -1,7 +1,8 @@
 ---
 title: 初探 Probabilistic Models of Cognition
 date: 2018-03-24 23:28:47
-tags: Artificial Intelligence
+tags:
+    - Artificial Intelligence
 author: pojenlai
 ---
 
