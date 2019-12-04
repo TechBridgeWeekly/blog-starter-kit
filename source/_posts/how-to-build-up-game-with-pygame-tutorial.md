@@ -77,7 +77,7 @@ while True:
 
 # 開始製作打蚊子小遊戲
 在開始正式製作我們的遊戲前我們先來看個遊戲成果動畫：
-![使用 Python 和 PyGame 遊戲製作入門教學](/img/kdchang/pygame101/mosquito-gif)
+![使用 Python 和 PyGame 遊戲製作入門教學](/img/kdchang/pygame101/mosquito-gif.gif)
 
 通常我們在設計遊戲之前我們會定義一下遊戲規則，而我們的打蚊子遊戲規則十分簡單，就是`打蚊子`，打到一隻加五分，遊戲不會結束（喂）。以下定義一下會用到的核心設計：
 
