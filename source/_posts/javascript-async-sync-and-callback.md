@@ -1,6 +1,6 @@
 ---
 title: JavaScript 中的同步與非同步（上）：先成為 callback 大師吧！
-date: 2019-10-05 04:07
+date: 2019-10-05 04:07:33
 tags:
   - JavaScript
 autohr: huli

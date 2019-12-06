@@ -1,7 +1,8 @@
 ---
 title: 一個資淺工程師年末的自我省視
 date: 2016-12-31 13:41:25
-tags: 
+tags:
+    - Software Engineer
 author: huli
 ---
 

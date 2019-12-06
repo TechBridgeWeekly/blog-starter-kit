@@ -1,5 +1,5 @@
 ---
-title: "[筆記] JavaScript: Understanding the Weird Parts --- Build your own lib/framework"
+title: '[筆記] JavaScript: Understanding the Weird Parts - Build your own lib/framework'
 date: 2018-05-05 18:44:38
 tags:
     - javascript

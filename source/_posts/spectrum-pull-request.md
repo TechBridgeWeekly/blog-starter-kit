@@ -1,7 +1,10 @@
 ---
 title: 記一次幫開源專案 spectrum 修 bug 的經歷
 date: 2019-04-20 08:27:21
-tags: 
+tags:
+  - open source
+  - spectrum
+  - github
 author: huli
 ---
 
